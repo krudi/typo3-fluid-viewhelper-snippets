@@ -1,0 +1,13 @@
+{
+  "Transform HTML Tag": {
+    "prefix": "fTransformHtml",
+    "body": [
+      "<f:transform.html",
+      "\tonFailure=\"${1:removeEnclosure}\"",
+      "\tselector=\"${2:a.href}\">",
+      "\t$3",
+      "</f:transform.html>"
+    ],
+    "description": "Transforms HTML and substitutes internal link scheme aspects."
+  }
+}

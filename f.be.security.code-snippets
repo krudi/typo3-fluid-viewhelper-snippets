@@ -1,0 +1,20 @@
+{
+  "Backend IfAuthenticated Tag": {
+    "prefix": "fBeSecurityIfAuthenticated",
+    "body": [
+      "<f:be.security.ifAuthenticated>",
+      "\t$1",
+      "</f:be.security.ifAuthenticated>"
+    ],
+    "description": "Renders the content inside this tag only if the backend user is authenticated."
+  },
+  "Backend IfHasRole Tag": {
+    "prefix": "fBeSecurityIfHasRole",
+    "body": [
+      "<f:be.security.ifHasRole role=\"$1\">",
+      "\t$2",
+      "</f:be.security.ifHasRole>"
+    ],
+    "description": "Renders the content inside this tag only if the backend user has the specified role."
+  }
+}

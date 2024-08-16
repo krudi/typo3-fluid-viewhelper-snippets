@@ -1,0 +1,12 @@
+{
+  "Sanitize HTML Tag": {
+    "prefix": "fSanitizeHtml",
+    "body": [
+      "<f:sanitize.html",
+      "\tbuild=\"${1:default}\">",
+      "\t$2",
+      "</f:sanitize.html>"
+    ],
+    "description": "Passes a given content through typo3/html-sanitizer to mitigate potential cross-site scripting occurrences."
+  }
+}

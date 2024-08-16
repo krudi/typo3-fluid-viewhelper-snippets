@@ -1,0 +1,69 @@
+{
+  "Backend Infobox Tag": {
+    "prefix": "fBeInfobox",
+    "body": [
+      "<f:be.infobox title=\"$1\"",
+      "\tmessage=\"$2\"",
+      "\tstate=\"${3:-2}\"",
+      "\ticonName=\"${4}\"",
+      "\tdisableIcon=\"${5:false}\">",
+      "\t$6",
+      "</f:be.infobox>"
+    ],
+    "description": "Renders a styled content infobox in the backend with various states."
+  },
+  "Backend Link Tag": {
+    "prefix": "fBeLink",
+    "body": [
+      "<f:be.link route=\"$1\"",
+      "\tparameters=\"${2:array}\"",
+      "\treferenceType=\"${3:'absolute'}\"",
+      "\tadditionalAttributes=\"${4:array}\"",
+      "\taria=\"${5:array}\"",
+      "\tdata=\"${6:array}\">",
+      "\t$7",
+      "</f:be.link>"
+    ],
+    "description": "Creates URIs to backend modules."
+  },
+  "Backend PageRenderer Tag": {
+    "prefix": "fBePageRenderer",
+    "body": [
+      "<f:be.pageRenderer",
+      "\tpageTitle=\"$1\"",
+      "\tincludeCssFiles=\"${2:array}\"",
+      "\tincludeJsFiles=\"${3:array}\"",
+      "\taddJsInlineLabels=\"${4:array}\"",
+      "\tincludeJavaScriptModules=\"${5:array}\"",
+      "\taddInlineSettings=\"${6:array}\" />"
+    ],
+    "description": "Registers backend module resources like CSS and JavaScript using the PageRenderer."
+  },
+  "Backend TableList Tag": {
+    "prefix": "fBeTableList",
+    "body": [
+      "<f:be.tableList tableName=\"$1\"",
+      "\tfieldList=\"${2:array}\"",
+      "\tstoragePid=\"${3:1}\"",
+      "\tlevels=\"${4:0}\"",
+      "\tfilter=\"$5\"",
+      "\trecordsPerPage=\"${6:0}\"",
+      "\tsortField=\"$7\"",
+      "\tsortDescending=\"${8:false}\"",
+      "\treadOnly=\"${9:false}\"",
+      "\tenableClickMenu=\"${10:true}\"",
+      "\tenableControlPanels=\"${11:false}\"",
+      "\tclickTitleMode=\"${12}\" />"
+    ],
+    "description": "Renders a record list as known from the TYPO3 list module."
+  },
+  "Backend Uri Tag": {
+    "prefix": "fBeUri",
+    "body": [
+      "<f:be.uri route=\"$1\"",
+      "\tparameters=\"${2:array}\"",
+      "\treferenceType=\"${3:'absolute'}\" />"
+    ],
+    "description": "Creates URIs to backend modules."
+  }
+}

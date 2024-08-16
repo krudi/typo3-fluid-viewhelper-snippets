@@ -1,0 +1,39 @@
+{
+  "Security IfAuthenticated Tag": {
+    "prefix": "fSecurityIfAuthenticated",
+    "body": [
+      "<f:security.ifAuthenticated>",
+      "\t<f:then>",
+      "\t\t${1:This is being shown whenever a FE user is logged in}",
+      "\t</f:then>",
+      "\t<f:else>",
+      "\t\t${2:This is being displayed if no FE user is logged in}",
+      "\t</f:else>",
+      "</f:security.ifAuthenticated>"
+    ],
+    "description": "This ViewHelper implements an ifAuthenticated/else condition for frontend users."
+  },
+  "Security IfHasRole Tag": {
+    "prefix": "fSecurityIfHasRole",
+    "body": [
+      "<f:security.ifHasRole role=\"${1:Administrator}\">",
+      "\t<f:then>",
+      "\t\t${2:This is being shown in case you have the role.}",
+      "\t</f:then>",
+      "\t<f:else>",
+      "\t\t${3:This is being displayed in case you do not have the role.}",
+      "\t</f:else>",
+      "</f:security.ifHasRole>"
+    ],
+    "description": "This ViewHelper implements an ifHasRole/else condition for frontend groups."
+  },
+  "Security Nonce Tag": {
+    "prefix": "fSecurityNonce",
+    "body": [
+      "<script nonce=\"{f:security.nonce()}\">",
+      "\t${1:const inline = 'script';}",
+      "</script>"
+    ],
+    "description": "This ViewHelper resolves the nonce attribute from the global server request object, or from the PolicyProvider service as a fallback value."
+  }
+}

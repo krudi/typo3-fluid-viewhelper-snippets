@@ -1,0 +1,195 @@
+{
+  "Form Button Tag": {
+    "prefix": "fFormButton",
+    "body": [
+      "<f:form.button",
+      "\ttype=\"${1:reset}\"",
+      "\tname=\"${2:buttonName}\"",
+      ">",
+      "\t${3:Button Label}",
+      "</f:form.button>"
+    ],
+    "description": "Creates a button, such as a reset or submit button."
+  },
+  "Form Checkbox Basic Tag": {
+    "prefix": "fFormCheckboxBasic",
+    "body": [
+      "<f:form.checkbox",
+      "\tname=\"${1:myCheckBox}\"",
+      "\tvalue=\"${2:someValue}\"",
+      "/>"
+    ],
+    "description": "Creates a basic checkbox input element."
+  },
+  "Form Checkbox Preselected Tag": {
+    "prefix": "fFormCheckboxPreselected",
+    "body": [
+      "<f:form.checkbox",
+      "\tname=\"${1:myCheckBox}\"",
+      "\tvalue=\"${2:someValue}\"",
+      "\tchecked=\"${3:{object.value} == 5}\"",
+      "/>"
+    ],
+    "description": "Creates a checkbox input element with a preselected value."
+  },
+  "Form Checkbox Bound Tag": {
+    "prefix": "fFormCheckboxBound",
+    "body": [
+      "<f:form.checkbox",
+      "\tproperty=\"${1:interests}\"",
+      "\tvalue=\"${2:TYPO3}\"",
+      "\tmultiple=\"${3:1}\"",
+      "/>"
+    ],
+    "description": "Creates a checkbox input element bound to a property, with multiple selections."
+  },
+  "Form Country Select Tag": {
+    "prefix": "fFormCountrySelect",
+    "body": [
+      "<f:form.countrySelect",
+      "\tname=\"${1:country}\"",
+      "\tvalue=\"${2:{defaultCountry}}\"",
+      ">"
+    ],
+    "description": "Renders a select tag with all available countries as options."
+  },
+  "Form Hidden Tag": {
+    "prefix": "fFormHidden",
+    "body": [
+      "<f:form.hidden",
+      "\tname=\"${1:myHiddenValue}\"",
+      "\tvalue=\"${2:42}\"",
+      ">"
+    ],
+    "description": "Renders a hidden input field."
+  },
+  "Form Password Tag": {
+    "prefix": "fFormPassword",
+    "body": [
+      "<f:form.password",
+      "\tname=\"${1:myPassword}\"",
+      ">"
+    ],
+    "description": "Creates a password input field."
+  },
+  "Form Radio Basic Tag": {
+    "prefix": "fFormRadioBasic",
+    "body": [
+      "<f:form.radio",
+      "\tname=\"${1:myRadioButton}\"",
+      "\tvalue=\"${2:someValue}\"",
+      "/>"
+    ],
+    "description": "Creates a basic radio button input element."
+  },
+  "Form Radio Bound Tag": {
+    "prefix": "fFormRadioBound",
+    "body": [
+      "<f:form.radio",
+      "\tproperty=\"${1:newsletter}\"",
+      "\tvalue=\"${2:1}\"",
+      "/>"
+    ],
+    "description": "Creates a radio button input element bound to a property."
+  },
+  "Form Radio Multiple Tag": {
+    "prefix": "fFormRadioMultiple",
+    "body": [
+      "<f:form.radio",
+      "\tname=\"${1:myRadioButton1}\"",
+      "\tvalue=\"${2:option1}\"",
+      "/>",
+      "<f:form.radio",
+      "\tname=\"${3:myRadioButton2}\"",
+      "\tvalue=\"${4:option2}\"",
+      "/>"
+    ],
+    "description": "Creates multiple radio button input elements."
+  },
+  "Form Select Basic Tag": {
+    "prefix": "fFormSelectBasic",
+    "body": [
+      "<f:form.select",
+      "\tname=\"${1:paymentOptions}\"",
+      "\toptions=\"${2:{payPal: 'PayPal International Services', visa: 'VISA Card'}}\"",
+      "/>"
+    ],
+    "description": "Creates a basic select dropdown list."
+  },
+  "Form Select Preselected Tag": {
+    "prefix": "fFormSelectPreselected",
+    "body": [
+      "<f:form.select",
+      "\tname=\"${1:paymentOptions}\"",
+      "\toptions=\"${2:{payPal: 'PayPal International Services', visa: 'VISA Card'}}\"",
+      "\tvalue=\"${3:visa}\"",
+      "/>"
+    ],
+    "description": "Creates a select dropdown list with a preselected option."
+  },
+  "Form Select Grouped Tag": {
+    "prefix": "fFormSelectGrouped",
+    "body": [
+      "<f:form.select",
+      "\tname=\"${1:myproperty}\">",
+      "\t<f:form.select.option value=\"1\">Option one</f:form.select.option>",
+      "\t<f:form.select.option value=\"2\">Option two</f:form.select.option>",
+      "\t<f:form.select.optgroup label=\"Group 1\">",
+      "\t\t<f:form.select.option value=\"3\">Grouped option one</f:form.select.option>",
+      "\t\t<f:form.select.option value=\"4\">Grouped option two</f:form.select.option>",
+      "\t</f:form.select.optgroup>",
+      "</f:form.select>"
+    ],
+    "description": "Creates a select dropdown list with grouped options."
+  },
+  "Form Submit Tag": {
+    "prefix": "fFormSubmit",
+    "body": [
+      "<f:form.submit",
+      "\tname=\"${1:mySubmit}\"",
+      "\tvalue=\"${2:Send Mail}\"",
+      ">",
+      "\t${3:<button>dummy button</button>}",
+      "</f:form.submit>"
+    ],
+    "description": "Creates a submit button."
+  },
+  "Form Textarea Tag": {
+    "prefix": "fFormTextarea",
+    "body": [
+      "<f:form.textarea",
+      "\tname=\"${1:myTextArea}\"",
+      "\tvalue=\"${2:This is shown inside the textarea}\"",
+      ">"
+    ],
+    "description": "Creates a textarea field."
+  },
+  "Form Textfield Tag": {
+    "prefix": "fFormTextfield",
+    "body": [
+      "<f:form.textfield",
+      "\tname=\"${1:myTextBox}\"",
+      "\tvalue=\"${2:default value}\"",
+      ">"
+    ],
+    "description": "Creates a text field input element."
+  },
+  "Form Upload Tag": {
+    "prefix": "fFormUpload",
+    "body": [
+      "<f:form.upload",
+      "\tname=\"${1:file}\"",
+      ">"
+    ],
+    "description": "Generates an input file element."
+  },
+  "Form ValidationResults Tag": {
+    "prefix": "fFormValidationResults",
+    "body": [
+      "<f:form.validationResults for=\"${1}\" as=\"${2:'validationResults'}\">",
+      "\t$3",
+      "</f:form.validationResults>"
+    ],
+    "description": "Outputs validation results."
+  }
+}
