@@ -1,10 +1,11 @@
 {
-    "Transform HTML Tag": {
+    "Transform HTML ViewHelper": {
         "prefix": "fTransformHtml",
         "body": [
             "<f:transform.html",
             "\tonFailure=\"${1:removeEnclosure}\"",
-            "\tselector=\"${2:a.href}\">",
+            "\tselector=\"${2:a.href}\"",
+            ">",
             "\t$3",
             "</f:transform.html>"
         ],

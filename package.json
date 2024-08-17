@@ -34,7 +34,7 @@
         "Snippets"
     ],
     "icon": "./assets/images/icon.png",
-    "displayName": "TYPO3 ViewHelper Snippets for VSCode",
+    "displayName": "TYPO3 ViewHelper Snippets",
     "galleryBanner": {
         "color": "#FFFFFF",
         "theme": "light"
@@ -43,19 +43,47 @@
         "snippets": [
             {
                 "language": "html",
-                "path": "./snippets/f/f.asset.json"
+                "path": "./snippets/f/form/f.form.json"
             },
             {
                 "language": "html",
-                "path": "./snippets/f/f.cache.json"
+                "path": "./snippets/f/form/f.form.select.json"
             },
             {
                 "language": "html",
-                "path": "./snippets/f/f.debug.json"
+                "path": "./snippets/f/asset/f.asset.json"
             },
             {
                 "language": "html",
-                "path": "./snippets/f/f.format.json"
+                "path": "./snippets/f/cache/f.cache.json"
+            },
+            {
+                "language": "html",
+                "path": "./snippets/f/debug/f.debug.json"
+            },
+            {
+                "language": "html",
+                "path": "./snippets/f/format/f.format.json"
+            },
+            {
+                "language": "html",
+                "path": "./snippets/f/link/f.link.json"
+            },
+            {
+                "language": "html",
+                "path": "./snippets/f/sanitize/f.sanitize.json"
+            },
+            {
+                "language": "html",
+                "path": "./snippets/f/security/f.security.json"
+            },
+            {
+                "language": "html",
+                "path": "./snippets/f/transform/f.transform.json"
+            },
+            {
+                "language": "html",
+                "path": "./snippets/f/uri/f.uri.json"
             },
             {
                 "language": "html",
@@ -63,43 +91,23 @@
             },
             {
                 "language": "html",
-                "path": "./snippets/f/f.link.json"
+                "path": "./snippets/f/be/f.be.general.json"
             },
             {
                 "language": "html",
-                "path": "./snippets/f/f.sanitize.json"
+                "path": "./snippets/f/be/menu/f.be.menus.json"
             },
             {
                 "language": "html",
-                "path": "./snippets/f/f.security.json"
+                "path": "./snippets/f/be/security/f.be.security.json"
             },
             {
                 "language": "html",
-                "path": "./snippets/f/f.transform.json"
+                "path": "./snippets/be/link/be.link.json"
             },
             {
                 "language": "html",
-                "path": "./snippets/f/f.uri.json"
-            },
-            {
-                "language": "html",
-                "path": "./snippets/form/f.form.json"
-            },
-            {
-                "language": "html",
-                "path": "./snippets/form/f.form.select.json"
-            },
-            {
-                "language": "html",
-                "path": "./snippets/form/formvh.form.json"
-            },
-            {
-                "language": "html",
-                "path": "./snippets/form/formvh.general.json"
-            },
-            {
-                "language": "html",
-                "path": "./snippets/core/core.general.json"
+                "path": "./snippets/be/uri/be.uri.json"
             },
             {
                 "language": "html",
@@ -107,23 +115,15 @@
             },
             {
                 "language": "html",
-                "path": "./snippets/be/be.link.json"
+                "path": "./snippets/core/core.general.json"
             },
             {
                 "language": "html",
-                "path": "./snippets/be/be.uri.json"
+                "path": "./snippets/formvh/formvh.form.json"
             },
             {
                 "language": "html",
-                "path": "./snippets/be/f.be.json"
-            },
-            {
-                "language": "html",
-                "path": "./snippets/be/f.be.menus.json"
-            },
-            {
-                "language": "html",
-                "path": "./snippets/be/f.be.security.json"
+                "path": "./snippets/formvh/formvh.general.json"
             }
         ]
     }

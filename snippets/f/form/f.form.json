@@ -1,5 +1,5 @@
 {
-    "Form Button Tag": {
+    "Form Button ViewHelper": {
         "prefix": "fFormButton",
         "body": [
             "<f:form.button",
@@ -11,7 +11,7 @@
         ],
         "description": "Creates a button, such as a reset or submit button."
     },
-    "Form Checkbox Basic Tag": {
+    "Form Checkbox Basic ViewHelper": {
         "prefix": "fFormCheckboxBasic",
         "body": [
             "<f:form.checkbox",
@@ -21,7 +21,7 @@
         ],
         "description": "Creates a basic checkbox input element."
     },
-    "Form Checkbox Preselected Tag": {
+    "Form Checkbox Preselected ViewHelper": {
         "prefix": "fFormCheckboxPreselected",
         "body": [
             "<f:form.checkbox",
@@ -32,7 +32,7 @@
         ],
         "description": "Creates a checkbox input element with a preselected value."
     },
-    "Form Checkbox Bound Tag": {
+    "Form Checkbox Bound ViewHelper": {
         "prefix": "fFormCheckboxBound",
         "body": [
             "<f:form.checkbox",
@@ -43,7 +43,7 @@
         ],
         "description": "Creates a checkbox input element bound to a property, with multiple selections."
     },
-    "Form Country Select Tag": {
+    "Form Country Select ViewHelper": {
         "prefix": "fFormCountrySelect",
         "body": [
             "<f:form.countrySelect",
@@ -53,26 +53,26 @@
         ],
         "description": "Renders a select tag with all available countries as options."
     },
-    "Form Hidden Tag": {
+    "Form Hidden ViewHelper": {
         "prefix": "fFormHidden",
         "body": [
             "<f:form.hidden",
             "\tname=\"${1:myHiddenValue}\"",
             "\tvalue=\"${2:42}\"",
-            ">"
+            "/>"
         ],
         "description": "Renders a hidden input field."
     },
-    "Form Password Tag": {
+    "Form Password ViewHelper": {
         "prefix": "fFormPassword",
         "body": [
             "<f:form.password",
             "\tname=\"${1:myPassword}\"",
-            ">"
+            "/>"
         ],
         "description": "Creates a password input field."
     },
-    "Form Radio Basic Tag": {
+    "Form Radio Basic ViewHelper": {
         "prefix": "fFormRadioBasic",
         "body": [
             "<f:form.radio",
@@ -82,7 +82,7 @@
         ],
         "description": "Creates a basic radio button input element."
     },
-    "Form Radio Bound Tag": {
+    "Form Radio Bound ViewHelper": {
         "prefix": "fFormRadioBound",
         "body": [
             "<f:form.radio",
@@ -92,7 +92,7 @@
         ],
         "description": "Creates a radio button input element bound to a property."
     },
-    "Form Radio Multiple Tag": {
+    "Form Radio Multiple ViewHelper": {
         "prefix": "fFormRadioMultiple",
         "body": [
             "<f:form.radio",
@@ -106,7 +106,7 @@
         ],
         "description": "Creates multiple radio button input elements."
     },
-    "Form Select Basic Tag": {
+    "Form Select Basic ViewHelper": {
         "prefix": "fFormSelectBasic",
         "body": [
             "<f:form.select",
@@ -116,7 +116,7 @@
         ],
         "description": "Creates a basic select dropdown list."
     },
-    "Form Select Preselected Tag": {
+    "Form Select Preselected ViewHelper": {
         "prefix": "fFormSelectPreselected",
         "body": [
             "<f:form.select",
@@ -127,7 +127,7 @@
         ],
         "description": "Creates a select dropdown list with a preselected option."
     },
-    "Form Select Grouped Tag": {
+    "Form Select Grouped ViewHelper": {
         "prefix": "fFormSelectGrouped",
         "body": [
             "<f:form.select",
@@ -142,7 +142,7 @@
         ],
         "description": "Creates a select dropdown list with grouped options."
     },
-    "Form Submit Tag": {
+    "Form Submit ViewHelper": {
         "prefix": "fFormSubmit",
         "body": [
             "<f:form.submit",
@@ -154,39 +154,42 @@
         ],
         "description": "Creates a submit button."
     },
-    "Form Textarea Tag": {
+    "Form Textarea ViewHelper": {
         "prefix": "fFormTextarea",
         "body": [
             "<f:form.textarea",
             "\tname=\"${1:myTextArea}\"",
             "\tvalue=\"${2:This is shown inside the textarea}\"",
-            ">"
+            "/>"
         ],
         "description": "Creates a textarea field."
     },
-    "Form Textfield Tag": {
+    "Form Textfield ViewHelper": {
         "prefix": "fFormTextfield",
         "body": [
             "<f:form.textfield",
             "\tname=\"${1:myTextBox}\"",
             "\tvalue=\"${2:default value}\"",
-            ">"
+            "/>"
         ],
         "description": "Creates a text field input element."
     },
-    "Form Upload Tag": {
+    "Form Upload ViewHelper": {
         "prefix": "fFormUpload",
         "body": [
             "<f:form.upload",
             "\tname=\"${1:file}\"",
-            ">"
+            "/>"
         ],
         "description": "Generates an input file element."
     },
-    "Form ValidationResults Tag": {
+    "Form ValidationResults ViewHelper": {
         "prefix": "fFormValidationResults",
         "body": [
-            "<f:form.validationResults for=\"${1}\" as=\"${2:'validationResults'}\">",
+            "<f:form.validationResults",
+            "\tfor=\"${1}\"",
+            "\tas=\"${2:'validationResults'}\"",
+            ">",
             "\t$3",
             "</f:form.validationResults>"
         ],

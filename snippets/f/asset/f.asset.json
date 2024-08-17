@@ -1,5 +1,5 @@
 {
-    "CSS Asset Tag": {
+    "CSS Asset ViewHelper": {
         "prefix": "fAssetCss",
         "body": [
             "<f:asset.css",
@@ -9,7 +9,7 @@
         ],
         "description": "Includes a CSS file in TYPO3 templates, identified by a unique identifier."
     },
-    "CSS Asset Inline Tag": {
+    "CSS Asset Inline ViewHelper": {
         "prefix": "fAssetCssInline",
         "body": [
             "<f:asset.css",
@@ -20,7 +20,7 @@
         ],
         "description": "Includes inline CSS in TYPO3 templates, identified by a unique identifier."
     },
-    "Script Asset Tag": {
+    "Script Asset ViewHelper": {
         "prefix": "fAssetScript",
         "body": [
             "<f:asset.script",
@@ -31,7 +31,7 @@
         ],
         "description": "Includes a JavaScript file in TYPO3 templates, identified by a unique identifier."
     },
-    "Script Inline Tag": {
+    "Script Inline ViewHelper": {
         "prefix": "fAssetScriptInline",
         "body": [
             "<f:asset.script",

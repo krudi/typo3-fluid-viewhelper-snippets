@@ -1,24 +1,26 @@
 {
-    "Form Select Optgroup Tag": {
+    "Form Select Optgroup ViewHelper": {
         "prefix": "fFormSelectOptgroup",
         "body": [
             "<f:form.select.optgroup",
             "\tadditionalAttributes=\"${1:array}\"",
             "\tdata=\"${2:array}\"",
-            "\tdisabled=\"${3:false}\">",
+            "\tdisabled=\"${3:false}\"",
+            ">",
             "\t$4",
             "</f:form.select.optgroup>"
         ],
         "description": "Adds custom <optgroup> tags inside an <f:form.select>, supports further child <f:form.select.option> tags."
     },
-    "Form Select Option Tag": {
+    "Form Select Option ViewHelper": {
         "prefix": "fFormSelectOption",
         "body": [
             "<f:form.select.option",
             "\tadditionalAttributes=\"${1:array}\"",
             "\tdata=\"${2:array}\"",
             "\tselected=\"${3}\"",
-            "\tvalue=\"${4}\">",
+            "\tvalue=\"${4}\"",
+            ">",
             "\t$5",
             "</f:form.select.option>"
         ],

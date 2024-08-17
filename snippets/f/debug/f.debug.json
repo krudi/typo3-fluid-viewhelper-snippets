@@ -1,5 +1,5 @@
 {
-    "Backend Debug Render Tag": {
+    "Backend Debug Render ViewHelper": {
         "prefix": "fDebugRender",
         "body": [
             "<f:debug.render",

@@ -1,5 +1,5 @@
 {
-    "Alias Tag": {
+    "Alias ViewHelper": {
         "prefix": "fAlias",
         "body": [
             "<f:alias",
@@ -20,7 +20,7 @@
         ],
         "description": "Inline version of the <f:alias> ViewHelper."
     },
-    "Case Tag": {
+    "Case ViewHelper": {
         "prefix": "fCase",
         "body": [
             "<f:case",
@@ -31,17 +31,7 @@
         ],
         "description": "Case ViewHelper that is only usable within the f:switch ViewHelper."
     },
-    "Case Inline": {
-        "prefix": "fCaseInline",
-        "body": [
-            "{f:case(",
-            "\tvalue: '${1}'",
-            ")}",
-            "${2}"
-        ],
-        "description": "Inline version of the <f:case> ViewHelper for use within <f:switch>."
-    },
-    "CObject Tag": {
+    "CObject ViewHelper": {
         "prefix": "fCObject",
         "body": [
             "<f:cObject",
@@ -63,12 +53,11 @@
             "\tdata: '${2}',",
             "\ttable: '${3}',",
             "\ttyposcriptObjectPath: '${4}'",
-            ")}",
-            "${5}"
+            ")}"
         ],
         "description": "Inline version of the <f:cObject> ViewHelper."
     },
-    "Comment Tag": {
+    "Comment ViewHelper": {
         "prefix": "fComment",
         "body": [
             "<f:comment",
@@ -78,15 +67,7 @@
         ],
         "description": "This ViewHelper prevents rendering of any content inside the tag."
     },
-    "Comment Inline": {
-        "prefix": "fCommentInline",
-        "body": [
-            "{f:comment()}",
-            "${1}"
-        ],
-        "description": "Inline version of the <f:comment> ViewHelper."
-    },
-    "Constant Tag": {
+    "Constant ViewHelper": {
         "prefix": "fConstant",
         "body": [
             "<f:constant",
@@ -97,17 +78,7 @@
         ],
         "description": "Wrapper for PHP's constant function."
     },
-    "Constant Inline": {
-        "prefix": "fConstantInline",
-        "body": [
-            "{f:constant(",
-            "\tname: '${1}'",
-            ")}",
-            "${2}"
-        ],
-        "description": "Inline version of the <f:constant> ViewHelper."
-    },
-    "Count Tag": {
+    "Count ViewHelper": {
         "prefix": "fCount",
         "body": [
             "<f:count",
@@ -123,12 +94,11 @@
         "body": [
             "{f:count(",
             "\tsubject: '${1}'",
-            ")}",
-            "${2}"
+            ")}"
         ],
         "description": "Inline version of the <f:count> ViewHelper."
     },
-    "Cycle Tag": {
+    "Cycle ViewHelper": {
         "prefix": "fCycle",
         "body": [
             "<f:cycle",
@@ -146,12 +116,11 @@
             "{f:cycle(",
             "\tvalues: '${1}',",
             "\tas: '${2}'",
-            ")}",
-            "${3}"
+            ")}"
         ],
         "description": "Inline version of the <f:cycle> ViewHelper."
     },
-    "Backend Debug Tag": {
+    "Backend Debug ViewHelper": {
         "prefix": "fDebug",
         "body": [
             "<f:debug",
@@ -162,7 +131,7 @@
         ],
         "description": "A basic <f:debug> ViewHelper with title='Debug' and {_all} as content."
     },
-    "Default Case Tag": {
+    "Default Case ViewHelper": {
         "prefix": "fDefaultCase",
         "body": [
             "<f:defaultCase",
@@ -172,15 +141,7 @@
         ],
         "description": "A ViewHelper which specifies the 'default' case when used within the f:switch ViewHelper."
     },
-    "Default Case Inline": {
-        "prefix": "fDefaultCaseInline",
-        "body": [
-            "{f:defaultCase()}",
-            "${1}"
-        ],
-        "description": "Inline version of the <f:defaultCase> ViewHelper for use within <f:switch>."
-    },
-    "Else Tag": {
+    "Else ViewHelper": {
         "prefix": "fElse",
         "body": [
             "<f:else",
@@ -190,15 +151,7 @@
         ],
         "description": "Else-Branch of a condition. Only has an effect inside of f:if."
     },
-    "Else Inline": {
-        "prefix": "fElseInline",
-        "body": [
-            "{f:else()}",
-            "${1}"
-        ],
-        "description": "Inline version of the <f:else> ViewHelper for use within <f:if>."
-    },
-    "Feature Tag": {
+    "Feature ViewHelper": {
         "prefix": "fFeature",
         "body": [
             "<f:feature",
@@ -214,28 +167,13 @@
         ],
         "description": "This ViewHelper checks if a feature flag is enabled."
     },
-    "Feature Inline": {
-        "prefix": "fFeatureInline",
-        "body": [
-            "{f:feature(",
-            "\tname: '${1}'",
-            ")}",
-            "<f:then>",
-            "\t${2}",
-            "</f:then>",
-            "<f:else>",
-            "\t${3}",
-            "</f:else>"
-        ],
-        "description": "Inline version of the <f:feature> ViewHelper."
-    },
-    "First Tag": {
+    "First ViewHelper": {
         "prefix": "fFirst",
         "body": [
             "<f:first",
             "\tvalue=\"${1}\"",
             ">",
-            "${2}",
+            "\t${2}",
             "</f:first>"
         ],
         "description": "The FirstViewHelper returns the first item of an array."
@@ -245,12 +183,11 @@
         "body": [
             "{f:first(",
             "\tvalue: '${1}'",
-            ")}",
-            "${2}"
+            ")}"
         ],
         "description": "Inline version of the <f:first> ViewHelper."
     },
-    "FlashMessages Tag": {
+    "FlashMessages ViewHelper": {
         "prefix": "fFlashMessages",
         "body": [
             "<f:flashMessages",
@@ -268,12 +205,11 @@
             "{f:flashMessages(",
             "\tas: '${1:flashMessages}',",
             "\tqueueIdentifier: '${2:defaultQueue}'",
-            ")}",
-            "${3}"
+            ")}"
         ],
         "description": "Inline version of the <f:flashMessages> ViewHelper."
     },
-    "For Tag": {
+    "For ViewHelper": {
         "prefix": "fFor",
         "body": [
             "<f:for",
@@ -288,21 +224,7 @@
         ],
         "description": "Loop ViewHelper to iterate over arrays."
     },
-    "For Inline": {
-        "prefix": "fForInline",
-        "body": [
-            "{f:for(",
-            "\teach: '{${1:array}}',",
-            "\tas: '${2:item}',",
-            "\tkey: '${3:key}',",
-            "\titeration: '${4:iterator}',",
-            "\treverse: ${5:false}",
-            ")}",
-            "${6}"
-        ],
-        "description": "Inline version of the <f:for> ViewHelper."
-    },
-    "GroupedFor Tag": {
+    "GroupedFor ViewHelper": {
         "prefix": "fGroupedFor",
         "body": [
             "<f:groupedFor",
@@ -316,20 +238,7 @@
         ],
         "description": "Grouped loop ViewHelper to iterate over arrays."
     },
-    "GroupedFor Inline": {
-        "prefix": "fGroupedForInline",
-        "body": [
-            "{f:groupedFor(",
-            "\teach: '{${1:array}}',",
-            "\tas: '${2:item}',",
-            "\tgroupBy: '${3:property}',",
-            "\tgroupKey: '${4:groupKey}'",
-            ")}",
-            "${5}"
-        ],
-        "description": "Inline version of the <f:groupedFor> ViewHelper."
-    },
-    "If Tag": {
+    "If ViewHelper": {
         "prefix": "fIf",
         "body": [
             "<f:if",
@@ -345,12 +254,11 @@
         "body": [
             "{f:if(",
             "\tcondition: '${1:{condition}}'",
-            ")}",
-            "${2}"
+            ")}"
         ],
         "description": "Inline version of the <f:if> ViewHelper for basic if condition."
     },
-    "If Tag (with additional conditions)": {
+    "If ViewHelper (with additional conditions)": {
         "prefix": "fIfThenElse",
         "body": [
             "<f:if",
@@ -373,7 +281,7 @@
         ],
         "description": "Inline version of the <f:if> ViewHelper with condition, then, and else attributes."
     },
-    "Image Tag": {
+    "Image ViewHelper": {
         "prefix": "fImage",
         "body": [
             "<f:image",
@@ -399,7 +307,7 @@
         ],
         "description": "Inline version of the <f:image> ViewHelper with selected attributes."
     },
-    "Inline Tag": {
+    "Inline ViewHelper": {
         "prefix": "fInline",
         "body": [
             "<f:inline",
@@ -418,7 +326,7 @@
         ],
         "description": "Inline version of the <f:inline> ViewHelper."
     },
-    "Join Tag": {
+    "Join ViewHelper": {
         "prefix": "fJoin",
         "body": [
             "<f:join",

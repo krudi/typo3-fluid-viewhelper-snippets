@@ -1,5 +1,5 @@
 {
-    "Backend ActionMenu Tag": {
+    "Backend ActionMenu ViewHelper": {
         "prefix": "fBeMenusActionMenu",
         "body": [
             "<f:be.menus.actionMenu",
@@ -13,24 +13,26 @@
         ],
         "description": "Renders a select box to switch between multiple actions and controllers, similar to TYPO3's funcMenu."
     },
-    "Backend ActionMenuItem Tag": {
+    "Backend ActionMenuItem ViewHelper": {
         "prefix": "fBeMenusActionMenuItem",
         "body": [
             "<f:be.menus.actionMenuItem label=\"$1\" controller=\"$2\" action=\"$3\"",
             "\tadditionalAttributes=\"${4:array}\"",
             "\targuments=\"${5:array}\"",
             "\taria=\"${6:array}\"",
-            "\tdata=\"${7:array}\" />"
+            "\tdata=\"${7:array}\"",
+            "/>"
         ],
         "description": "Adds an item to an action menu in the backend with specified label, controller, and action."
     },
-    "Backend ActionMenuItemGroup Tag": {
+    "Backend ActionMenuItemGroup ViewHelper": {
         "prefix": "fBeMenusActionMenuItemGroup",
         "body": [
             "<f:be.menus.actionMenuItemGroup label=\"$1\"",
             "\tadditionalAttributes=\"${2:array}\"",
             "\taria=\"${3:array}\"",
-            "\tdata=\"${4:array}\">",
+            "\tdata=\"${4:array}\"",
+            ">",
             "\t$5",
             "</f:be.menus.actionMenuItemGroup>"
         ],

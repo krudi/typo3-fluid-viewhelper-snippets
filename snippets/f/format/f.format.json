@@ -1,5 +1,5 @@
 {
-    "Format Bytes Tag": {
+    "Format Bytes ViewHelper": {
         "prefix": "fFormatBytes",
         "body": [
             "<f:format.bytes",
@@ -7,62 +7,63 @@
             "\tdecimals=\"${2:0}\"",
             "\tthousandsSeparator=\"${3:,}\"",
             "\tunits=\"${4}\"",
-            "\tvalue=\"${5}\">",
-            "\t$6",
-            "</f:format.bytes>"
+            "\tvalue=\"${5}\"",
+            "/>",
+            "\t$6"
         ],
         "description": "Formats an integer with a byte count into human readable form."
     },
-    "Format Case Tag": {
+    "Format Case ViewHelper": {
         "prefix": "fFormatCase",
         "body": [
             "<f:format.case",
             "\tmode=\"${1:upper}\"",
-            "\tvalue=\"${2}\">",
-            "\t$3",
-            "</f:format.case>"
+            "\tvalue=\"${2}\"",
+            "/>",
+            "\t$3"
         ],
         "description": "Modifies the case of an input string to upper- or lowercase or capitalization."
     },
-    "Format Cdata Tag": {
+    "Format Cdata ViewHelper": {
         "prefix": "fFormatCdata",
         "body": [
-            "<f:format.cdata value=\"${1}\">",
-            "\t$2",
-            "</f:format.cdata>"
+            "<f:format.cdata",
+            "\tvalue=\"${1}\"",
+            "/>",
+            "\t$2"
         ],
         "description": "Outputs an argument/value without any escaping and wraps it with CDATA tags."
     },
-    "Format Crop Tag": {
+    "Format Crop ViewHelper": {
         "prefix": "fFormatCrop",
         "body": [
             "<f:format.crop",
             "\tappend=\"${1:&hellip;}\"",
             "\tmaxCharacters=\"${2:10}\"",
             "\trespectHtml=\"${3:true}\"",
-            "\trespectWordBoundaries=\"${4:true}\">",
-            "\t$5",
-            "</f:format.crop>"
+            "\trespectWordBoundaries=\"${4:true}\"",
+            "/>",
+            "\t$5"
         ],
         "description": "Crops the text between its opening and closing tags."
     },
-    "Format Currency Tag": {
+    "Format Currency ViewHelper": {
         "prefix": "fFormatCurrency",
         "body": [
             "<f:format.currency",
-            "\tcurrencySign=\"${1}$\"",
+            "\tcurrencySign=\"${1:$}\"",
             "\tdecimalSeparator=\"${2:.}\"",
             "\tdecimals=\"${3:2}\"",
             "\tprependCurrency=\"${4:true}\"",
             "\tseparateCurrency=\"${5:false}\"",
             "\tthousandsSeparator=\"${6:,}\"",
-            "\tuseDash=\"${7:false}\">",
-            "\t$8",
-            "</f:format.currency>"
+            "\tuseDash=\"${7:false}\"",
+            "/>",
+            "\t$8"
         ],
         "description": "Formats a given float to a currency representation."
     },
-    "Format Date Tag": {
+    "Format Date ViewHelper": {
         "prefix": "fFormatDate",
         "body": [
             "<f:format.date",
@@ -70,13 +71,13 @@
             "\tdate=\"${2}\"",
             "\tformat=\"${3:Y-m-d}\"",
             "\tlocale=\"${4}\"",
-            "\tpattern=\"${5}\">",
-            "\t$6",
-            "</f:format.date>"
+            "\tpattern=\"${5}\"",
+            "/>",
+            "\t$6"
         ],
         "description": "Formats an object implementing \\DateTimeInterface."
     },
-    "Format Html Tag": {
+    "Format HTML ViewHelper": {
         "prefix": "fFormatHtml",
         "body": [
             "<f:format.html",
@@ -84,144 +85,147 @@
             "\tcurrentValueKey=\"${2}\"",
             "\tdata=\"${3}\"",
             "\tparseFuncTSPath=\"${4:lib.parseFunc_RTE}\"",
-            "\ttable=\"${5}\">",
-            "\t$6",
-            "</f:format.html>"
+            "\ttable=\"${5}\"",
+            "/>",
+            "\t$6"
         ],
         "description": "Renders a string by passing it to a TYPO3 parseFunc."
     },
-    "Format Htmlentities Tag": {
+    "Format Htmlentities ViewHelper": {
         "prefix": "fFormatHtmlentities",
         "body": [
             "<f:format.htmlentities",
             "\tdoubleEncode=\"${1:true}\"",
             "\tencoding=\"${2:UTF-8}\"",
             "\tkeepQuotes=\"${3:false}\"",
-            "\tvalue=\"${4}\">",
-            "\t$5",
-            "</f:format.htmlentities>"
+            "\tvalue=\"${4}\"",
+            "/>",
+            "\t$5"
         ],
         "description": "Applies htmlentities() escaping to a value."
     },
-    "Format HtmlentitiesDecode Tag": {
+    "Format HtmlentitiesDecode ViewHelper": {
         "prefix": "fFormatHtmlentitiesDecode",
         "body": [
             "<f:format.htmlentitiesDecode",
             "\tencoding=\"${1:UTF-8}\"",
             "\tkeepQuotes=\"${2:false}\"",
-            "\tvalue=\"${3}\">",
-            "\t$4",
-            "</f:format.htmlentitiesDecode>"
+            "\tvalue=\"${3}\"",
+            "/>",
+            "\t$4"
         ],
         "description": "Applies html_entity_decode() to a value."
     },
-    "Format Htmlspecialchars Tag": {
+    "Format Htmlspecialchars ViewHelper": {
         "prefix": "fFormatHtmlspecialchars",
         "body": [
             "<f:format.htmlspecialchars",
             "\tdoubleEncode=\"${1:true}\"",
             "\tencoding=\"${2:UTF-8}\"",
             "\tkeepQuotes=\"${3:false}\"",
-            "\tvalue=\"${4}\">",
-            "\t$5",
-            "</f:format.htmlspecialchars>"
+            "\tvalue=\"${4}\"",
+            "/>",
+            "\t$5"
         ],
         "description": "Applies PHP htmlspecialchars() escaping to a value."
     },
-    "Format Json Tag": {
+    "Format Json ViewHelper": {
         "prefix": "fFormatJson",
         "body": [
             "<f:format.json",
             "\tforceObject=\"${1:false}\"",
-            "\tvalue=\"${2}\">",
-            "\t$3",
-            "</f:format.json>"
+            "\tvalue=\"${2}\"",
+            "/>",
+            "\t$3"
         ],
         "description": "Wrapper for PHPs json_encode function."
     },
-    "Format Nl2br Tag": {
+    "Format Nl2br ViewHelper": {
         "prefix": "fFormatNl2br",
         "body": [
-            "<f:format.nl2br value=\"${1}\">",
-            "\t$2",
-            "</f:format.nl2br>"
+            "<f:format.nl2br",
+            "\tvalue=\"${1}\"",
+            "/>",
+            "\t$2"
         ],
         "description": "Wrapper for PHPs nl2br function."
     },
-    "Format Number Tag": {
+    "Format Number ViewHelper": {
         "prefix": "fFormatNumber",
         "body": [
             "<f:format.number",
             "\tdecimalSeparator=\"${1:.}\"",
             "\tdecimals=\"${2:2}\"",
-            "\tthousandsSeparator=\"${3:,}\">",
-            "\t$4",
-            "</f:format.number>"
+            "\tthousandsSeparator=\"${3:,}\"",
+            "/>",
+            "\t$4"
         ],
         "description": "Formats a number with custom precision, decimal point, and grouped thousands."
     },
-    "Format Padding Tag": {
+    "Format Padding ViewHelper": {
         "prefix": "fFormatPadding",
         "body": [
             "<f:format.padding",
             "\tpadLength=\"${1:10}\"",
             "\tpadString=\"${2: }\"",
             "\tpadType=\"${3:right}\"",
-            "\tvalue=\"${4}\">",
-            "\t$5",
-            "</f:format.padding>"
+            "\tvalue=\"${4}\"",
+            "/>",
+            "\t$5"
         ],
         "description": "Formats a string using PHP's str_pad function."
     },
-    "Format Printf Tag": {
+    "Format Printf ViewHelper": {
         "prefix": "fFormatPrintf",
         "body": [
             "<f:format.printf",
             "\targuments=\"${1:array}\"",
-            "\tvalue=\"${2}\">",
-            "\t$3",
-            "</f:format.printf>"
+            "\tvalue=\"${2}\"",
+            "/>",
+            "\t$3"
         ],
         "description": "A ViewHelper for formatting values with printf."
     },
-    "Format Raw Tag": {
+    "Format Raw ViewHelper": {
         "prefix": "fFormatRaw",
         "body": [
-            "<f:format.raw value=\"${1}\">",
-            "\t$2",
-            "</f:format.raw>"
+            "<f:format.raw",
+            "\tvalue=\"${1}\"",
+            "/>",
+            "\t$2"
         ],
         "description": "Outputs an argument/value without any escaping."
     },
-    "Format StripTags Tag": {
+    "Format StripTags ViewHelper": {
         "prefix": "fFormatStripTags",
         "body": [
             "<f:format.stripTags",
             "\tallowedTags=\"${1}\"",
-            "\tvalue=\"${2}\">",
-            "\t$3",
-            "</f:format.stripTags>"
+            "\tvalue=\"${2}\"",
+            "/>",
+            "\t$3"
         ],
         "description": "Removes tags from the given string using PHP's strip_tags function."
     },
-    "Format Trim Tag": {
+    "Format Trim ViewHelper": {
         "prefix": "fFormatTrim",
         "body": [
             "<f:format.trim",
             "\tcharacters=\"${1}\"",
             "\tside=\"${2:both}\"",
-            "\tvalue=\"${3}\">",
-            "\t$4",
-            "</f:format.trim>"
+            "\tvalue=\"${3}\"",
+            "/>",
+            "\t$4"
         ],
         "description": "Strips whitespace (or other characters) from the beginning and end of a string."
     },
-    "Format Urlencode Tag": {
+    "Format Urlencode ViewHelper": {
         "prefix": "fFormatUrlencode",
         "body": [
-            "<f:format.urlencode value=\"${1}\">",
-            "\t$2",
-            "</f:format.urlencode>"
+            "<f:format.urlencode",
+            "\tvalue=\"${1}\"",
+            "/>",
+            "\t$2"
         ],
         "description": "Encodes the given string using rawurlencode according to RFC 3986."
     }

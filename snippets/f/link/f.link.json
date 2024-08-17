@@ -1,5 +1,5 @@
 {
-  "Link Action Tag": {
+  "Link Action ViewHelper": {
     "prefix": "fLinkAction",
     "body": [
       "<f:link.action",
@@ -7,7 +7,8 @@
       "\tcontroller=\"${2}\"",
       "\tpluginName=\"${3}\"",
       "\textensionName=\"${4}\"",
-      "\targuments=\"${5:array}\">",
+      "\targuments=\"${5:array}\"",
+      ">",
       "\t${6}",
       "</f:link.action>"
     ],
@@ -26,11 +27,10 @@
     ],
     "description": "Inline version of the ViewHelper for creating links to extbase actions."
   },
-  "Link Email Tag": {
+  "Link Email ViewHelper": {
     "prefix": "fLinkEmail",
     "body": [
-      "<f:link.email",
-      "\temail=\"${1}\">",
+      "<f:link.email email=\"${1}\">",
       "\t${2}",
       "</f:link.email>"
     ],
@@ -39,17 +39,14 @@
   "Link Email Inline": {
     "prefix": "fLinkEmailInline",
     "body": [
-      "{f:link.email(",
-      "\temail: '${1}'",
-      ")}"
+      "{f:link.email(email: '${1}')}"
     ],
     "description": "Inline version of the ViewHelper for creating an email link."
   },
-  "Link External Tag": {
+  "Link External ViewHelper": {
     "prefix": "fLinkExternal",
     "body": [
-      "<f:link.external",
-      "\turi=\"${1}\">",
+      "<f:link.external uri=\"${1}\">",
       "\t${2}",
       "</f:link.external>"
     ],
@@ -58,17 +55,14 @@
   "Link External Inline": {
     "prefix": "fLinkExternalInline",
     "body": [
-      "{f:link.external(",
-      "\turi: '${1}'",
-      ")}"
+      "{f:link.external(uri: '${1}')}"
     ],
     "description": "Inline version of the ViewHelper for creating links to external targets."
   },
-  "Link File Tag": {
+  "Link File ViewHelper": {
     "prefix": "fLinkFile",
     "body": [
-      "<f:link.file",
-      "\tfile=\"${1}\">",
+      "<f:link.file file=\"${1}\">",
       "\t${2}",
       "</f:link.file>"
     ],
@@ -77,17 +71,14 @@
   "Link File Inline": {
     "prefix": "fLinkFileInline",
     "body": [
-      "{f:link.file(",
-      "\tfile: '${1}'",
-      ")}"
+      "{f:link.file(file: '${1}')}"
     ],
     "description": "Inline version of the ViewHelper for creating links to a file (FAL)."
   },
-  "Link Page Tag": {
+  "Link Page ViewHelper": {
     "prefix": "fLinkPage",
     "body": [
-      "<f:link.page",
-      "\tpageUid=\"${1}\">",
+      "<f:link.page pageUid=\"${1}\">",
       "\t${2}",
       "</f:link.page>"
     ],
@@ -96,17 +87,14 @@
   "Link Page Inline": {
     "prefix": "fLinkPageInline",
     "body": [
-      "{f:link.page(",
-      "\tpageUid: '${1}'",
-      ")}"
+      "{f:link.page(pageUid: '${1}')}"
     ],
     "description": "Inline version of the ViewHelper for creating links to TYPO3 pages."
   },
-  "Link Typolink Tag": {
+  "Link Typolink ViewHelper": {
     "prefix": "fLinkTypolink",
     "body": [
-      "<f:link.typolink",
-      "\tparameter=\"${1}\">",
+      "<f:link.typolink parameter=\"${1}\">",
       "\t${2}",
       "</f:link.typolink>"
     ],
@@ -115,9 +103,7 @@
   "Link Typolink Inline": {
     "prefix": "fLinkTypolinkInline",
     "body": [
-      "{f:link.typolink(",
-      "\tparameter: '${1}'",
-      ")}"
+      "{f:link.typolink(parameter: '${1}')}"
     ],
     "description": "Inline version of the ViewHelper to create links from fields supported by the link wizard."
   }

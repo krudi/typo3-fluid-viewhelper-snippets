@@ -1,5 +1,5 @@
 {
-    "Security IfAuthenticated Tag": {
+    "Security IfAuthenticated ViewHelper": {
         "prefix": "fSecurityIfAuthenticated",
         "body": [
             "<f:security.ifAuthenticated>",
@@ -13,7 +13,7 @@
         ],
         "description": "This ViewHelper implements an ifAuthenticated/else condition for frontend users."
     },
-    "Security IfHasRole Tag": {
+    "Security IfHasRole ViewHelper": {
         "prefix": "fSecurityIfHasRole",
         "body": [
             "<f:security.ifHasRole role=\"${1:Administrator}\">",
@@ -27,7 +27,7 @@
         ],
         "description": "This ViewHelper implements an ifHasRole/else condition for frontend groups."
     },
-    "Security Nonce Tag": {
+    "Security Nonce ViewHelper": {
         "prefix": "fSecurityNonce",
         "body": [
             "<script nonce=\"{f:security.nonce()}\">",

@@ -1,5 +1,5 @@
 {
-    "Backend IfAuthenticated Tag": {
+    "Backend IfAuthenticated ViewHelper": {
         "prefix": "fBeSecurityIfAuthenticated",
         "body": [
             "<f:be.security.ifAuthenticated>",
@@ -8,7 +8,7 @@
         ],
         "description": "Renders the content inside this tag only if the backend user is authenticated."
     },
-    "Backend IfHasRole Tag": {
+    "Backend IfHasRole ViewHelper": {
         "prefix": "fBeSecurityIfHasRole",
         "body": [
             "<f:be.security.ifHasRole role=\"$1\">",

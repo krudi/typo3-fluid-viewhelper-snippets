@@ -3,23 +3,13 @@
         "prefix": "fUriAction",
         "body": [
             "<f:uri.action",
-            "\tabsolute=\"${1:false}\"",
-            "\taction=\"${2}\"",
-            "\taddQueryString=\"${3:false}\"",
-            "\tadditionalParams=\"${4:array}\"",
+            "\taction=\"${1}\"",
+            "\tcontroller=\"${2}\"",
+            "\tpluginName=\"${3}\"",
+            "\textensionName=\"${4}\"",
             "\targuments=\"${5:array}\"",
-            "\targumentsToBeExcludedFromQueryString=\"${6:array}\"",
-            "\tcontroller=\"${7}\"",
-            "\textensionName=\"${8}\"",
-            "\tformat=\"${9}\"",
-            "\tlanguage=\"${10}\"",
-            "\tlinkAccessRestrictedPages=\"${11:false}\"",
-            "\tnoCache=\"${12:false}\"",
-            "\tpageType=\"${13:0}\"",
-            "\tpageUid=\"${14}\"",
-            "\tpluginName=\"${15}\"",
-            "\tsection=\"${16}\">",
-            "\t$17",
+            ">",
+            "\t$6",
             "</f:uri.action>"
         ],
         "description": "A ViewHelper for creating URIs to extbase actions."
@@ -29,7 +19,8 @@
         "body": [
             "<f:uri.external",
             "\tdefaultScheme=\"${1:https}\"",
-            "\turi=\"${2}\">",
+            "\turi=\"${2}\"",
+            ">",
             "\t$3",
             "</f:uri.external>"
         ],
@@ -39,21 +30,13 @@
         "prefix": "fUriImage",
         "body": [
             "<f:uri.image",
-            "\tabsolute=\"${1:false}\"",
-            "\tbase64=\"${2:false}\"",
-            "\tcrop=\"${3}\"",
-            "\tcropVariant=\"${4:default}\"",
-            "\tfileExtension=\"${5}\"",
-            "\theight=\"${6}\"",
-            "\timage=\"${7}\"",
-            "\tmaxHeight=\"${8}\"",
-            "\tmaxWidth=\"${9}\"",
-            "\tminHeight=\"${10}\"",
-            "\tminWidth=\"${11}\"",
-            "\tsrc=\"${12}\"",
-            "\ttreatIdAsReference=\"${13:false}\"",
-            "\twidth=\"${14}\">",
-            "\t$15",
+            "\timage=\"{${1:imageObject}}\"",
+            "\talt=\"${2:alt text}\"",
+            "\twidth=\"${3:width}\"",
+            "\theight=\"${4:height}\"",
+            "\tfileExtension=\"${5:fileExtension}\"",
+            ">",
+            "\t$6",
             "</f:uri.image>"
         ],
         "description": "Resizes a given image (if required) and returns its relative path."
@@ -71,7 +54,8 @@
             "\tnoCache=\"${7:false}\"",
             "\tpageType=\"${8:0}\"",
             "\tpageUid=\"${9}\"",
-            "\tsection=\"${10}\">",
+            "\tsection=\"${10}\"",
+            ">",
             "\t$11",
             "</f:uri.page>"
         ],
@@ -84,7 +68,8 @@
             "\tabsolute=\"${1:false}\"",
             "\textensionName=\"${2}\"",
             "\tpath=\"${3}\"",
-            "\tuseCacheBusting=\"${4:true}\">",
+            "\tuseCacheBusting=\"${4:true}\"",
+            ">",
             "\t$5",
             "</f:uri.resource>"
         ],
@@ -93,16 +78,7 @@
     "Uri Typolink Tag": {
         "prefix": "fUriTypolink",
         "body": [
-            "<f:uri.typolink",
-            "\tabsolute=\"${1:false}\"",
-            "\taddQueryString=\"${2:false}\"",
-            "\taddQueryStringExclude=\"${3}\"",
-            "\tadditionalParams=\"${4}\"",
-            "\tlanguage=\"${5}\"",
-            "\tparameter=\"${6}\"",
-            "\ttarget=\"${7}\"",
-            "\ttextWrap=\"${8}\"",
-            "\ttitle=\"${9}\">",
+            "<f:uri.typolink parameter=\"${6}\">",
             "\t$10",
             "</f:uri.typolink>"
         ],
@@ -125,7 +101,12 @@
     "f:media ViewHelper": {
         "prefix": "fMedia",
         "body": [
-            "<f:media file=\"{${1:file}}\" width=\"${2:400}\" height=\"${3:375}\" ${4:additionalConfig=\"{loop: '1', autoplay: '1'}\"} />"
+            "<f:media",
+            "\tfile=\"{${1:file}}\"",
+            "\twidth=\"${2:400}\"",
+            "\theight=\"${3:375}\"",
+            "\t${4:additionalConfig=\"{loop: '1', autoplay: '1'}\"}",
+            " />"
         ],
         "description": "Renders a given media file with the correct HTML tag."
     },
@@ -139,14 +120,25 @@
     "f:render ViewHelper": {
         "prefix": "fRender",
         "body": [
-            "<f:render section=\"${1:someSection}\" partial=\"${2:partialName}\" arguments=\"${3:{foo: someVariable}}\" ${4:optional=false} ${5:debug=true} ${6:delegate=\"\"} />"
+            "<f:render",
+            "\tsection=\"${1:someSection}\"",
+            "\tpartial=\"${2:partialName}\"",
+            "\targuments=\"${3:{foo: someVariable}}\"",
+            "\t${4:optional=false}",
+            "\t${5:debug=true}",
+            "\t${6:delegate=\"\"}",
+            " />"
         ],
         "description": "Renders a section or partial with specified arguments."
     },
     "f:replace ViewHelper": {
         "prefix": "fReplace",
         "body": [
-            "<f:replace value=\"${1:Hello World}\" search=\"${2:World}\" replace=\"${3:Fluid}\" />"
+            "<f:replace",
+            "\tvalue=\"${1:Hello World}\"",
+            "\tsearch=\"${2:World}\"",
+            "\treplace=\"${3:Fluid}\"",
+            " />"
         ],
         "description": "Replaces one or multiple strings with other strings."
     },
@@ -167,7 +159,11 @@
     "f:split ViewHelper": {
         "prefix": "fSplit",
         "body": [
-            "<f:split value=\"${1:1,5,8}\" separator=\"${2:,}\" limit=\"${3:2}\" />"
+            "<f:split",
+            "\tvalue=\"${1:1,5,8}\"",
+            "\tseparator=\"${2:,}\"",
+            "\tlimit=\"${3:2}\"",
+            " />"
         ],
         "description": "Splits a string by the specified separator."
     },
@@ -188,7 +184,12 @@
     "f:translate ViewHelper": {
         "prefix": "fTranslate",
         "body": [
-            "<f:translate key=\"${1:key1}\" extensionName=\"${2:MyExt}\" ${3:arguments=${4:{0: 'dog', 1: 'fox'}} default=\"${5:default value}\" />"
+            "<f:translate",
+            "\tkey=\"${1:key1}\"",
+            "\textensionName=\"${2:MyExt}\"",
+            "\t${3:arguments=${4:{0: 'dog', 1: 'fox'}}}",
+            "\tdefault=\"${5:default value}\"",
+            " />"
         ],
         "description": "Translates a key from locallang or custom locallang file."
     },

@@ -1,18 +1,19 @@
 {
-    "Backend Infobox Tag": {
+    "Backend Infobox ViewHelper": {
         "prefix": "fBeInfobox",
         "body": [
             "<f:be.infobox title=\"$1\"",
             "\tmessage=\"$2\"",
             "\tstate=\"${3:-2}\"",
             "\ticonName=\"${4}\"",
-            "\tdisableIcon=\"${5:false}\">",
+            "\tdisableIcon=\"${5:false}\"",
+            ">",
             "\t$6",
             "</f:be.infobox>"
         ],
         "description": "Renders a styled content infobox in the backend with various states."
     },
-    "Backend Link Tag": {
+    "Backend Link ViewHelper": {
         "prefix": "fBeLink",
         "body": [
             "<f:be.link route=\"$1\"",
@@ -20,13 +21,14 @@
             "\treferenceType=\"${3:'absolute'}\"",
             "\tadditionalAttributes=\"${4:array}\"",
             "\taria=\"${5:array}\"",
-            "\tdata=\"${6:array}\">",
+            "\tdata=\"${6:array}\"",
+            ">",
             "\t$7",
             "</f:be.link>"
         ],
         "description": "Creates URIs to backend modules."
     },
-    "Backend PageRenderer Tag": {
+    "Backend PageRenderer ViewHelper": {
         "prefix": "fBePageRenderer",
         "body": [
             "<f:be.pageRenderer",
@@ -35,11 +37,12 @@
             "\tincludeJsFiles=\"${3:array}\"",
             "\taddJsInlineLabels=\"${4:array}\"",
             "\tincludeJavaScriptModules=\"${5:array}\"",
-            "\taddInlineSettings=\"${6:array}\" />"
+            "\taddInlineSettings=\"${6:array}\"",
+            "/>"
         ],
         "description": "Registers backend module resources like CSS and JavaScript using the PageRenderer."
     },
-    "Backend TableList Tag": {
+    "Backend TableList ViewHelper": {
         "prefix": "fBeTableList",
         "body": [
             "<f:be.tableList tableName=\"$1\"",
@@ -53,16 +56,18 @@
             "\treadOnly=\"${9:false}\"",
             "\tenableClickMenu=\"${10:true}\"",
             "\tenableControlPanels=\"${11:false}\"",
-            "\tclickTitleMode=\"${12}\" />"
+            "\tclickTitleMode=\"${12}\"",
+            "/>"
         ],
         "description": "Renders a record list as known from the TYPO3 list module."
     },
-    "Backend Uri Tag": {
+    "Backend Uri ViewHelper": {
         "prefix": "fBeUri",
         "body": [
             "<f:be.uri route=\"$1\"",
             "\tparameters=\"${2:array}\"",
-            "\treferenceType=\"${3:'absolute'}\" />"
+            "\treferenceType=\"${3:'absolute'}\"",
+            "/>"
         ],
         "description": "Creates URIs to backend modules."
     }
