@@ -1,6 +1,6 @@
 {
     "name": "typo3-viewhelpers-vscode-snippets",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "Integrate TYPO3 code snippets easily to Visual Studio Code. Improve your TYPO3 development with a collection of popular snippets, designed for quick access and efficient coding.",
     "licenses": [
         {
