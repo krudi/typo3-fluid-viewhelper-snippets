@@ -29,6 +29,10 @@
     "engines": {
         "vscode": "^1.0.0"
     },
+    "scripts": {
+        "lint:files": "prettier --check \"**/*.{json,yml,yaml}\"",
+        "lint:files:fix": "prettier --write \"**/*.{json,yml,yaml}\""
+    },
     "preview": true,
     "categories": [
         "Snippets"
@@ -126,5 +130,8 @@
                 "path": "./snippets/formvh/formvh.general.json"
             }
         ]
+    },
+    "devDependencies": {
+        "prettier": "^3.3.3"
     }
 }
