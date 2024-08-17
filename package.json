@@ -1,18 +1,18 @@
 {
-    "name": "typo3-viewhelpers-vscode-snippets",
-    "version": "0.1.4",
+    "name": "typo3-fluid-viewhelper-snippets",
+    "version": "0.1.5",
     "description": "Integrate TYPO3 code snippets easily to Visual Studio Code. Improve your TYPO3 development with a collection of popular snippets, designed for quick access and efficient coding.",
     "licenses": [
         {
             "type": "MIT",
-            "url": "https://gitlab.com/krudi/typo3-viewhelpers-vscode-snippet/LICENSE"
+            "url": "https://gitlab.com/krudi/typo3-fluid-viewhelper-snippets/LICENSE"
         }
     ],
     "publisher": "krudi",
     "private": false,
-    "homepage": "https://gitlab.com/krudi/typo3-viewhelpers-vscode-snippets#readme",
+    "homepage": "https://gitlab.com/krudi/typo3-fluid-viewhelper-snippets#readme",
     "bugs": {
-        "url": "https://gitlab.com/krudi/typo3-viewhelpers-vscode-snippets/issue"
+        "url": "https://gitlab.com/krudi/typo3-fluid-viewhelper-snippets/issue"
     },
     "keywords": [
         "vscode",
@@ -24,7 +24,7 @@
     ],
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/krudi/typo3-viewhelpers-vscode-snippets.git"
+        "url": "git+https://github.com/krudi/typo3-fluid-viewhelper-snippets.git"
     },
     "engines": {
         "vscode": "^1.0.0"
@@ -38,7 +38,7 @@
         "Snippets"
     ],
     "icon": "./assets/images/icon.png",
-    "displayName": "TYPO3 ViewHelper Snippets",
+    "displayName": "TYPO3 Fluid ViewHelper Snippets",
     "galleryBanner": {
         "color": "#FFFFFF",
         "theme": "light"
