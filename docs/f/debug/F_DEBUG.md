@@ -1,4 +1,4 @@
-### Backend Debug Render Tag
+### Backend Debug Render ViewHelper
 
 **Trigger the Snippet:** Type `fDebugRender` in your IDE or editor to trigger this snippet.
 

@@ -1,4 +1,4 @@
-### Backend Infobox Tag
+### Backend Infobox ViewHelper
 
 **Trigger the Snippet:** Type `fBeInfobox` in your IDE or editor to trigger this snippet.
 
@@ -12,14 +12,15 @@ Renders a styled content infobox in the backend with various states.
     message="$2"
     state="${3:-2}"
     iconName="${4}"
-    disableIcon="${5:false}">
+    disableIcon="${5:false}"
+>
     $6
 </f:be.infobox>
 ```
 
 ---
 
-### Backend Link Tag
+### Backend Link ViewHelper
 
 **Trigger the Snippet:** Type `fBeLink` in your IDE or editor to trigger this snippet.
 
@@ -34,14 +35,15 @@ Creates URIs to backend modules.
     referenceType="${3:'absolute'}"
     additionalAttributes="${4:array}"
     aria="${5:array}"
-    data="${6:array}">
+    data="${6:array}"
+>
     $7
 </f:be.link>
 ```
 
 ---
 
-### Backend PageRenderer Tag
+### Backend PageRenderer ViewHelper
 
 **Trigger the Snippet:** Type `fBePageRenderer` in your IDE or editor to trigger this snippet.
 
@@ -63,7 +65,7 @@ Registers backend module resources like CSS and JavaScript using the PageRendere
 
 ---
 
-### Backend TableList Tag
+### Backend TableList ViewHelper
 
 **Trigger the Snippet:** Type `fBeTableList` in your IDE or editor to trigger this snippet.
 
@@ -90,7 +92,7 @@ Renders a record list as known from the TYPO3 list module.
 
 ---
 
-### Backend Uri Tag
+### Backend Uri ViewHelper
 
 **Trigger the Snippet:** Type `fBeUri` in your IDE or editor to trigger this snippet.
 

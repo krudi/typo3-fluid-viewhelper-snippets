@@ -1,4 +1,4 @@
-### CSS Asset Tag
+### CSS Asset ViewHelper
 
 **Trigger the Snippet:** Type `fAssetCss` in your IDE or editor to trigger this snippet.
 
@@ -16,7 +16,7 @@ Includes a CSS file in TYPO3 templates, identified by a unique identifier.
 
 ---
 
-### CSS Asset Inline Tag
+### CSS Asset Inline ViewHelper
 
 **Trigger the Snippet:** Type `fAssetCssInline` in your IDE or editor to trigger this snippet.
 
@@ -33,7 +33,7 @@ Includes inline CSS in TYPO3 templates, identified by a unique identifier.
 
 ---
 
-### Script Asset Tag
+### Script Asset ViewHelper
 
 **Trigger the Snippet:** Type `fAssetScript` in your IDE or editor to trigger this snippet.
 
@@ -52,7 +52,7 @@ Includes a JavaScript file in TYPO3 templates, identified by a unique identifier
 
 ---
 
-### Script Asset Tag
+### Script Asset ViewHelper
 
 **Trigger the Snippet:** Type `fAssetScriptInline` in your IDE or editor to trigger this snippet.
 

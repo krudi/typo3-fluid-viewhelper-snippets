@@ -1,4 +1,4 @@
-### Form Select Optgroup Tag
+### Form Select Optgroup ViewHelper
 
 **Trigger the Snippet:** Type `fFormSelectOptgroup` in your IDE or editor to trigger this snippet.
 
@@ -19,7 +19,7 @@ Adds custom <optgroup> tags inside an <f:form.select>, supporting further child 
 
 ---
 
-### Form Select Option Tag
+### Form Select Option ViewHelper
 
 **Trigger the Snippet:** Type `fFormSelectOption` in your IDE or editor to trigger this snippet.
 

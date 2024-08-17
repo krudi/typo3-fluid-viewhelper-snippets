@@ -1,4 +1,4 @@
-### Format Bytes Tag
+### Format Bytes ViewHelper
 
 **Trigger the Snippet:** Type `fFormatBytes` in your IDE or editor to trigger this snippet.
 
@@ -13,14 +13,15 @@ Formats an integer with a byte count into a human-readable form.
     decimals="${2:0}"
     thousandsSeparator="${3:,}"
     units="${4}"
-    value="${5}">
+    value="${5}"
+>
     $6
 </f:format.bytes>
 ```
 
 ---
 
-### Format Case Tag
+### Format Case ViewHelper
 
 **Trigger the Snippet:** Type `fFormatCase` in your IDE or editor to trigger this snippet.
 
@@ -40,7 +41,7 @@ Modifies the case of an input string to upper- or lowercase or capitalization.
 
 ---
 
-### Format Cdata Tag
+### Format Cdata ViewHelper
 
 **Trigger the Snippet:** Type `fFormatCdata` in your IDE or editor to trigger this snippet.
 
@@ -59,7 +60,7 @@ Outputs an argument/value without any escaping and wraps it with CDATA tags.
 
 ---
 
-### Format Crop Tag
+### Format Crop ViewHelper
 
 **Trigger the Snippet:** Type `fFormatCrop` in your IDE or editor to trigger this snippet.
 
@@ -81,7 +82,7 @@ Crops the text between its opening and closing tags to a specified length, respe
 
 ---
 
-### Format Currency Tag
+### Format Currency ViewHelper
 
 **Trigger the Snippet:** Type `fFormatCurrency` in your IDE or editor to trigger this snippet.
 
@@ -98,14 +99,15 @@ Formats a given float to a currency representation. This ViewHelper is useful fo
     prependCurrency="${4:true}"
     separateCurrency="${5:false}"
     thousandsSeparator="${6:,}"
-    useDash="${7:false}">
+    useDash="${7:false}"
+>
     $8
 </f:format.currency>
 ```
 
 ---
 
-### Format Currency Tag
+### Format Date ViewHelper
 
 **Trigger the Snippet:** Type `fFormatDate` in your IDE or editor to trigger this snippet.
 
@@ -120,14 +122,15 @@ Formats an object implementing `\DateTimeInterface`. This ViewHelper is especial
     date="${2}"
     format="${3:Y-m-d}"
     locale="${4}"
-    pattern="${5}">
+    pattern="${5}"
+>
     $6
 </f:format.date>
 ```
 
 ---
 
-### Format HTML Tag
+### Format HTML ViewHelper
 
 **Trigger the Snippet:** Type `fFormatHtml` in your IDE or editor to trigger this snippet.
 
@@ -142,14 +145,15 @@ Renders a string by passing it to a TYPO3 parseFunc, which allows for complex pa
     currentValueKey="${2}"
     data="${3}"
     parseFuncTSPath="${4:lib.parseFunc_RTE}"
-    table="${5}">
+    table="${5}"
+>
     $6
 </f:format.html>
 ```
 
 ---
 
-### Format HtmlEntities Tag
+### Format HtmlEntities ViewHelper
 
 **Trigger the Snippet:** Type `fFormatHtmlentities` in your IDE or editor to trigger this snippet.
 
@@ -163,14 +167,15 @@ Applies `htmlentities()` escaping to a value. This ViewHelper is useful for enco
     doubleEncode="${1:true}"
     encoding="${2:UTF-8}"
     keepQuotes="${3:false}"
-    value="${4}">
+    value="${4}"
+>
     $5
 </f:format.htmlentities>
 ```
 
 ---
 
-### Format HtmlEntitiesDecode Tag
+### Format HtmlEntitiesDecode ViewHelper
 
 **Trigger the Snippet:** Type `htmlentitiesDecode` in your IDE or editor to trigger this snippet.
 
@@ -183,14 +188,15 @@ Applies `htmlentities()` escaping to a value. This ViewHelper is useful for enco
 <f:format.htmlentitiesDecode
     encoding="${1:UTF-8}"
     keepQuotes="${2:false}"
-    value="${3}">
+    value="${3}"
+>
     $4
 </f:format.htmlentitiesDecode>
 ```
 
 ---
 
-### Format Htmlspecialchars Tag
+### Format Htmlspecialchars ViewHelper
 
 **Trigger the Snippet:** Type `fFormatHtmlspecialchars` in your IDE or editor to trigger this snippet.
 
@@ -212,7 +218,7 @@ Applies PHP `htmlspecialchars()` escaping to a value. This ViewHelper helps prev
 
 ---
 
-### Format Json Tag
+### Format Json ViewHelper
 
 **Trigger the Snippet:** Type `fFormatJson` in your IDE or editor to trigger this snippet.
 
@@ -233,7 +239,7 @@ Wrapper for PHP's json_encode function. This ViewHelper is used to convert array
 
 ---
 
-### Format Nl2br Tag
+### Format Nl2br ViewHelper
 
 **Trigger the Snippet:** Type `fFormatNl2br` in your IDE or editor to trigger this snippet.
 
@@ -252,7 +258,7 @@ Wrapper for PHP's nl2br function. This ViewHelper converts new lines (`\n`) in a
 
 ---
 
-### Format Number Tag
+### Format Number ViewHelper
 
 **Trigger the Snippet:** Type `fFormatNumber` in your IDE or editor to trigger this snippet.
 
@@ -271,7 +277,7 @@ Formats a number with custom precision, decimal point, and grouped thousands. Us
 
 ---
 
-### Format Padding Tag
+### Format Padding ViewHelper
 
 **Trigger the Snippet:** Type `fFormatNumber` in your IDE or editor to trigger this snippet.
 
@@ -293,7 +299,7 @@ Formats a string using PHP's `str_pad` function, adding padding to the specified
 
 ---
 
-### Format Printf Tag
+### Format Printf ViewHelper
 
 **Trigger the Snippet:** Type `fFormatNumber` in your IDE or editor to trigger this snippet.
 
@@ -313,7 +319,7 @@ A ViewHelper for formatting values using the printf function, which allows for c
 
 ---
 
-### Format Raw Tag
+### Format Raw ViewHelper
 
 **Trigger the Snippet:** Type `fFormatRaw` in your IDE or editor to trigger this snippet.
 
@@ -332,7 +338,7 @@ Outputs a value without any escaping, preserving the raw data.
 
 ---
 
-### Format StripTags Tag
+### Format StripTags ViewHelper
 
 **Trigger the Snippet:** Type `fFormatStripTags` in your IDE or editor to trigger this snippet.
 
@@ -352,7 +358,7 @@ Removes HTML and PHP tags from a string, optionally allowing certain tags.
 
 ---
 
-### Format Trim Tag
+### Format Trim ViewHelper
 
 **Trigger the Snippet:** Type `fFormatTrim` in your IDE or editor to trigger this snippet.
 
@@ -373,7 +379,7 @@ Strips whitespace (or other specified characters) from the beginning and end of 
 
 ---
 
-### Format Urlencode Tag
+### Format Urlencode ViewHelper
 
 **Trigger the Snippet:** Type `fFormatUrlencode` in your IDE or editor to trigger this snippet.
 

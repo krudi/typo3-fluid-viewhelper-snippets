@@ -1,4 +1,4 @@
-### Alias Tag
+### Alias ViewHelper
 
 **Trigger the Snippet:** Type `fAlias` in your IDE or editor.
 
@@ -17,7 +17,7 @@ Declares new variables that are aliases of existing variables, simplifying templ
 
 ---
 
-### Case Tag
+### Case ViewHelper
 
 **Trigger the Snippet:** Type `fCase` in your IDE or editor.
 
@@ -36,7 +36,7 @@ Used within the <f:switch> ViewHelper as a single case. Matches a given value an
 
 ---
 
-### CObject Tag
+### CObject ViewHelper
 
 **Trigger the Snippet:** Type `fCObject` in your IDE or editor.
 
@@ -57,7 +57,7 @@ Renders content objects defined in TypoScript, allowing for integration of compl
 
 ---
 
-### CObject Inline Tag
+### CObject Inline ViewHelper
 
 **Trigger the Snippet:** Type `fCObjectInline` in your IDE or editor.
 
@@ -77,7 +77,7 @@ Inline rendering of TypoScript content objects, particularly useful for embeddin
 
 ---
 
-### Comment Tag
+### Comment ViewHelper
 
 **Trigger the Snippet:** Type `fComment` in your IDE or editor.
 
@@ -94,7 +94,7 @@ Hides content within templates from being rendered, useful for developers to lea
 
 ---
 
-### Constant Tag
+### Constant ViewHelper
 
 **Trigger the Snippet:** Type `fConstant` in your IDE or editor.
 
@@ -112,7 +112,7 @@ Accesses PHP constants directly within templates, facilitating the use of config
 
 ---
 
-### Count Tag
+### Count ViewHelper
 
 **Trigger the Snippet:** Type `fCount` in your IDE or editor.
 
@@ -131,7 +131,7 @@ Counts the elements in an array or an object implementing Countable, returning t
 
 ---
 
-### Count Inline Tag
+### Count Inline ViewHelper
 
 **Trigger the Snippet:** Type `fCountInline` in your IDE or editor.
 
@@ -148,7 +148,7 @@ Inline version for quickly obtaining counts of array or Countable objects, usefu
 
 ---
 
-### Cycle Inline Tag
+### Cycle Inline ViewHelper
 
 **Trigger the Snippet:** Type `fCycleInline` in your IDE or editor.
 
@@ -166,7 +166,7 @@ Inline version of the <f:cycle> ViewHelper, ideal for situations where you need 
 
 ---
 
-### Backend Debug Tag
+### Backend Debug ViewHelper
 
 **Trigger the Snippet:** Type `fDebug` in your IDE or editor.
 
@@ -184,7 +184,7 @@ A basic <f:debug> ViewHelper that provides debugging information with a default 
 
 ---
 
-### Default Case Tag
+### Default Case ViewHelper
 
 **Trigger the Snippet:** Type `fElse` in your IDE or editor.
 
@@ -199,7 +199,7 @@ A ViewHelper that specifies the 'default' case when used within the <f:switch> V
 
 ---
 
-### Else Tag
+### Else ViewHelper
 
 **Trigger the Snippet:** Type `fElse` in your IDE or editor.
 
@@ -214,7 +214,7 @@ Defines the Else-Branch of a condition. Only effective when used inside an <f:if
 
 ---
 
-### Feature Tag
+### Feature ViewHelper
 
 **Trigger the Snippet:** Type `fFeature` in your IDE or editor.
 
@@ -236,7 +236,7 @@ Checks if a feature flag is enabled and allows conditional rendering of content 
 
 ---
 
-### First Tag
+### First ViewHelper
 
 **Trigger the Snippet:** Type `fFirst` in your IDE or editor.
 
@@ -253,7 +253,7 @@ ${2}
 
 ---
 
-### First Inline Tag
+### First Inline ViewHelper
 
 **Trigger the Snippet:** Type `fFirstInline` in your IDE or editor.
 
@@ -267,7 +267,7 @@ Inline version of the <f:first> ViewHelper, allowing quick access to the first e
 
 ---
 
-### FlashMessages Tag
+### FlashMessages ViewHelper
 
 **Trigger the Snippet:** Type `fFlashMessages` in your IDE or editor.
 
@@ -285,7 +285,7 @@ Renders the flash messages as an unsorted list, useful for displaying user feedb
 
 ---
 
-### FlashMessages Inline Tag
+### FlashMessages Inline ViewHelper
 
 **Trigger the Snippet:** Type `fFlashMessagesInline` in your IDE or editor.
 
@@ -301,7 +301,7 @@ Inline version of the <f:flashMessages> ViewHelper for quick rendering of flash 
 
 ---
 
-### For Tag
+### For ViewHelper
 
 **Trigger the Snippet:** Type `fFor` in your IDE or editor.
 
@@ -322,7 +322,7 @@ Loop ViewHelper to iterate over arrays, useful for processing collections of ite
 
 ---
 
-### GroupedFor Tag
+### GroupedFor ViewHelper
 
 **Trigger the Snippet:** Type `fGroupedFor` in your IDE or editor.
 
@@ -342,7 +342,7 @@ Grouped loop ViewHelper to iterate over arrays, grouping by a specific property.
 
 ---
 
-### If Tag
+### If ViewHelper
 
 **Trigger the Snippet:** Type `fIf` in your IDE or editor.
 
@@ -374,7 +374,7 @@ Inline version of the <f:if> ViewHelper for basic conditional rendering.
 
 ---
 
-### If Tag (with additional conditions)
+### If ViewHelper (with additional conditions)
 
 **Trigger the Snippet:** Type `fIfThenElse` in your IDE or editor.
 
@@ -409,7 +409,7 @@ Inline version of the <f:if> ViewHelper with condition, then, and else attribute
 
 ---
 
-### Image Tag
+### Image ViewHelper
 
 **Trigger the Snippet:** Type `fImage` in your IDE or editor.
 
@@ -447,7 +447,7 @@ Inline version of the <f:image> ViewHelper with selected attributes, for quick i
 
 ---
 
-### Inline Tag
+### Inline ViewHelper
 
 **Trigger the Snippet:** Type `fInline` in your IDE or editor.
 
@@ -477,7 +477,7 @@ Inline version of the <f:inline> ViewHelper for rendering Fluid code stored in a
 
 ---
 
-### Join Tag
+### Join ViewHelper
 
 **Trigger the Snippet:** Type `fJoin` in your IDE or editor.
 

@@ -1,4 +1,4 @@
-### Uri fUriAction Tag
+### Uri fUriAction ViewHelper
 
 **Trigger the Snippet:** Type `fTransformHtml` in your IDE or editor.
 
@@ -21,7 +21,7 @@ A ViewHelper for creating URIs to Extbase actions. This is useful for generating
 
 ---
 
-### Uri External Tag
+### Uri External ViewHelper
 
 **Trigger the Snippet:** Type `fUriExternal` in your IDE or editor.
 
@@ -41,7 +41,7 @@ A ViewHelper for creating URIs to external targets. This is useful for linking t
 
 ---
 
-### Uri Image Tag
+### Uri Image ViewHelper
 
 **Trigger the Snippet:** Type `fUriImage` in your IDE or editor.
 
@@ -64,7 +64,7 @@ Resizes a given image (if required) and returns its relative path. This ViewHelp
 
 ---
 
-### Uri Page Tag
+### Uri Page ViewHelper
 
 **Trigger the Snippet:** Type `fUriPage` in your IDE or editor.
 
@@ -92,7 +92,7 @@ A ViewHelper for creating URIs to TYPO3 pages. This snippet is useful for genera
 
 ---
 
-### Uri Resource Tag
+### Uri Resource ViewHelper
 
 **Trigger the Snippet:** Type `fUriPage` in your IDE or editor.
 
@@ -114,7 +114,7 @@ A ViewHelper for creating URIs to resources. This is useful for linking to stati
 
 ---
 
-### Uri Typolink Tag
+### Uri Typolink ViewHelper
 
 **Trigger the Snippet:** Type `fUriTypolink` in your IDE or editor.
 
@@ -131,7 +131,7 @@ A ViewHelper to create URIs from fields supported by the link wizard. This is us
 
 ---
 
-### Last Tag
+### Last ViewHelper
 
 **Trigger the Snippet:** Type `fLast` in your IDE or editor.
 
@@ -146,7 +146,7 @@ Returns the last item of an array. This ViewHelper is useful for extracting the 
 
 ---
 
-### Last Tag
+### Last ViewHelper
 
 **Trigger the Snippet:** Type `fLayout` in your IDE or editor.
 
@@ -161,7 +161,7 @@ Selects a layout to be used for the current template. This is essential for sett
 
 ---
 
-### Media Tag
+### Media ViewHelper
 
 **Trigger the Snippet:** Type `fMedia` in your IDE or editor.
 
@@ -181,7 +181,7 @@ Renders a given media file with the correct HTML tag. This ViewHelper is particu
 
 ---
 
-### Or Tag
+### Or ViewHelper
 
 **Trigger the Snippet:** Type `fOr` in your IDE or editor.
 
@@ -196,7 +196,7 @@ Use alternative text if content is null. This is useful for providing fallback v
 
 ---
 
-### Replace Tag
+### Replace ViewHelper
 
 **Trigger the Snippet:** Type `fReplace` in your IDE or editor.
 
@@ -215,7 +215,7 @@ Replaces one or multiple strings with other strings. This ViewHelper is useful f
 
 ---
 
-### Section Tag
+### Section ViewHelper
 
 **Trigger the Snippet:** Type `fSection` in your IDE or editor.
 
@@ -234,7 +234,7 @@ Declares sections in templates for later use. Sections are useful for organizing
 
 ---
 
-### Spaceless Tag
+### Spaceless ViewHelper
 
 **Trigger the Snippet:** Type `fSpaceless` in your IDE or editor.
 
@@ -251,7 +251,7 @@ Removes redundant spaces between HTML tags. This ViewHelper is helpful for minim
 
 ---
 
-### Split Tag
+### Split ViewHelper
 
 **Trigger the Snippet:** Type `fSplit` in your IDE or editor.
 
@@ -266,7 +266,7 @@ Splits a string by the specified separator. This ViewHelper is useful for breaki
 
 ---
 
-### Switch Tag
+### Switch ViewHelper
 
 **Trigger the Snippet:** Type `fSplit` in your IDE or editor.
 
@@ -287,7 +287,7 @@ Switches content based on the value or expression. This ViewHelper is useful for
 
 ---
 
-### Then Tag
+### Then ViewHelper
 
 **Trigger the Snippet:** Type `fThen` in your IDE or editor.
 
@@ -304,7 +304,7 @@ Used within <f:if> to specify what should be rendered if the condition is true. 
 
 ---
 
-### Translate Tag
+### Translate ViewHelper
 
 **Trigger the Snippet:** Type `fTranslate` in your IDE or editor.
 
@@ -324,7 +324,7 @@ Translates a key from locallang or custom locallang file. This ViewHelper is ess
 
 ---
 
-### Variable Tag
+### Variable ViewHelper
 
 **Trigger the Snippet:** Type `fVariable` in your IDE or editor.
 

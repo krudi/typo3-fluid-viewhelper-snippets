@@ -1,4 +1,4 @@
-### Backend Cache Disable Tag
+### Backend Cache Disable ViewHelper
 
 **Trigger the Snippet:** Type `fCacheDisable` in your IDE or editor to trigger this snippet.
 
@@ -15,7 +15,7 @@ Disables template compiling for the full template file to a PHP class.
 
 ---
 
-### Backend Cache Static Tag
+### Backend Cache Static ViewHelper
 
 **Trigger the Snippet:** Type `fCacheStatic` in your IDE or editor to trigger this snippet.
 
@@ -32,7 +32,7 @@ Forces the output of the enclosed template code to be compiled to a static strin
 
 ---
 
-### Backend Cache Static Tag
+### Backend Cache Static ViewHelper
 
 **Trigger the Snippet:** Type `fCacheWarmup` in your IDE or editor to trigger this snippet.
 

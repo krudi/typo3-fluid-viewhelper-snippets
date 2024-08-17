@@ -1,4 +1,4 @@
-### Transform HTML Tag
+### Transform HTML ViewHelper
 
 **Trigger the Snippet:** Type `fTransformHtml` in your IDE or editor.
 
@@ -10,7 +10,8 @@ This ViewHelper transforms HTML and substitutes internal link scheme aspects. It
 ```html
 <f:transform.html
     onFailure="${1:removeEnclosure}"
-    selector="${2:a.href}">
+    selector="${2:a.href}"
+>
     ${3}
 </f:transform.html>
 ```

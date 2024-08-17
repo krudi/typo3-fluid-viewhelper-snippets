@@ -1,4 +1,4 @@
-### Link Action Tag
+### Link Action ViewHelper
 
 **Trigger the Snippet:** Type `fLinkAction` in your IDE or editor.
 
@@ -41,7 +41,7 @@ Inline version of the ViewHelper for creating links to Extbase actions. This sni
 
 ---
 
-### Link Email Tag
+### Link Email ViewHelper
 
 **Trigger the Snippet:** Type `fLinkEmail` in your IDE or editor.
 
@@ -51,8 +51,7 @@ Email link ViewHelper. Generates an email link with the provided email address, 
 **Snippet Code:**
 
 ```html
-<f:link.email
-    email="${1}">
+<f:link.email email="${1}">
     ${2}
 </f:link.email>
 ```
@@ -69,14 +68,12 @@ Inline version of the ViewHelper for creating an email link. Ideal for embedding
 **Snippet Code:**
 
 ```html
-{f:link.email(
-    email: '${1}'
-)}
+{f:link.email(email: '${1}')}
 ```
 
 ---
 
-### Link External Tag
+### Link External ViewHelper
 
 **Trigger the Snippet:** Type `fLinkExternal` in your IDE or editor.
 
@@ -86,8 +83,7 @@ A ViewHelper for creating links to external targets, such as websites outside yo
 **Snippet Code:**
 
 ```html
-<f:link.external
-    uri="${1}">
+<f:link.external uri="${1}">
     ${2}
 </f:link.external>
 ```
@@ -104,14 +100,12 @@ Inline version of the ViewHelper for creating links to external targets. Perfect
 **Snippet Code:**
 
 ```html
-{f:link.external(
-    uri: '${1}'
-)}
+{f:link.external(uri: '${1}')}
 ```
 
 ---
 
-### Link File Tag
+### Link File ViewHelper
 
 **Trigger the Snippet:** Type `fLinkFile` in your IDE or editor.
 
@@ -121,8 +115,7 @@ A ViewHelper for creating links to a file (FAL). This is particularly useful whe
 **Snippet Code:**
 
 ```html
-<f:link.file
-    file="${1}">
+<f:link.file file="${1}">
     ${2}
 </f:link.file>
 ```
@@ -139,14 +132,12 @@ Inline version of the ViewHelper for creating links to a file (FAL). This snippe
 **Snippet Code:**
 
 ```html
-{f:link.file(
-    file: '${1}'
-)}
+{f:link.file(file: '${1}')}
 ```
 
 ---
 
-### Link Page Tag
+### Link Page ViewHelper
 
 **Trigger the Snippet:** Type `fLinkPage` in your IDE or editor.
 
@@ -156,8 +147,7 @@ A ViewHelper for creating links to TYPO3 pages. This ViewHelper is essential for
 **Snippet Code:**
 
 ```html
-<f:link.page
-    pageUid="${1}">
+<f:link.page pageUid="${1}">
     ${2}
 </f:link.page>
 ```
@@ -174,13 +164,11 @@ Inline version of the ViewHelper for creating links to TYPO3 pages. This version
 **Snippet Code:**
 
 ```html
-{f:link.page(
-    pageUid: '${1}'
-)}
+{f:link.page(pageUid: '${1}')}
 
 ---
 
-### Link Typolink Tag
+### Link Typolink ViewHelper
 
 **Trigger the Snippet:** Type `fLinkTypolink` in your IDE or editor.
 
@@ -190,8 +178,7 @@ A ViewHelper to create links from fields supported by the link wizard. This View
 **Snippet Code:**
 
 ```html
-<f:link.typolink
-    parameter="${1}">
+<f:link.typolink parameter="${1}">
     ${2}
 </f:link.typolink>
 ```
@@ -208,7 +195,5 @@ Inline version of the ViewHelper to create links from fields supported by the li
 **Snippet Code:**
 
 ```html
-{f:link.typolink(
-    parameter: '${1}'
-)}
+{f:link.typolink(parameter: '${1}')}
 ```

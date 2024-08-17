@@ -1,4 +1,4 @@
-### Backend IfAuthenticated Tag
+### Backend IfAuthenticated ViewHelper
 
 **Trigger the Snippet:** Type `fBeSecurityIfAuthenticated` in your IDE or editor to trigger this snippet.
 
@@ -15,7 +15,7 @@ Renders the content inside this tag only if the backend user is authenticated.
 
 ---
 
-### Backend IfHasRole Tag
+### Backend IfHasRole ViewHelper
 
 **Trigger the Snippet:** Type `fBeSecurityIfHasRole` in your IDE or editor to trigger this snippet.
 

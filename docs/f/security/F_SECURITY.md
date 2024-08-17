@@ -1,4 +1,4 @@
-### Security IfAuthenticated Tag
+### Security IfAuthenticated ViewHelper
 
 **Trigger the Snippet:** Type `fSecurityIfAuthenticated` in your IDE or editor.
 
@@ -20,7 +20,7 @@ This ViewHelper implements an ifAuthenticated/else condition for frontend users.
 
 ---
 
-### Security IfHasRole Tag
+### Security IfHasRole ViewHelper
 
 **Trigger the Snippet:** Type `fSecurityIfHasRole` in your IDE or editor.
 
@@ -42,7 +42,7 @@ This ViewHelper implements an ifHasRole/else condition for frontend groups. It a
 
 ---
 
-### Security Nonce Tag
+### Security Nonce ViewHelper
 
 **Trigger the Snippet:** Type `fSecurityNonce` in your IDE or editor.
 

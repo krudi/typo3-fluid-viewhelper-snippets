@@ -1,4 +1,4 @@
-### Sanitize HTML Tag
+### Sanitize HTML ViewHelper
 
 **Trigger the Snippet:** Type `fSanitizeHtml` in your IDE or editor.
 

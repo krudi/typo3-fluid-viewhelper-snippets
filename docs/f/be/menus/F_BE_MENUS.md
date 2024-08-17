@@ -1,4 +1,4 @@
-### Backend ActionMenu Tag
+### Backend ActionMenu ViewHelper
 
 **Trigger the Snippet:** Type `fBeMenusActionMenu` in your IDE or editor to trigger this snippet.
 
@@ -12,14 +12,15 @@ Renders a select box to switch between multiple actions and controllers, similar
     additionalAttributes="${1:array}"
     aria="${2:array}"
     data="${3:array}"
-    defaultController="${4}">
+    defaultController="${4}"
+>
     $5
 </f:be.menus.actionMenu>
 ```
 
 ---
 
-### Backend ActionMenuItem Tag
+### Backend ActionMenuItem ViewHelper
 
 **Trigger the Snippet:** Type `fBeMenusActionMenuItem` in your IDE or editor to trigger this snippet.
 
@@ -42,7 +43,7 @@ Adds an item to an action menu in the backend with specified label, controller, 
 
 ---
 
-### Backend ActionMenuItemGroup Tag
+### Backend ActionMenuItemGroup ViewHelper
 
 **Trigger the Snippet:** Type `fBeMenusActionMenuItemGroup` in your IDE or editor to trigger this snippet.
 

@@ -1,4 +1,4 @@
-### Form Button Tag
+### Form Button ViewHelper
 
 **Trigger the Snippet:** Type `fFormButton` in your IDE or editor to trigger this snippet.
 
@@ -18,7 +18,7 @@ Creates a button, such as a reset or submit button, in a form.
 
 ---
 
-### Form Checkbox Basic Tag
+### Form Checkbox Basic ViewHelper
 
 **Trigger the Snippet:** Type `fFormCheckboxBasic` in your IDE or editor to trigger this snippet.
 
@@ -36,7 +36,7 @@ Creates a basic checkbox input element.
 
 ---
 
-### Form Checkbox Preselected Tag
+### Form Checkbox Preselected ViewHelper
 
 **Trigger the Snippet:** Type `fFormCheckboxPreselected` in your IDE or editor to trigger this snippet.
 
@@ -55,7 +55,7 @@ Creates a checkbox input element with a preselected value.
 
 ---
 
-### Form Checkbox Bound Tag
+### Form Checkbox Bound ViewHelper
 
 **Trigger the Snippet:** Type `fFormCheckboxBound` in your IDE or editor to trigger this snippet.
 
@@ -74,7 +74,7 @@ Creates a checkbox input element bound to a property, with multiple selections.
 
 ---
 
-### Form Country Select Tag
+### Form Country Select ViewHelper
 
 **Trigger the Snippet:** Type `fFormCountrySelect` in your IDE or editor to trigger this snippet.
 
@@ -92,7 +92,7 @@ Renders a select tag with all available countries as options.
 
 ---
 
-### Form Hidden Tag
+### Form Hidden ViewHelper
 
 **Trigger the Snippet:** Type `fFormHidden` in your IDE or editor to trigger this snippet.
 
@@ -110,7 +110,7 @@ Renders a hidden input field.
 
 ---
 
-### Form Password Tag
+### Form Password ViewHelper
 
 **Trigger the Snippet:** Type `fFormPassword` in your IDE or editor to trigger this snippet.
 
@@ -127,7 +127,7 @@ Creates a password input field.
 
 ---
 
-### Form Radio Basic Tag
+### Form Radio Basic ViewHelper
 
 **Trigger the Snippet:** Type `fFormRadioBasic` in your IDE or editor to trigger this snippet.
 
@@ -145,7 +145,7 @@ Creates a password input field.
 
 ---
 
-### Form Radio Bound Tag
+### Form Radio Bound ViewHelper
 
 **Trigger the Snippet:** Type `fFormRadioBound` in your IDE or editor to trigger this snippet.
 
@@ -163,7 +163,7 @@ Creates a radio button input element bound to a property.
 
 ---
 
-### Form Radio Multiple Tag
+### Form Radio Multiple ViewHelper
 
 **Trigger the Snippet:** Type `fFormSelectBasic` in your IDE or editor to trigger this snippet.
 
@@ -181,7 +181,7 @@ Creates a basic select dropdown list.
 
 ---
 
-### Form Select Preselected Tag
+### Form Select Preselected ViewHelper
 
 **Trigger the Snippet:** Type `fFormSelectPreselected` in your IDE or editor to trigger this snippet.
 
@@ -200,7 +200,7 @@ Creates a select dropdown list with a preselected option.
 
 ---
 
-### Form Select Grouped Tag
+### Form Select Grouped ViewHelper
 
 **Trigger the Snippet:** Type `fFormSelectGrouped` in your IDE or editor to trigger this snippet.
 
@@ -224,7 +224,7 @@ Creates a select dropdown list with grouped options.
 
 ---
 
-### Form Submit Tag
+### Form Submit ViewHelper
 
 **Trigger the Snippet:** Type `fFormSubmit` in your IDE or editor to trigger this snippet.
 
@@ -244,7 +244,7 @@ Creates a submit button.
 
 ---
 
-### Form Textarea Tag
+### Form Textarea ViewHelper
 
 **Trigger the Snippet:** Type `fFormTextarea` in your IDE or editor to trigger this snippet.
 
@@ -262,7 +262,7 @@ Creates a textarea field.
 
 ---
 
-### Form Textfield Tag
+### Form Textfield ViewHelper
 
 **Trigger the Snippet:** Type `fFormTextfield` in your IDE or editor to trigger this snippet.
 
@@ -280,7 +280,7 @@ Creates a text field input element.
 
 ---
 
-### Form Upload Tag
+### Form Upload ViewHelper
 
 **Trigger the Snippet:** Type `fFormUpload` in your IDE or editor to trigger this snippet.
 
@@ -297,7 +297,7 @@ Generates an input file element.
 
 ---
 
-### Form ValidationResults Tag
+### Form ValidationResults ViewHelper
 
 **Trigger the Snippet:** Type `fFormValidationResults` in your IDE or editor to trigger this snippet.
 
