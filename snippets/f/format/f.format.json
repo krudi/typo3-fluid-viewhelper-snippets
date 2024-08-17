@@ -1,348 +1,326 @@
 {
-    "Format Bytes ViewHelper": {
-        "prefix": "fFormatBytes",
-        "body": [
-            "<f:format.bytes",
-            "\tdecimalSeparator=\"${1:.}\"",
-            "\tdecimals=\"${2:0}\"",
-            "\tthousandsSeparator=\"${3:,}\"",
-            "\tunits=\"${4}\"",
-            ">",
-            "\t${5}",
-            "</f:format.bytes>"
-        ],
-        "description": "Formats an integer with a byte count into human-readable form."
-    },
-    "Format Bytes Inline": {
-        "prefix": "fFormatBytesInline",
-        "body": [
-            "{${1:fileSize} -> f:format.bytes(decimalSeparator: '${2:.}', decimals: ${3:0}, thousandsSeparator: '${4:,}', units: '${5}')}"
-        ],
-        "description": "Inline version of the f:format.bytes ViewHelper."
-    },
-    "Format Case ViewHelper": {
-        "prefix": "fFormatCase",
-        "body": [
-            "<f:format.case mode=\"${1:upper}\">${2}</f:format.case>"
-        ],
-        "description": "Modifies the case of an input string to upper- or lowercase or capitalization."
-    },
-    "Format Case Inline": {
-        "prefix": "fFormatCaseInline",
-        "body": [
-            "{${1:someVariable} -> f:format.case(case: '${2:upper}')}"
-        ],
-        "description": "Inline version of the f:format.case ViewHelper."
-    },
-    "Format Cdata ViewHelper": {
-        "prefix": "fFormatCdata",
-        "body": [
-            "<f:format.cdata>${1}</f:format.cdata>"
-        ],
-        "description": "Outputs an argument/value without any escaping and wraps it with CDATA tags."
-    },
-    "Format Cdata Inline": {
-        "prefix": "fFormatCdataInline",
-        "body": [
-            "{${1:string} -> f:format.cdata()}"
-        ],
-        "description": "Inline version of the f:format.cdata ViewHelper."
-    },
-    "Format Crop ViewHelper": {
-        "prefix": "fFormatCrop",
-        "body": [
-            "<f:format.crop",
-            "\tappend=\"${1:&hellip;}\"",
-            "\tmaxCharacters=\"${2:10}\"",
-            "\trespectHtml=\"${3:true}\"",
-            "\trespectWordBoundaries=\"${4:true}\"",
-            ">",
-            "\t${5}",
-            "</f:format.crop>"
-        ],
-        "description": "Crops the text between its opening and closing tags."
-    },
-    "Format Crop Inline": {
-        "prefix": "fFormatCropInline",
-        "body": [
-            "{${1:someLongText} -> f:format.crop(append: '${2:&hellip;}', maxCharacters: ${3:10}, respectHtml: ${4:true}, respectWordBoundaries: ${5:true})}"
-        ],
-        "description": "Inline version of the f:format.crop ViewHelper."
-    },
-    "Format Currency ViewHelper": {
-        "prefix": "fFormatCurrency",
-        "body": [
-            "<f:format.currency",
-            "\tcurrencySign=\"${1:$}\"",
-            "\tdecimalSeparator=\"${2:.}\"",
-            "\tdecimals=\"${3:2}\"",
-            "\tprependCurrency=\"${4:true}\"",
-            "\tseparateCurrency=\"${5:false}\"",
-            "\tthousandsSeparator=\"${6:,}\"",
-            "\tuseDash=\"${7:false}\"",
-            ">",
-            "\t${8}",
-            "</f:format.currency>"
-        ],
-        "description": "Formats a given float to a currency representation."
-    },
-    "Format Currency Inline": {
-        "prefix": "fFormatCurrencyInline",
-        "body": [
-            "{${1:someNumber} -> f:format.currency(thousandsSeparator: '${2:,}', currencySign: '${3:EUR}', decimalSeparator: '${4:.}', decimals: ${5:2}, prependCurrency: ${6:true}, separateCurrency: ${7:false}, useDash: ${8:false})}"
-        ],
-        "description": "Inline version of the f:format.currency ViewHelper."
-    },
-    "Format Date ViewHelper": {
-        "prefix": "fFormatDate",
-        "body": [
-            "<f:format.date",
-            "\tbase=\"${1}\"",
-            "\tdate=\"${2}\"",
-            "\tformat=\"${3:Y-m-d}\"",
-            "\tlocale=\"${4}\"",
-            "\tpattern=\"${5}\"",
-            ">",
-            "\t${6}",
-            "</f:format.date>"
-        ],
-        "description": "Formats an object implementing \\DateTimeInterface."
-    },
-    "Format Date Inline": {
-        "prefix": "fFormatDateInline",
-        "body": [
-            "{f:format.date(base: '${1}', date: ${2:dateObject}, format: '${3:Y-m-d}', locale: '${4}', pattern: '${5}')}"
-        ],
-        "description": "Inline version of the f:format.date ViewHelper."
-    },
-    "Format HTML ViewHelper": {
-        "prefix": "fFormatHtml",
-        "body": [
-            "<f:format.html",
-            "\tcurrent=\"${1}\"",
-            "\tcurrentValueKey=\"${2}\"",
-            "\tdata=\"${3}\"",
-            "\tparseFuncTSPath=\"${4:lib.parseFunc_RTE}\"",
-            "\ttable=\"${5}\"",
-            ">",
-            "\t${6}",
-            "</f:format.html>"
-        ],
-        "description": "Renders a string by passing it to a TYPO3 parseFunc."
-    },
-    "Format HTML Inline": {
-        "prefix": "fFormatHtmlInline",
-        "body": [
-            "{${1:someText} -> f:format.html(parseFuncTSPath: '${2:lib.parseFunc}')}"
-        ],
-        "description": "Inline version of the f:format.html ViewHelper."
-    },
-    "Format Htmlentities ViewHelper": {
-        "prefix": "fFormatHtmlentities",
-        "body": [
-            "<f:format.htmlentities",
-            "\tdoubleEncode=\"${1:true}\"",
-            "\tencoding=\"${2:UTF-8}\"",
-            "\tkeepQuotes=\"${3:false}\"",
-            ">",
-            "\t${4}",
-            "</f:format.htmlentities>"
-        ],
-        "description": "Applies htmlentities() escaping to a value."
-    },
-    "Format Htmlentities Inline": {
-        "prefix": "fFormatHtmlentitiesInline",
-        "body": [
-            "{${1:text} -> f:format.htmlentities(encoding: '${2:ISO-8859-1}', doubleEncode: ${3:true}, keepQuotes: ${4:false})}"
-        ],
-        "description": "Inline version of the f:format.htmlentities ViewHelper."
-    },
-    "Format HtmlentitiesDecode ViewHelper": {
-        "prefix": "fFormatHtmlentitiesDecode",
-        "body": [
-            "<f:format.htmlentitiesDecode",
-            "\tencoding=\"${1:UTF-8}\"",
-            "\tkeepQuotes=\"${2:false}\"",
-            ">",
-            "\t${3}",
-            "</f:format.htmlentitiesDecode>"
-        ],
-        "description": "Applies html_entity_decode() to a value."
-    },
-    "Format HtmlentitiesDecode Inline": {
-        "prefix": "fFormatHtmlentitiesDecodeInline",
-        "body": [
-            "{${1:text} -> f:format.htmlentitiesDecode(encoding: '${2:ISO-8859-1}', keepQuotes: ${3:false})}"
-        ],
-        "description": "Inline version of the f:format.htmlentitiesDecode ViewHelper."
-    },
-    "Format Htmlspecialchars ViewHelper": {
-        "prefix": "fFormatHtmlspecialchars",
-        "body": [
-            "<f:format.htmlspecialchars",
-            "\tdoubleEncode=\"${1:true}\"",
-            "\tencoding=\"${2:UTF-8}\"",
-            "\tkeepQuotes=\"${3:false}\"",
-            ">",
-            "\t${4}",
-            "</f:format.htmlspecialchars>"
-        ],
-        "description": "Applies PHP htmlspecialchars() escaping to a value."
-    },
-    "Format Htmlspecialchars Inline": {
-        "prefix": "fFormatHtmlspecialcharsInline",
-        "body": [
-            "{${1:text} -> f:format.htmlspecialchars(encoding: '${2:ISO-8859-1}', doubleEncode: ${3:true}, keepQuotes: ${4:false})}"
-        ],
-        "description": "Inline version of the f:format.htmlspecialchars ViewHelper."
-    },
-    "Format Json ViewHelper": {
-        "prefix": "fFormatJson",
-        "body": [
-            "<f:format.json forceObject=\"${1:false}\">",
-            "\t${2}",
-            "</f:format.json>"
-        ],
-        "description": "Wrapper for PHP's json_encode function."
-    },
-    "Format Json Inline": {
-        "prefix": "fFormatJsonInline",
-        "body": [
-            "{f:format.json(forceObject: ${1:false}, value: ${2:{foo: 'bar', bar: 'baz'}})}"
-        ],
-        "description": "Inline version of the f:format.json ViewHelper."
-    },
-    "Format Nl2br ViewHelper": {
-        "prefix": "fFormatNl2br",
-        "body": [
-            "<f:format.nl2br>${1}</f:format.nl2br>"
-        ],
-        "description": "Wrapper for PHP's nl2br function."
-    },
-    "Format Nl2br Inline": {
-        "prefix": "fFormatNl2brInline",
-        "body": [
-            "{${1:text_with_linebreaks} -> f:format.nl2br()}"
-        ],
-        "description": "Inline version of the f:format.nl2br ViewHelper."
-    },
-    "Format Number ViewHelper": {
-        "prefix": "fFormatNumber",
-        "body": [
-            "<f:format.number",
-            "\tdecimalSeparator=\"${1:.}\"",
-            "\tdecimals=\"${2:2}\"",
-            "\tthousandsSeparator=\"${3:,}\"",
-            ">",
-            "\t${4}",
-            "</f:format.number>"
-        ],
-        "description": "Formats a number with custom precision, decimal point, and grouped thousands."
-    },
-    "Format Number Inline": {
-        "prefix": "fFormatNumberInline",
-        "body": [
-            "{${1:number} -> f:format.number(decimals: ${2:1}, decimalSeparator: '${3:,}', thousandsSeparator: '${4:.}')}"
-        ],
-        "description": "Inline version of the f:format.number ViewHelper."
-    },
-    "Format Padding ViewHelper": {
-        "prefix": "fFormatPadding",
-        "body": [
-            "<f:format.padding",
-            "\tpadLength=\"${1:10}\"",
-            "\tpadString=\"${2: }\"",
-            "\tpadType=\"${3:right}\"",
-            ">",
-            "\t${4}",
-            "</f:format.padding>"
-        ],
-        "description": "Formats a string using PHP's str_pad function."
-    },
-    "Format Padding Inline": {
-        "prefix": "fFormatPaddingInline",
-        "body": [
-            "{${1:TYPO3} -> f:format.padding(padLength: ${2:10}, padString: '${3:-=}', padType: '${4:right}')}"
-        ],
-        "description": "Inline version of the f:format.padding ViewHelper."
-    },
-    "Format Printf ViewHelper": {
-        "prefix": "fFormatPrintf",
-        "body": [
-            "<f:format.printf arguments=\"${1:array}\">",
-            "\t${2}",
-            "</f:format.printf>"
-        ],
-        "description": "A ViewHelper for formatting values with printf."
-    },
-    "Format Printf Inline": {
-        "prefix": "fFormatPrintfInline",
-        "body": [
-            "{${1:someText} -> f:format.printf(arguments: ${2:{1: 'TYPO3'}})}"
-        ],
-        "description": "Inline version of the f:format.printf ViewHelper."
-    },
-    "Format Raw ViewHelper": {
-        "prefix": "fFormatRaw",
-        "body": [
-            "<f:format.raw>${1}</f:format.raw>"
-        ],
-        "description": "Outputs an argument/value without any escaping."
-    },
-    "Format Raw Inline": {
-        "prefix": "fFormatRawInline",
-        "body": [
-            "{${1:string} -> f:format.raw()}"
-        ],
-        "description": "Inline version of the f:format.raw ViewHelper."
-    },
-    "Format StripTags ViewHelper": {
-        "prefix": "fFormatStripTags",
-        "body": [
-            "<f:format.stripTags allowedTags=\"${1}\">",
-            "\t${2}",
-            "</f:format.stripTags>"
-        ],
-        "description": "Removes tags from the given string using PHP's strip_tags function."
-    },
-    "Format StripTags Inline": {
-        "prefix": "fFormatStripTagsInline",
-        "body": [
-            "{${1:text} -> f:format.stripTags(allowedTags: '${2}')}"
-        ],
-        "description": "Inline version of the f:format.stripTags ViewHelper."
-    },
-    "Format Trim ViewHelper": {
-        "prefix": "fFormatTrim",
-        "body": [
-            "<f:format.trim",
-            "\tcharacters=\"${1}\"",
-            "\tside=\"${2:both}\"",
-            ">",
-            "\t${3}",
-            "</f:format.trim>"
-        ],
-        "description": "Strips whitespace (or other characters) from the beginning and end of a string."
-    },
-    "Format Trim Inline": {
-        "prefix": "fFormatTrimInline",
-        "body": [
-            "{${1:yourString} -> f:format.trim(side: '${2:right}', characters: '${3}')}"
-        ],
-        "description": "Inline version of the f:format.trim ViewHelper."
-    },
-    "Format Urlencode ViewHelper": {
-        "prefix": "fFormatUrlencode",
-        "body": [
-            "<f:format.urlencode>${1}</f:format.urlencode>"
-        ],
-        "description": "Encodes the given string using rawurlencode according to RFC 3986."
-    },
-    "Format Urlencode Inline": {
-        "prefix": "fFormatUrlencodeInline",
-        "body": [
-            "{${1:text} -> f:format.urlencode()}"
-        ],
-        "description": "Inline version of the f:format.urlencode ViewHelper."
-    }
+  "Format Bytes ViewHelper": {
+    "prefix": "fFormatBytes",
+    "body": [
+      "<f:format.bytes",
+      "\tdecimalSeparator=\"${1:.}\"",
+      "\tdecimals=\"${2:0}\"",
+      "\tthousandsSeparator=\"${3:,}\"",
+      "\tunits=\"${4}\"",
+      ">",
+      "\t${5}",
+      "</f:format.bytes>"
+    ],
+    "description": "Formats an integer with a byte count into human-readable form."
+  },
+  "Format Bytes Inline": {
+    "prefix": "fFormatBytesInline",
+    "body": [
+      "{${1:fileSize} -> f:format.bytes(decimalSeparator: '${2:.}', decimals: ${3:0}, thousandsSeparator: '${4:,}', units: '${5}')}"
+    ],
+    "description": "Inline version of the f:format.bytes ViewHelper."
+  },
+  "Format Case ViewHelper": {
+    "prefix": "fFormatCase",
+    "body": ["<f:format.case mode=\"${1:upper}\">${2}</f:format.case>"],
+    "description": "Modifies the case of an input string to upper- or lowercase or capitalization."
+  },
+  "Format Case Inline": {
+    "prefix": "fFormatCaseInline",
+    "body": ["{${1:someVariable} -> f:format.case(case: '${2:upper}')}"],
+    "description": "Inline version of the f:format.case ViewHelper."
+  },
+  "Format Cdata ViewHelper": {
+    "prefix": "fFormatCdata",
+    "body": ["<f:format.cdata>${1}</f:format.cdata>"],
+    "description": "Outputs an argument/value without any escaping and wraps it with CDATA tags."
+  },
+  "Format Cdata Inline": {
+    "prefix": "fFormatCdataInline",
+    "body": ["{${1:string} -> f:format.cdata()}"],
+    "description": "Inline version of the f:format.cdata ViewHelper."
+  },
+  "Format Crop ViewHelper": {
+    "prefix": "fFormatCrop",
+    "body": [
+      "<f:format.crop",
+      "\tappend=\"${1:&hellip;}\"",
+      "\tmaxCharacters=\"${2:10}\"",
+      "\trespectHtml=\"${3:true}\"",
+      "\trespectWordBoundaries=\"${4:true}\"",
+      ">",
+      "\t${5}",
+      "</f:format.crop>"
+    ],
+    "description": "Crops the text between its opening and closing tags."
+  },
+  "Format Crop Inline": {
+    "prefix": "fFormatCropInline",
+    "body": [
+      "{${1:someLongText} -> f:format.crop(append: '${2:&hellip;}', maxCharacters: ${3:10}, respectHtml: ${4:true}, respectWordBoundaries: ${5:true})}"
+    ],
+    "description": "Inline version of the f:format.crop ViewHelper."
+  },
+  "Format Currency ViewHelper": {
+    "prefix": "fFormatCurrency",
+    "body": [
+      "<f:format.currency",
+      "\tcurrencySign=\"${1:$}\"",
+      "\tdecimalSeparator=\"${2:.}\"",
+      "\tdecimals=\"${3:2}\"",
+      "\tprependCurrency=\"${4:true}\"",
+      "\tseparateCurrency=\"${5:false}\"",
+      "\tthousandsSeparator=\"${6:,}\"",
+      "\tuseDash=\"${7:false}\"",
+      ">",
+      "\t${8}",
+      "</f:format.currency>"
+    ],
+    "description": "Formats a given float to a currency representation."
+  },
+  "Format Currency Inline": {
+    "prefix": "fFormatCurrencyInline",
+    "body": [
+      "{${1:someNumber} -> f:format.currency(thousandsSeparator: '${2:,}', currencySign: '${3:EUR}', decimalSeparator: '${4:.}', decimals: ${5:2}, prependCurrency: ${6:true}, separateCurrency: ${7:false}, useDash: ${8:false})}"
+    ],
+    "description": "Inline version of the f:format.currency ViewHelper."
+  },
+  "Format Date ViewHelper": {
+    "prefix": "fFormatDate",
+    "body": [
+      "<f:format.date",
+      "\tbase=\"${1}\"",
+      "\tdate=\"${2}\"",
+      "\tformat=\"${3:Y-m-d}\"",
+      "\tlocale=\"${4}\"",
+      "\tpattern=\"${5}\"",
+      ">",
+      "\t${6}",
+      "</f:format.date>"
+    ],
+    "description": "Formats an object implementing \\DateTimeInterface."
+  },
+  "Format Date Inline": {
+    "prefix": "fFormatDateInline",
+    "body": [
+      "{f:format.date(base: '${1}', date: ${2:dateObject}, format: '${3:Y-m-d}', locale: '${4}', pattern: '${5}')}"
+    ],
+    "description": "Inline version of the f:format.date ViewHelper."
+  },
+  "Format HTML ViewHelper": {
+    "prefix": "fFormatHtml",
+    "body": [
+      "<f:format.html",
+      "\tcurrent=\"${1}\"",
+      "\tcurrentValueKey=\"${2}\"",
+      "\tdata=\"${3}\"",
+      "\tparseFuncTSPath=\"${4:lib.parseFunc_RTE}\"",
+      "\ttable=\"${5}\"",
+      ">",
+      "\t${6}",
+      "</f:format.html>"
+    ],
+    "description": "Renders a string by passing it to a TYPO3 parseFunc."
+  },
+  "Format HTML Inline": {
+    "prefix": "fFormatHtmlInline",
+    "body": [
+      "{${1:someText} -> f:format.html(parseFuncTSPath: '${2:lib.parseFunc}')}"
+    ],
+    "description": "Inline version of the f:format.html ViewHelper."
+  },
+  "Format Htmlentities ViewHelper": {
+    "prefix": "fFormatHtmlentities",
+    "body": [
+      "<f:format.htmlentities",
+      "\tdoubleEncode=\"${1:true}\"",
+      "\tencoding=\"${2:UTF-8}\"",
+      "\tkeepQuotes=\"${3:false}\"",
+      ">",
+      "\t${4}",
+      "</f:format.htmlentities>"
+    ],
+    "description": "Applies htmlentities() escaping to a value."
+  },
+  "Format Htmlentities Inline": {
+    "prefix": "fFormatHtmlentitiesInline",
+    "body": [
+      "{${1:text} -> f:format.htmlentities(encoding: '${2:ISO-8859-1}', doubleEncode: ${3:true}, keepQuotes: ${4:false})}"
+    ],
+    "description": "Inline version of the f:format.htmlentities ViewHelper."
+  },
+  "Format HtmlentitiesDecode ViewHelper": {
+    "prefix": "fFormatHtmlentitiesDecode",
+    "body": [
+      "<f:format.htmlentitiesDecode",
+      "\tencoding=\"${1:UTF-8}\"",
+      "\tkeepQuotes=\"${2:false}\"",
+      ">",
+      "\t${3}",
+      "</f:format.htmlentitiesDecode>"
+    ],
+    "description": "Applies html_entity_decode() to a value."
+  },
+  "Format HtmlentitiesDecode Inline": {
+    "prefix": "fFormatHtmlentitiesDecodeInline",
+    "body": [
+      "{${1:text} -> f:format.htmlentitiesDecode(encoding: '${2:ISO-8859-1}', keepQuotes: ${3:false})}"
+    ],
+    "description": "Inline version of the f:format.htmlentitiesDecode ViewHelper."
+  },
+  "Format Htmlspecialchars ViewHelper": {
+    "prefix": "fFormatHtmlspecialchars",
+    "body": [
+      "<f:format.htmlspecialchars",
+      "\tdoubleEncode=\"${1:true}\"",
+      "\tencoding=\"${2:UTF-8}\"",
+      "\tkeepQuotes=\"${3:false}\"",
+      ">",
+      "\t${4}",
+      "</f:format.htmlspecialchars>"
+    ],
+    "description": "Applies PHP htmlspecialchars() escaping to a value."
+  },
+  "Format Htmlspecialchars Inline": {
+    "prefix": "fFormatHtmlspecialcharsInline",
+    "body": [
+      "{${1:text} -> f:format.htmlspecialchars(encoding: '${2:ISO-8859-1}', doubleEncode: ${3:true}, keepQuotes: ${4:false})}"
+    ],
+    "description": "Inline version of the f:format.htmlspecialchars ViewHelper."
+  },
+  "Format Json ViewHelper": {
+    "prefix": "fFormatJson",
+    "body": [
+      "<f:format.json forceObject=\"${1:false}\">",
+      "\t${2}",
+      "</f:format.json>"
+    ],
+    "description": "Wrapper for PHP's json_encode function."
+  },
+  "Format Json Inline": {
+    "prefix": "fFormatJsonInline",
+    "body": [
+      "{f:format.json(forceObject: ${1:false}, value: ${2:{foo: 'bar', bar: 'baz'}})}"
+    ],
+    "description": "Inline version of the f:format.json ViewHelper."
+  },
+  "Format Nl2br ViewHelper": {
+    "prefix": "fFormatNl2br",
+    "body": ["<f:format.nl2br>${1}</f:format.nl2br>"],
+    "description": "Wrapper for PHP's nl2br function."
+  },
+  "Format Nl2br Inline": {
+    "prefix": "fFormatNl2brInline",
+    "body": ["{${1:text_with_linebreaks} -> f:format.nl2br()}"],
+    "description": "Inline version of the f:format.nl2br ViewHelper."
+  },
+  "Format Number ViewHelper": {
+    "prefix": "fFormatNumber",
+    "body": [
+      "<f:format.number",
+      "\tdecimalSeparator=\"${1:.}\"",
+      "\tdecimals=\"${2:2}\"",
+      "\tthousandsSeparator=\"${3:,}\"",
+      ">",
+      "\t${4}",
+      "</f:format.number>"
+    ],
+    "description": "Formats a number with custom precision, decimal point, and grouped thousands."
+  },
+  "Format Number Inline": {
+    "prefix": "fFormatNumberInline",
+    "body": [
+      "{${1:number} -> f:format.number(decimals: ${2:1}, decimalSeparator: '${3:,}', thousandsSeparator: '${4:.}')}"
+    ],
+    "description": "Inline version of the f:format.number ViewHelper."
+  },
+  "Format Padding ViewHelper": {
+    "prefix": "fFormatPadding",
+    "body": [
+      "<f:format.padding",
+      "\tpadLength=\"${1:10}\"",
+      "\tpadString=\"${2: }\"",
+      "\tpadType=\"${3:right}\"",
+      ">",
+      "\t${4}",
+      "</f:format.padding>"
+    ],
+    "description": "Formats a string using PHP's str_pad function."
+  },
+  "Format Padding Inline": {
+    "prefix": "fFormatPaddingInline",
+    "body": [
+      "{${1:TYPO3} -> f:format.padding(padLength: ${2:10}, padString: '${3:-=}', padType: '${4:right}')}"
+    ],
+    "description": "Inline version of the f:format.padding ViewHelper."
+  },
+  "Format Printf ViewHelper": {
+    "prefix": "fFormatPrintf",
+    "body": [
+      "<f:format.printf arguments=\"${1:array}\">",
+      "\t${2}",
+      "</f:format.printf>"
+    ],
+    "description": "A ViewHelper for formatting values with printf."
+  },
+  "Format Printf Inline": {
+    "prefix": "fFormatPrintfInline",
+    "body": [
+      "{${1:someText} -> f:format.printf(arguments: ${2:{1: 'TYPO3'}})}"
+    ],
+    "description": "Inline version of the f:format.printf ViewHelper."
+  },
+  "Format Raw ViewHelper": {
+    "prefix": "fFormatRaw",
+    "body": ["<f:format.raw>${1}</f:format.raw>"],
+    "description": "Outputs an argument/value without any escaping."
+  },
+  "Format Raw Inline": {
+    "prefix": "fFormatRawInline",
+    "body": ["{${1:string} -> f:format.raw()}"],
+    "description": "Inline version of the f:format.raw ViewHelper."
+  },
+  "Format StripTags ViewHelper": {
+    "prefix": "fFormatStripTags",
+    "body": [
+      "<f:format.stripTags allowedTags=\"${1}\">",
+      "\t${2}",
+      "</f:format.stripTags>"
+    ],
+    "description": "Removes tags from the given string using PHP's strip_tags function."
+  },
+  "Format StripTags Inline": {
+    "prefix": "fFormatStripTagsInline",
+    "body": ["{${1:text} -> f:format.stripTags(allowedTags: '${2}')}"],
+    "description": "Inline version of the f:format.stripTags ViewHelper."
+  },
+  "Format Trim ViewHelper": {
+    "prefix": "fFormatTrim",
+    "body": [
+      "<f:format.trim",
+      "\tcharacters=\"${1}\"",
+      "\tside=\"${2:both}\"",
+      ">",
+      "\t${3}",
+      "</f:format.trim>"
+    ],
+    "description": "Strips whitespace (or other characters) from the beginning and end of a string."
+  },
+  "Format Trim Inline": {
+    "prefix": "fFormatTrimInline",
+    "body": [
+      "{${1:yourString} -> f:format.trim(side: '${2:right}', characters: '${3}')}"
+    ],
+    "description": "Inline version of the f:format.trim ViewHelper."
+  },
+  "Format Urlencode ViewHelper": {
+    "prefix": "fFormatUrlencode",
+    "body": ["<f:format.urlencode>${1}</f:format.urlencode>"],
+    "description": "Encodes the given string using rawurlencode according to RFC 3986."
+  },
+  "Format Urlencode Inline": {
+    "prefix": "fFormatUrlencodeInline",
+    "body": ["{${1:text} -> f:format.urlencode()}"],
+    "description": "Inline version of the f:format.urlencode ViewHelper."
+  }
 }
