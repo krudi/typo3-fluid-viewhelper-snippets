@@ -1,42 +1,130 @@
 {
-  "name": "typo3-viewhelpers-vscode-snippets",
-  "version": "0.1.0",
-  "description": "Integrate TYPO3 code snippets easily to Visual Studio Code. Improve your TYPO3 development with a collection of popular snippets, designed for quick access and efficient coding.",
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://gitlab.com/krudi/typo3-viewhelpers-vscode-snippet/LICENSE"
+    "name": "typo3-viewhelpers-vscode-snippets",
+    "version": "0.1.0",
+    "description": "Integrate TYPO3 code snippets easily to Visual Studio Code. Improve your TYPO3 development with a collection of popular snippets, designed for quick access and efficient coding.",
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "https://gitlab.com/krudi/typo3-viewhelpers-vscode-snippet/LICENSE"
+        }
+    ],
+    "publisher": "krudi",
+    "private": false,
+    "homepage": "https://gitlab.com/krudi/typo3-viewhelpers-vscode-snippets#readme",
+    "bugs": {
+        "url": "https://gitlab.com/krudi/typo3-viewhelpers-vscode-snippets/issue"
+    },
+    "keywords": [
+        "vscode",
+        "extension",
+        "snippets",
+        "typo3",
+        "fluid",
+        "viewhelpers"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/krudi/typo3-viewhelpers-vscode-snippets.git"
+    },
+    "engines": {
+        "vscode": "^1.0.0"
+    },
+    "preview": true,
+    "categories": [
+        "Snippets"
+    ],
+    "icon": "./assets/images/icon.png",
+    "displayName": "TYPO3 ViewHelper Snippets for VSCode",
+    "galleryBanner": {
+        "color": "#FFFFFF",
+        "theme": "light"
+    },
+    "contributes": {
+        "snippets": [
+            {
+                "language": "html",
+                "path": "./snippets/f/f.asset.json"
+            },
+            {
+                "language": "html",
+                "path": "./snippets/f/f.cache.json"
+            },
+            {
+                "language": "html",
+                "path": "./snippets/f/f.debug.json"
+            },
+            {
+                "language": "html",
+                "path": "./snippets/f/f.format.json"
+            },
+            {
+                "language": "html",
+                "path": "./snippets/f/f.general.json"
+            },
+            {
+                "language": "html",
+                "path": "./snippets/f/f.link.json"
+            },
+            {
+                "language": "html",
+                "path": "./snippets/f/f.sanitize.json"
+            },
+            {
+                "language": "html",
+                "path": "./snippets/f/f.security.json"
+            },
+            {
+                "language": "html",
+                "path": "./snippets/f/f.transform.json"
+            },
+            {
+                "language": "html",
+                "path": "./snippets/f/f.uri.json"
+            },
+            {
+                "language": "html",
+                "path": "./snippets/form/f.form.json"
+            },
+            {
+                "language": "html",
+                "path": "./snippets/form/f.form.select.json"
+            },
+            {
+                "language": "html",
+                "path": "./snippets/form/formvh.form.json"
+            },
+            {
+                "language": "html",
+                "path": "./snippets/form/formvh.general.json"
+            },
+            {
+                "language": "html",
+                "path": "./snippets/core/core.general.json"
+            },
+            {
+                "language": "html",
+                "path": "./snippets/be/be.general.json"
+            },
+            {
+                "language": "html",
+                "path": "./snippets/be/be.link.json"
+            },
+            {
+                "language": "html",
+                "path": "./snippets/be/be.uri.json"
+            },
+            {
+                "language": "html",
+                "path": "./snippets/be/f.be.json"
+            },
+            {
+                "language": "html",
+                "path": "./snippets/be/f.be.menus.json"
+            },
+            {
+                "language": "html",
+                "path": "./snippets/be/f.be.security.json"
+            }
+        ]
     }
-  ],
-  "publisher": "krudi",
-  "private": false,
-  "homepage": "https://gitlab.com/krudi/typo3-viewhelpers-vscode-snippets#readme",
-  "bugs": {
-    "url": "https://gitlab.com/krudi/typo3-viewhelpers-vscode-snippets/issue"
-  },
-  "keywords": [
-    "vscode",
-    "extension",
-    "snippets",
-    "typo3",
-    "fluid",
-    "viewhelpers"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/krudi/typo3-viewhelpers-vscode-snippets.git"
-  },
-  "engines": {
-    "vscode": "*"
-  },
-  "preview": true,
-  "categories": [
-    "Snippets"
-  ],
-  "icon": "./assets/images/icon.png",
-  "displayName": "TYPO3 ViewHelper Snippets for VSCode",
-  "galleryBanner": {
-    "color": "#FF8700",
-    "theme": "light"
-  }
 }

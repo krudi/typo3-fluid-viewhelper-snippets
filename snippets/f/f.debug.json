@@ -1,0 +1,18 @@
+{
+    "Backend Debug Render Tag": {
+        "prefix": "fDebugRender",
+        "body": [
+            "<f:debug.render",
+            "\tpartial=\"${1:PartialName}\"",
+            "\tsection=\"${2:SectionName}\"",
+            "\targuments=\"${3:{_all}}\"",
+            "\tcontentAs=\"${4:content}\"",
+            "\tdebug=\"${5:true}\"",
+            "\tdefault=\"${6:DefaultValue}\"",
+            "\toptional=\"${7:false}\"",
+            ">",
+            "</f:debug.render>"
+        ],
+        "description": "A debuggable version of <f:render> that wraps the output with HTML for inspection with the admin panel in the frontend."
+    }
+}

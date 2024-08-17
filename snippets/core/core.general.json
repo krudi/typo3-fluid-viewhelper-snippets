@@ -1,0 +1,41 @@
+{
+    "Normalized URL ViewHelper": {
+        "prefix": "coreNormalizedUrl",
+        "body": [
+            "<core:normalizedUrl",
+            "\tpathOrUrl=\"${1:https://foo.bar/img.jpg}\"",
+            "/>"
+        ],
+        "description": "Normalizes a path that uses EXT: syntax or an absolute URL to an absolute web path."
+    },
+    "Icon for Resource ViewHelper": {
+        "prefix": "coreIconForResource",
+        "body": [
+            "<core:iconForResource",
+            "\tresource=\"{${1:file.resource}}\"",
+            "/>"
+        ],
+        "description": "Displays an icon for a FAL resource (file or folder)."
+    },
+    "Icon ViewHelper": {
+        "prefix": "coreIcon",
+        "body": [
+            "<core:icon",
+            "\ttitle=\"${1:Open actions menu}\"",
+            "\tidentifier=\"${2:actions-menu}\"",
+            "\talternativeMarkupIdentifier=\"${3:inline}\"",
+            "/>"
+        ],
+        "description": "Displays an icon identified by an icon identifier."
+    },
+    "Icon for Record ViewHelper": {
+        "prefix": "coreIconForRecord",
+        "body": [
+            "<core:iconForRecord",
+            "\ttable=\"${1:tt_content}\"",
+            "\trow=\"{${2:record}}\"",
+            "/>"
+        ],
+        "description": "Displays an icon for a specific record."
+    }
+}
