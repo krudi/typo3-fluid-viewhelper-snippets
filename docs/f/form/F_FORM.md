@@ -121,7 +121,8 @@ Creates a password input field.
 
 ```html
 <f:form.password
-    name="${1:myPassword}"
+    name="${1:name}"
+    value="${2:value}"
 />
 ```
 
@@ -291,7 +292,8 @@ Generates an input file element.
 
 ```html
 <f:form.upload
-    name="${1:file}"
+    name="${1:name}"
+    value="${1:value}"
 />
 ```
 

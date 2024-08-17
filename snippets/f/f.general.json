@@ -2,20 +2,16 @@
     "Alias ViewHelper": {
         "prefix": "fAlias",
         "body": [
-            "<f:alias",
-            "\tmap=\"{${1:x}: '${2:foo}'}\"",
-            ">",
+            "<f:alias map=\"{${1:x}: '${2:foo}'}\">",
             "\t${3:${1}}",
             "</f:alias>"
         ],
         "description": "Declares new variables which are aliases of other variables."
     },
-    "Alias Inline": {
+    "Alias Inline ViewHelper": {
         "prefix": "fAliasInline",
         "body": [
-            "{f:alias(",
-            "\tmap: {${1:x}: '${2:foo}'}",
-            ")}",
+            "{f:alias(map: {${1:x}: '${2:foo}'})}",
             "${3:${1}}"
         ],
         "description": "Inline version of the <f:alias> ViewHelper."
@@ -23,9 +19,7 @@
     "Case ViewHelper": {
         "prefix": "fCase",
         "body": [
-            "<f:case",
-            "\tvalue=\"${1}\"",
-            ">",
+            "<f:case value=\"${1}\">",
             "\t${2}",
             "</f:case>"
         ],
@@ -45,7 +39,7 @@
         ],
         "description": "This ViewHelper renders CObjects from the global TypoScript configuration."
     },
-    "CObject Inline": {
+    "CObject Inline ViewHelper": {
         "prefix": "fCObjectInline",
         "body": [
             "{f:cObject(",
@@ -60,8 +54,7 @@
     "Comment ViewHelper": {
         "prefix": "fComment",
         "body": [
-            "<f:comment",
-            ">",
+            "<f:comment>",
             "\t${1}",
             "</f:comment>"
         ],
@@ -70,9 +63,7 @@
     "Constant ViewHelper": {
         "prefix": "fConstant",
         "body": [
-            "<f:constant",
-            "\tname=\"${1}\"",
-            ">",
+            "<f:constant name=\"${1}\">",
             "${2}",
             "</f:constant>"
         ],
@@ -81,20 +72,16 @@
     "Count ViewHelper": {
         "prefix": "fCount",
         "body": [
-            "<f:count",
-            "\tsubject=\"${1}\"",
-            ">",
+            "<f:count subject=\"${1}\">",
             "${2}",
             "</f:count>"
         ],
         "description": "This ViewHelper counts elements of the specified array or countable object."
     },
-    "Count Inline": {
+    "Count Inline ViewHelper": {
         "prefix": "fCountInline",
         "body": [
-            "{f:count(",
-            "\tsubject: '${1}'",
-            ")}"
+            "{f:count(subject: '${1}')}"
         ],
         "description": "Inline version of the <f:count> ViewHelper."
     },
@@ -110,7 +97,7 @@
         ],
         "description": "This ViewHelper cycles through the specified values."
     },
-    "Cycle Inline": {
+    "Cycle Inline ViewHelper": {
         "prefix": "fCycleInline",
         "body": [
             "{f:cycle(",
@@ -123,9 +110,7 @@
     "Backend Debug ViewHelper": {
         "prefix": "fDebug",
         "body": [
-            "<f:debug",
-            "\ttitle=\"Debug\"",
-            ">",
+            "<f:debug title=\"Debug\">",
             "\t${1:{_all}}",
             "</f:debug>"
         ],
@@ -134,8 +119,7 @@
     "Default Case ViewHelper": {
         "prefix": "fDefaultCase",
         "body": [
-            "<f:defaultCase",
-            ">",
+            "<f:defaultCase>",
             "\t${1}",
             "</f:defaultCase>"
         ],
@@ -144,8 +128,7 @@
     "Else ViewHelper": {
         "prefix": "fElse",
         "body": [
-            "<f:else",
-            ">",
+            "<f:else>",
             "\t${1}",
             "</f:else>"
         ],
@@ -154,9 +137,7 @@
     "Feature ViewHelper": {
         "prefix": "fFeature",
         "body": [
-            "<f:feature",
-            "\tname=\"${1}\"",
-            ">",
+            "<f:feature name=\"${1}\">",
             "\t<f:then>",
             "\t\t${2}",
             "\t</f:then>",
@@ -170,20 +151,16 @@
     "First ViewHelper": {
         "prefix": "fFirst",
         "body": [
-            "<f:first",
-            "\tvalue=\"${1}\"",
-            ">",
+            "<f:first value=\"${1}\">",
             "\t${2}",
             "</f:first>"
         ],
         "description": "The FirstViewHelper returns the first item of an array."
     },
-    "First Inline": {
+    "First Inline ViewHelper": {
         "prefix": "fFirstInline",
         "body": [
-            "{f:first(",
-            "\tvalue: '${1}'",
-            ")}"
+            "{f:first(value: '${1}')}"
         ],
         "description": "Inline version of the <f:first> ViewHelper."
     },
@@ -199,7 +176,7 @@
         ],
         "description": "Renders the flash messages as an unsorted list."
     },
-    "FlashMessages Inline": {
+    "FlashMessages Inline ViewHelper": {
         "prefix": "fFlashMessagesInline",
         "body": [
             "{f:flashMessages(",
@@ -241,43 +218,33 @@
     "If ViewHelper": {
         "prefix": "fIf",
         "body": [
-            "<f:if",
-            "\tcondition=\"${1:{condition}}\"",
-            ">",
+            "<f:if condition=\"${1:{condition}}\">",
             "\t${2}",
             "</f:if>"
         ],
         "description": "Implements a basic if condition."
     },
-    "If Inline": {
+    "If Inline ViewHelper": {
         "prefix": "fIfInline",
         "body": [
-            "{f:if(",
-            "\tcondition: '${1:{condition}}'",
-            ")}"
+            "{f:if(condition: '${1:{condition}}')}"
         ],
         "description": "Inline version of the <f:if> ViewHelper for basic if condition."
     },
     "If ViewHelper (with additional conditions)": {
         "prefix": "fIfThenElse",
         "body": [
-            "<f:if",
-            "\tcondition=\"${1:condition}\"",
-            ">",
+            "<f:if condition=\"${1:condition}\">",
             "\t<f:then>${2}</f:then>",
             "\t<f:else>${3}</f:else>",
             "</f:if>"
         ],
         "description": "Implements an if/else condition."
     },
-    "IfThenElse Inline": {
+    "IfThenElse Inline ViewHelper (with additional conditions)": {
         "prefix": "fIfThenElseInline",
         "body": [
-            "{f:if(",
-            "condition: '${1:{condition} == 1}',",
-            "then: '${2}',",
-            "else: '${3}'",
-            ")}"
+            "{f:if(condition: '${1:{condition} == 1}', then: '${2}', else: '${3}')}"
         ],
         "description": "Inline version of the <f:if> ViewHelper with condition, then, and else attributes."
     },
@@ -294,7 +261,7 @@
         ],
         "description": "Resizes a given image and renders the respective img tag with selected attributes."
     },
-    "Image Inline": {
+    "Image Inline ViewHelper": {
         "prefix": "fImageInline",
         "body": [
             "{f:image(",
@@ -310,19 +277,14 @@
     "Inline ViewHelper": {
         "prefix": "fInline",
         "body": [
-            "<f:inline",
-            "\tcode=\"${1:code}\"",
-            ">",
-            "\t/>"
+            "<f:inline code=\"${1:code}\" />"
         ],
         "description": "Inline Fluid rendering ViewHelper to render Fluid code stored in a variable."
     },
-    "Inline Inline": {
+    "Inline Inline ViewHelper": {
         "prefix": "fInlineInline",
         "body": [
-            "{f:inline(",
-            "\tcode: '${1:code}'",
-            ")}"
+            "{f:inline(code: '${1:code}')}"
         ],
         "description": "Inline version of the <f:inline> ViewHelper."
     },
@@ -333,12 +295,11 @@
             "\tvalue=\"{${1:array}}\"",
             "\tseparator=\"${2:, }\"",
             "\tseparatorLast=\"${3: and }\"",
-            ">",
-            "\t/>"
+            "/>"
         ],
         "description": "Combines elements from an array into a single string."
     },
-    "Join Inline": {
+    "Join Inline ViewHelper": {
         "prefix": "fJoinInline",
         "body": [
             "{f:join(",
@@ -348,5 +309,118 @@
             ")}"
         ],
         "description": "Inline version of the <f:join> ViewHelper."
+    },
+    "f:last ViewHelper": {
+        "prefix": "fLast",
+        "body": [
+            "<f:last value=\"{${1:0: 'first', 1: 'second'}}\" />"
+        ],
+        "description": "Returns the last item of an array."
+    },
+    "f:layout ViewHelper": {
+        "prefix": "fLayout",
+        "body": [
+            "<f:layout name=\"${1:main}\" />"
+        ],
+        "description": "Selects a layout to be used for the current template."
+    },
+    "f:media ViewHelper": {
+        "prefix": "fMedia",
+        "body": [
+            "<f:media",
+            "\tfile=\"{${1:file}}\"",
+            "\twidth=\"${2:400}\"",
+            "\theight=\"${3:375}\"",
+            "\t${4:additionalConfig=\"{loop: '1', autoplay: '1'}\"}",
+            " />"
+        ],
+        "description": "Renders a given media file with the correct HTML tag."
+    },
+    "f:or ViewHelper": {
+        "prefix": "fOr",
+        "body": [
+            "{${1:undefinedVariable} -> f:or(alternative=${2:fallback})}"
+        ],
+        "description": "Use alternative text if content is null."
+    },
+    "f:render ViewHelper": {
+        "prefix": "fRender",
+        "body": [
+            "<f:render",
+            "\tsection=\"${1:someSection}\"",
+            "\tpartial=\"${2:partialName}\"",
+            "\targuments=\"${3:{_all}}\"",
+            " />"
+        ],
+        "description": "Renders a section or partial with specified arguments."
+    },
+    "f:replace ViewHelper": {
+        "prefix": "fReplace",
+        "body": [
+            "<f:replace",
+            "\tvalue=\"${1:Hello World}\"",
+            "\tsearch=\"${2:World}\"",
+            "\treplace=\"${3:Fluid}\"",
+            " />"
+        ],
+        "description": "Replaces one or multiple strings with other strings."
+    },
+    "f:section ViewHelper": {
+        "prefix": "fSection",
+        "body": [
+            "<f:section name=\"${1:sectionName}\">${2:This is a section.}</f:section>"
+        ],
+        "description": "Declares sections in templates for later use."
+    },
+    "f:spaceless ViewHelper": {
+        "prefix": "fSpaceless",
+        "body": [
+            "<f:spaceless>\n\t${1:<div><div><div>text\n\ntext</div></div></div>}\n</f:spaceless>"
+        ],
+        "description": "Removes redundant spaces between HTML tags."
+    },
+    "f:split ViewHelper": {
+        "prefix": "fSplit",
+        "body": [
+            "<f:split",
+            "\tvalue=\"${1:1,5,8}\"",
+            "\tseparator=\"${2:,}\"",
+            "\tlimit=\"${3:2}\"",
+            " />"
+        ],
+        "description": "Splits a string by the specified separator."
+    },
+    "f:switch ViewHelper": {
+        "prefix": "fSwitch",
+        "body": [
+            "<f:switch expression=\"{${1:person.gender}}\">\n\t<f:case value=\"${2:male}\">Mr.</f:case>\n\t<f:case value=\"${3:female}\">Mrs.</f:case>\n\t<f:defaultCase>Mr. / Mrs.</f:defaultCase>\n</f:switch>"
+        ],
+        "description": "Switches content based on the value or expression."
+    },
+    "f:then ViewHelper": {
+        "prefix": "fThen",
+        "body": [
+            "<f:then>\n\t${1:content}\n</f:then>"
+        ],
+        "description": "Used within <f:if> to specify what should be rendered if the condition is true."
+    },
+    "f:translate ViewHelper": {
+        "prefix": "fTranslate",
+        "body": [
+            "<f:translate",
+            "\tkey=\"${1:key1}\"",
+            "\textensionName=\"${2:MyExt}\"",
+            "\t${3:arguments=${4:{0: 'dog', 1: 'fox'}}}",
+            "\tdefault=\"${5:default value}\"",
+            " />"
+        ],
+        "description": "Translates a key from locallang or custom locallang file."
+    },
+    "f:variable ViewHelper": {
+        "prefix": "fVariable",
+        "body": [
+            "<f:variable name=\"${1:myvariable}\" value=\"${2:some value}\" />"
+        ],
+        "description": "Assigns a template variable."
     }
 }

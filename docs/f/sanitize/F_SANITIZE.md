@@ -9,7 +9,8 @@ A ViewHelper that passes the given content through TYPO3's html-sanitizer to mit
 
 ```html
 <f:sanitize.html
-    build="${1:default}">
+    build="${1:default}"
+>
     ${2}
 </f:sanitize.html>
 ```

@@ -12,9 +12,7 @@
     "CSS Asset Inline ViewHelper": {
         "prefix": "fAssetCssInline",
         "body": [
-            "<f:asset.css",
-            "\tidentifier=\"${1:identifier123}\"",
-            ">",
+            "<f:asset.css identifier=\"${1:identifier123}\">",
             "\t${2:/* Inline CSS content here */}",
             "</f:asset.css>"
         ],

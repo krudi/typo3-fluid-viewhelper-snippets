@@ -14,7 +14,7 @@
     ],
     "description": "A ViewHelper for creating links to extbase actions."
   },
-  "Link Action Inline": {
+  "Link Action Inline ViewHelper": {
     "prefix": "fLinkActionInline",
     "body": [
       "{f:link.action(",
@@ -36,7 +36,7 @@
     ],
     "description": "Email link ViewHelper. Generates an email link."
   },
-  "Link Email Inline": {
+  "Link Email Inline ViewHelper": {
     "prefix": "fLinkEmailInline",
     "body": [
       "{f:link.email(email: '${1}')}"
@@ -52,7 +52,7 @@
     ],
     "description": "A ViewHelper for creating links to external targets."
   },
-  "Link External Inline": {
+  "Link External Inline ViewHelper": {
     "prefix": "fLinkExternalInline",
     "body": [
       "{f:link.external(uri: '${1}')}"
@@ -68,7 +68,7 @@
     ],
     "description": "A ViewHelper for creating links to a file (FAL)."
   },
-  "Link File Inline": {
+  "Link File Inline ViewHelper": {
     "prefix": "fLinkFileInline",
     "body": [
       "{f:link.file(file: '${1}')}"
@@ -84,7 +84,7 @@
     ],
     "description": "A ViewHelper for creating links to TYPO3 pages."
   },
-  "Link Page Inline": {
+  "Link Page Inline ViewHelper": {
     "prefix": "fLinkPageInline",
     "body": [
       "{f:link.page(pageUid: '${1}')}"
@@ -100,7 +100,7 @@
     ],
     "description": "A ViewHelper to create links from fields supported by the link wizard."
   },
-  "Link Typolink Inline": {
+  "Link Typolink Inline ViewHelper": {
     "prefix": "fLinkTypolinkInline",
     "body": [
       "{f:link.typolink(parameter: '${1}')}"

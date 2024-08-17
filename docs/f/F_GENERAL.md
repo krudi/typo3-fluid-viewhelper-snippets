@@ -8,11 +8,24 @@ Declares new variables that are aliases of existing variables, simplifying templ
 **Snippet Code:**
 
 ```html
-<f:alias
-    map="{${1:x}: '${2:foo}'}"
->
+<f:alias map="{${1:x}: '${2:foo}'}">
     ${3:${1}}
 </f:alias>
+```
+
+---
+
+### Alias Inline ViewHelper
+
+**Trigger the Snippet:** Type `fAliasInline` in your IDE or editor.
+
+**Description:**
+The Alias Inline ViewHelper allows you to declare new variables as aliases of other variables within a single line. This is particularly useful for simplifying complex expressions or reusing values in Fluid templates without needing to create a block-level alias.
+
+**Snippet Code:**
+
+```html
+{f:alias(map: {${1:x}: '${2:foo}'})}
 ```
 
 ---
@@ -27,9 +40,7 @@ Used within the <f:switch> ViewHelper as a single case. Matches a given value an
 **Snippet Code:**
 
 ```html
-<f:case
-    value="${1}"
->
+<f:case value="${1}">
     ${2}
 </f:case>
 ```
@@ -104,9 +115,7 @@ Accesses PHP constants directly within templates, facilitating the use of config
 **Snippet Code:**
 
 ```html
-<f:constant
-    name="${1}"
->
+<f:constant name="${1}">
     ${2}
 </f:constant>
 
@@ -122,9 +131,7 @@ Counts the elements in an array or an object implementing Countable, returning t
 **Snippet Code:**
 
 ```html
-<f:count
-    subject="${1}"
->
+<f:count subject="${1}">
     ${2}
 </f:count>
 ```
@@ -141,9 +148,7 @@ Inline version for quickly obtaining counts of array or Countable objects, usefu
 **Snippet Code:**
 
 ```html
-{f:count(
-    subject: '${1}'
-)}
+{f:count(subject: '${1}')}
 ```
 
 ---
@@ -175,8 +180,7 @@ A basic <f:debug> ViewHelper that provides debugging information with a default 
 **Snippet Code:**
 
 ```html
-<f:debug
-    title="Debug"
+<f:debug title="Debug"
 >
     ${1:{_all}}
 </f:debug>
@@ -222,9 +226,7 @@ Defines the Else-Branch of a condition. Only effective when used inside an <f:if
 Checks if a feature flag is enabled and allows conditional rendering of content based on the feature's state.
 
 ```html
-<f:feature
-    name="${1}"
->
+<f:feature name="${1}">
     <f:then>
         ${2}
     </f:then>
@@ -244,10 +246,8 @@ Checks if a feature flag is enabled and allows conditional rendering of content 
 The FirstViewHelper returns the first item of an array, useful when you need to access the initial element in a list.
 
 ```html
-<f:first
-    value="${1}"
->
-${2}
+<f:first value="${1}">
+    ${2}
 </f:first>
 ```
 
@@ -261,9 +261,7 @@ ${2}
 Inline version of the <f:first> ViewHelper, allowing quick access to the first element of an array within an expression.
 
 ```html
-{f:first(
-    value: '${1}'
-)}
+{f:first(value: '${1}')}
 
 ---
 
@@ -382,9 +380,7 @@ Inline version of the <f:if> ViewHelper for basic conditional rendering.
 Implements an if/else condition, useful for branching logic within your templates.
 
 ```html
-<f:if
-    condition="${1:condition}"
->
+<f:if condition="${1:condition}">
     <f:then>${2}</f:then>
     <f:else>${3}</f:else>
 </f:if>
@@ -400,11 +396,7 @@ Implements an if/else condition, useful for branching logic within your template
 Inline version of the <f:if> ViewHelper with condition, then, and else attributes.
 
 ```html
-{f:if(
-    condition: '${1:{condition} == 1}',
-    then: '${2}',
-    else: '${3}'
-)}
+{f:if(condition: '${1:{condition} == 1}', then: '${2}', else: '${3}')}
 ```
 
 ---
@@ -455,9 +447,7 @@ Inline version of the <f:image> ViewHelper with selected attributes, for quick i
 Inline Fluid rendering ViewHelper to render Fluid code stored in a variable.
 
 ```html
-<f:inline
-    code="${1:code}"
-/>
+<f:inline code="${1:code}" />
 ```
 
 ---
@@ -470,9 +460,7 @@ Inline Fluid rendering ViewHelper to render Fluid code stored in a variable.
 Inline version of the <f:inline> ViewHelper for rendering Fluid code stored in a variable.
 
 ```html
-{f:inline(
-    code: '${1:code}'
-)}
+{f:inline(code: '${1:code}')}
 ```
 
 ---
@@ -507,4 +495,234 @@ Inline version of the <f:join> ViewHelper for quick concatenation of array eleme
     separator: '${2:, }',
     separatorLast: '${3: and }'
 )}
+```
+
+---
+
+### Last ViewHelper
+
+**Trigger the Snippet:** Type `fLast` in your IDE or editor.
+
+**Description:**
+Returns the last item of an array. This ViewHelper is useful for extracting the final element from a list.
+
+**Snippet Code:**
+
+```html
+<f:last value="{${1:0: 'first', 1: 'second'}}" />
+```
+
+---
+
+### Layout ViewHelper
+
+**Trigger the Snippet:** Type `fLayout` in your IDE or editor.
+
+**Description:**
+Selects a layout to be used for the current template. This is essential for setting up the overall structure of your TYPO3 templates.
+
+**Snippet Code:**
+
+```html
+<f:layout name="${1:main}" />
+```
+
+---
+
+### Media ViewHelper
+
+**Trigger the Snippet:** Type `fMedia` in your IDE or editor.
+
+**Description:**
+Renders a given media file with the correct HTML tag. This ViewHelper is particularly useful for embedding media files like videos and audio in your templates.
+
+**Snippet Code:**
+
+```html
+<f:media
+    file="{${1:file}}"
+    width="${2:400}"
+    height="${3:375}"
+    ${4:additionalConfig="{loop: '1', autoplay: '1'}"}
+/>
+```
+
+---
+
+### Or ViewHelper
+
+**Trigger the Snippet:** Type `fOr` in your IDE or editor.
+
+**Description:**
+Use alternative text if content is null. This is useful for providing fallback values when dealing with potentially undefined variables.
+
+**Snippet Code:**
+
+```html
+{${1:undefinedVariable} -> f:or(alternative=${2:fallback})}
+```
+
+---
+
+### Render ViewHelper
+
+**Trigger the Snippet:** Type `fRender` in your IDE or editor.
+
+**Description:**
+Renders a section or partial with specified arguments. This ViewHelper is integral for reusing template parts, ensuring modular and maintainable code. It dynamically includes sections or partials into your templates based on given conditions or arguments.
+
+**Snippet Code:**
+
+```html
+<f:render
+    section="${1:someSection}"
+    partial="${2:partialName}"
+    arguments="${3:{_all}}"
+/>
+```
+
+---
+
+### Replace ViewHelper
+
+**Trigger the Snippet:** Type `fReplace` in your IDE or editor.
+
+**Description:**
+Replaces one or multiple strings with other strings. This ViewHelper is useful for performing text replacements within your templates.
+
+**Snippet Code:**
+
+```html
+<f:replace
+    value="${1:Hello World}"
+    search="${2:World}"
+    replace="${3:Fluid}"
+/>
+```
+
+---
+
+### Section ViewHelper
+
+**Trigger the Snippet:** Type `fSection` in your IDE or editor.
+
+**Description:**
+Declares sections in templates for later use. Sections are useful for organizing and reusing template content.
+
+**Snippet Code:**
+
+```html
+<f:section
+    name="${1:sectionName}"
+>
+    ${2:This is a section.}
+</f:section>
+```
+
+---
+
+### Spaceless ViewHelper
+
+**Trigger the Snippet:** Type `fSpaceless` in your IDE or editor.
+
+**Description:**
+Removes redundant spaces between HTML tags. This ViewHelper is helpful for minimizing the output HTML by removing unnecessary whitespace.
+
+**Snippet Code:**
+
+```html
+<f:spaceless>
+    ${1:<div><div><div>text\n\ntext</div></div></div>}
+</f:spaceless>
+```
+
+---
+
+### Split ViewHelper
+
+**Trigger the Snippet:** Type `fSplit` in your IDE or editor.
+
+**Description:**
+Splits a string by the specified separator. This ViewHelper is useful for breaking strings into arrays based on a delimiter.
+
+**Snippet Code:**
+
+```html
+<f:split value="${1:1,5,8}" separator="${2:,}" limit="${3:2}" />
+```
+
+---
+
+### Switch ViewHelper
+
+**Trigger the Snippet:** Type `fSplit` in your IDE or editor.
+
+**Description:**
+Switches content based on the value or expression. This ViewHelper is useful for handling multiple conditional cases in your templates.
+
+**Snippet Code:**
+
+```html
+<f:switch
+    expression="{${1:person.gender}}"
+>
+    <f:case value="${2:male}">Mr.</f:case>
+    <f:case value="${3:female}">Mrs.</f:case>
+    <f:defaultCase>Mr. / Mrs.</f:defaultCase>
+</f:switch>
+```
+
+---
+
+### Then ViewHelper
+
+**Trigger the Snippet:** Type `fThen` in your IDE or editor.
+
+**Description:**
+Used within <f:if> to specify what should be rendered if the condition is true. This ViewHelper defines the content for the true branch of a conditional statement.
+
+**Snippet Code:**
+
+```html
+<f:then>
+    ${1:content}
+</f:then>
+```
+
+---
+
+### Translate ViewHelper
+
+**Trigger the Snippet:** Type `fTranslate` in your IDE or editor.
+
+**Description:**
+Translates a key from locallang or custom locallang file. This ViewHelper is essential for multilingual TYPO3 websites, allowing for dynamic text translation.
+
+**Snippet Code:**
+
+```html
+<f:translate
+    key="${1:key1}"
+    extensionName="${2:MyExt}"
+    ${3:arguments=${4:{0: 'dog', 1: 'fox'}}
+    default="${5:default value}}"
+/>
+```
+
+---
+
+### Variable ViewHelper
+
+**Trigger the Snippet:** Type `fVariable` in your IDE or editor.
+
+**Description:**
+Assigns a template variable. This ViewHelper is useful for setting variables within your templates that can be used later in the rendering process.
+
+**Snippet Code:**
+
+```html
+<f:variable
+    name="${1:myvariable}"
+    value="${2:some value}"
+/>
 ```

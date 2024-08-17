@@ -67,7 +67,8 @@
         "prefix": "fFormPassword",
         "body": [
             "<f:form.password",
-            "\tname=\"${1:myPassword}\"",
+            "\tname=\"${1:name}\"",
+            "\tvalue=\"${1:value}\"",
             "/>"
         ],
         "description": "Creates a password input field."
@@ -178,7 +179,8 @@
         "prefix": "fFormUpload",
         "body": [
             "<f:form.upload",
-            "\tname=\"${1:file}\"",
+            "\tname=\"${1:name}\"",
+            "\tvalue=\"${1:value}\"",
             "/>"
         ],
         "description": "Generates an input file element."
