@@ -1,3 +1,12 @@
-# Prettier files
+# Dependency directories
 
-.prettierrc.yml
+node_modules/
+
+# Visual Studio Code files
+
+.vscode
+.vscode-test
+
+# Git files
+
+.gitignore
