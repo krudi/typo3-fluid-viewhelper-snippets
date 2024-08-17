@@ -9,4 +9,3 @@ All snippets included in this extension are created and adjusted based on the [T
 ## Issue
 
 Have you found a bug in this project or have a suggestion for a new feature? Create a new ticket for the bug or feature, which can be found on the [GitHub](https://github.com/krudi/typo3-viewhelpers-vscode-snippets/issues) page.
-Integrate TYPO3 code snippets easily to Visual Studio Code. Improve your TYPO3 development with a collection of popular snippets, designed for quick access and efficient coding.
