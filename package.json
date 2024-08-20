@@ -44,6 +44,42 @@
         "theme": "light"
     },
     "contributes": {
+        "languages": [
+            {
+                "id": "tsconfig",
+                "aliases": [
+                    "TSConfig",
+                    "tsconfig"
+                ],
+                "extensions": [
+                    ".tsconfig"
+                ],
+                "configuration": "./language-configuration.json"
+            },
+            {
+                "id": "typoscript",
+                "aliases": [
+                    "TypoScript",
+                    "typoscript"
+                ],
+                "extensions": [
+                    ".typoscript"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "tsconfig",
+                "scopeName": "source.tsconfig",
+                "path": "./syntaxes/tsconfig.tmLanguage.json"
+            },
+            {
+                "language": "typoscript",
+                "scopeName": "source.typoscript",
+                "path": "./syntaxes/typoscript.tmLanguage.json"
+            }
+        ],
         "snippets": [
             {
                 "language": "html",

@@ -20,6 +20,10 @@ All snippets included in this extension are created and adjusted based on the [T
 ### Forms (`formvh:*`)
 - [Forms Documentation](./docs/formvh/README.md)
 
+## Syntax Support
+
+This extension also provides syntax support for [TypoScript](https://docs.typo3.org/m/typo3/reference-typoscript/main/en-us/Index.html) and [TSConfig](https://docs.typo3.org/m/typo3/reference-tsconfig/main/en-us/Index.html#start).
+
 ## Issue
 
 Have you found a bug in this project or have a suggestion for a new feature? Create a new ticket for the bug or feature, which can be found on the [GitHub](https://github.com/krudi/typo3-fluid-viewhelper-snippets/issues) page.
