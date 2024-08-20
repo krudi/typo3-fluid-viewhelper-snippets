@@ -1,0 +1,20 @@
+TCEFORM.tt_content.layout {
+  removeItems = 1,2,3
+  addItems {
+    10 = Special Layout
+  }
+}
+
+[backend.user.isAdmin]
+  TCEFORM.pages {
+    title.disabled = 1
+  }
+[END]
+
+[page|layout = 2]
+  mod.web_layout {
+    disablePageTree = 1
+  }
+[END]
+
+@import 'EXT:site_package/Configuration/TSconfig/somefile.tsconfig'
