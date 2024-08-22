@@ -3,11 +3,12 @@
     "prefix": "fFormSelectOptgroup",
     "body": [
       "<f:form.select.optgroup",
-      "\tadditionalAttributes=\"${1:array}\"",
-      "\tdata=\"${2:array}\"",
+      "\tadditionalAttributes=\"${1:{}}\"",
+      "\tdata=\"${2:{}}\"",
       "\tdisabled=\"${3:false}\"",
+      "\tlabel=\"${4:Group Label}\"",
       ">",
-      "\t$4",
+      "\t${5:<f:form.select.option value=\"1\">Option 1</f:form.select.option>}",
       "</f:form.select.optgroup>"
     ],
     "description": "Adds custom <optgroup> tags inside an <f:form.select>, supports further child <f:form.select.option> tags."
@@ -16,12 +17,12 @@
     "prefix": "fFormSelectOption",
     "body": [
       "<f:form.select.option",
-      "\tadditionalAttributes=\"${1:array}\"",
-      "\tdata=\"${2:array}\"",
-      "\tselected=\"${3}\"",
-      "\tvalue=\"${4}\"",
+      "\tadditionalAttributes=\"${1:{}}\"",
+      "\tdata=\"${2:{}}\"",
+      "\tselected=\"${3:false}\"",
+      "\tvalue=\"${4:optionValue}\"",
       ">",
-      "\t$5",
+      "\t${5:Option Label}",
       "</f:form.select.option>"
     ],
     "description": "Adds custom <option> tags inside an <f:form.select>."

@@ -35,8 +35,8 @@
     "body": [
       "<be:thumbnail",
       "\timage=\"${1:file.resource}\"",
-      "\twidth=\"${2:thumbnail.width}\"",
-      "\theight=\"${3:thumbnail.height}\"",
+      "\twidth=\"${2:150}\"",
+      "\theight=\"${3:150}\"",
       "\tcontext=\"${4:Image.Preview}\"",
       "/>"
     ],

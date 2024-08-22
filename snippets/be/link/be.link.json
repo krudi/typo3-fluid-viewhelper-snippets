@@ -4,9 +4,9 @@
     "body": [
       "<be:link.editRecord",
       "\tuid=\"${1:42}\"",
-      "\ttable=\"${2:a_table}\"",
+      "\ttable=\"${2:tt_content}\"",
       "\t${3:returnUrl=\"foo/bar\"}",
-      "\t${4:fields=\"\"}",
+      "\t${4:fields=\"title,subtitle\"}",
       "/>"
     ],
     "description": "Generates a link to edit a specific record identified by its UID and table. You can specify fields to edit and a return URL to redirect after closing the edit dialog."
@@ -15,11 +15,11 @@
     "prefix": "beLinkNewRecord",
     "body": [
       "<be:link.newRecord",
-      "\ttable=\"${1:a_table}\"",
-      "\t${2:pid=\"\"}",
+      "\ttable=\"${1:tt_content}\"",
+      "\t${2:pid=\"1\"}",
       "\t${3:uid=\"-17\"}",
       "\t${4:returnUrl=\"foo/bar\"}",
-      "\t${5:defaultValues=\"{}\"}",
+      "\t${5:defaultValues=\"{tt_content: {header: 'New Header'}}\"}",
       "/>"
     ],
     "description": "Generates a link to create a new record in a specified table. You can specify the page ID for placement, the UID for ordering, default field values, and a return URL to redirect after creating the record."

@@ -3,7 +3,7 @@
     "prefix": "fBeSecurityIfAuthenticated",
     "body": [
       "<f:be.security.ifAuthenticated>",
-      "\t$1",
+      "\t${1:Content visible to authenticated users}",
       "</f:be.security.ifAuthenticated>"
     ],
     "description": "Renders the content inside this tag only if the backend user is authenticated."
@@ -11,8 +11,8 @@
   "Backend IfHasRole ViewHelper": {
     "prefix": "fBeSecurityIfHasRole",
     "body": [
-      "<f:be.security.ifHasRole role=\"$1\">",
-      "\t$2",
+      "<f:be.security.ifHasRole role=\"${1:Administrator}\">",
+      "\t${2:Content visible to users with the Administrator role}",
       "</f:be.security.ifHasRole>"
     ],
     "description": "Renders the content inside this tag only if the backend user has the specified role."

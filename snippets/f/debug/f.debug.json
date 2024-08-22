@@ -8,7 +8,7 @@
       "\targuments=\"${3:{_all}}\"",
       "\tcontentAs=\"${4:content}\"",
       "\tdebug=\"${5:true}\"",
-      "\tdefault=\"${6:DefaultValue}\"",
+      "\tdefault=\"${6:Default content}\"",
       "\toptional=\"${7:false}\"",
       ">",
       "</f:debug.render>"

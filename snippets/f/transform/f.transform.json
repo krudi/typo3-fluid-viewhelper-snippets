@@ -6,9 +6,16 @@
       "\tonFailure=\"${1:removeEnclosure}\"",
       "\tselector=\"${2:a.href}\"",
       ">",
-      "\t$3",
+      "\t${3:<a href=\"t3://page?uid=1\" class=\"home\">Home</a>}",
       "</f:transform.html>"
     ],
     "description": "Transforms HTML and substitutes internal link scheme aspects."
+  },
+  "Transform HTML Inline ViewHelper": {
+    "prefix": "fTransformHtmlInline",
+    "body": [
+      "{${1:content} -> f:transform.html(selector: '${2:a.href}', onFailure: '${3:removeEnclosure}')}"
+    ],
+    "description": "Inline version of the <f:transform.html> ViewHelper for transforming HTML."
   }
 }

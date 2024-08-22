@@ -3,13 +3,13 @@
     "prefix": "fUriAction",
     "body": [
       "<f:uri.action",
-      "\taction=\"${1}\"",
-      "\tcontroller=\"${2}\"",
-      "\tpluginName=\"${3}\"",
-      "\textensionName=\"${4}\"",
-      "\targuments=\"${5:array}\"",
+      "\taction=\"${1:index}\"",
+      "\tcontroller=\"${2:Default}\"",
+      "\tpluginName=\"${3:MyPlugin}\"",
+      "\textensionName=\"${4:MyExtension}\"",
+      "\targuments=\"{${5:arguments}}\"",
       ">",
-      "\t$6",
+      "\t${6}",
       "</f:uri.action>"
     ],
     "description": "A ViewHelper for creating URIs to extbase actions."
@@ -19,9 +19,9 @@
     "body": [
       "<f:uri.external",
       "\tdefaultScheme=\"${1:https}\"",
-      "\turi=\"${2}\"",
+      "\turi=\"${2:https://example.com}\"",
       ">",
-      "\t$3",
+      "\t${3}",
       "</f:uri.external>"
     ],
     "description": "A ViewHelper for creating URIs to external targets."
@@ -31,12 +31,12 @@
     "body": [
       "<f:uri.image",
       "\timage=\"{${1:imageObject}}\"",
-      "\talt=\"${2:alt text}\"",
-      "\twidth=\"${3:width}\"",
-      "\theight=\"${4:height}\"",
-      "\tfileExtension=\"${5:fileExtension}\"",
+      "\talt=\"${2:Alt text}\"",
+      "\twidth=\"${3:800}\"",
+      "\theight=\"${4:auto}\"",
+      "\tfileExtension=\"${5:jpg}\"",
       ">",
-      "\t$6",
+      "\t${6}",
       "</f:uri.image>"
     ],
     "description": "Resizes a given image (if required) and returns its relative path."
@@ -47,16 +47,16 @@
       "<f:uri.page",
       "\tabsolute=\"${1:false}\"",
       "\taddQueryString=\"${2:false}\"",
-      "\tadditionalParams=\"${3:array}\"",
-      "\targumentsToBeExcludedFromQueryString=\"${4:array}\"",
-      "\tlanguage=\"${5}\"",
+      "\tadditionalParams=\"{${3:additionalParams}}\"",
+      "\targumentsToBeExcludedFromQueryString=\"{${4:argumentsToExclude}}\"",
+      "\tlanguage=\"${5:0}\"",
       "\tlinkAccessRestrictedPages=\"${6:false}\"",
       "\tnoCache=\"${7:false}\"",
       "\tpageType=\"${8:0}\"",
-      "\tpageUid=\"${9}\"",
-      "\tsection=\"${10}\"",
+      "\tpageUid=\"${9:1}\"",
+      "\tsection=\"${10:section}\"",
       ">",
-      "\t$11",
+      "\t${11}",
       "</f:uri.page>"
     ],
     "description": "A ViewHelper for creating URIs to TYPO3 pages."
@@ -66,11 +66,11 @@
     "body": [
       "<f:uri.resource",
       "\tabsolute=\"${1:false}\"",
-      "\textensionName=\"${2}\"",
-      "\tpath=\"${3}\"",
+      "\textensionName=\"${2:MyExtension}\"",
+      "\tpath=\"${3:Resources/Public/Images/image.jpg}\"",
       "\tuseCacheBusting=\"${4:true}\"",
       ">",
-      "\t$5",
+      "\t${5}",
       "</f:uri.resource>"
     ],
     "description": "A ViewHelper for creating URIs to resources."
@@ -78,8 +78,8 @@
   "Uri Typolink ViewHelper": {
     "prefix": "fUriTypolink",
     "body": [
-      "<f:uri.typolink parameter=\"${6}\">",
-      "\t$10",
+      "<f:uri.typolink parameter=\"${1:1}\">",
+      "\t${2}",
       "</f:uri.typolink>"
     ],
     "description": "A ViewHelper to create URIs from fields supported by the link wizard."

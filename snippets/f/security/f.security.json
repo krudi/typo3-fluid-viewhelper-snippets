@@ -4,10 +4,10 @@
     "body": [
       "<f:security.ifAuthenticated>",
       "\t<f:then>",
-      "\t\t${1:This is being shown whenever a FE user is logged in}",
+      "\t\t${1:You are logged in as a frontend user.}",
       "\t</f:then>",
       "\t<f:else>",
-      "\t\t${2:This is being displayed if no FE user is logged in}",
+      "\t\t${2:Please log in to access this content.}",
       "\t</f:else>",
       "</f:security.ifAuthenticated>"
     ],
@@ -18,10 +18,10 @@
     "body": [
       "<f:security.ifHasRole role=\"${1:Administrator}\">",
       "\t<f:then>",
-      "\t\t${2:This is being shown in case you have the role.}",
+      "\t\t${2:Welcome, Administrator!}",
       "\t</f:then>",
       "\t<f:else>",
-      "\t\t${3:This is being displayed in case you do not have the role.}",
+      "\t\t${3:You do not have the necessary permissions.}",
       "\t</f:else>",
       "</f:security.ifHasRole>"
     ],
@@ -31,7 +31,7 @@
     "prefix": "fSecurityNonce",
     "body": [
       "<script nonce=\"{f:security.nonce()}\">",
-      "\t${1:const inline = 'script';}",
+      "\t${1:const inlineScript = 'This script is secured with a nonce.';}",
       "</script>"
     ],
     "description": "This ViewHelper resolves the nonce attribute from the global server request object, or from the PolicyProvider service as a fallback value."

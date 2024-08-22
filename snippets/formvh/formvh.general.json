@@ -4,11 +4,11 @@
     "body": [
       "<formvh:form",
       "\tname=\"${1:formName}\"",
-      "\taction=\"${2:action}\"",
+      "\taction=\"${2:submit}\"",
       "\tmethod=\"${3:post}\"",
-      "\tcontroller=\"${4:controller}\"",
-      "\textensionName=\"${5:extension}\"",
-      "\tformat=\"${6:.html}\"",
+      "\tcontroller=\"${4:Main}\"",
+      "\textensionName=\"${5:MyExtension}\"",
+      "\tformat=\"${6:html}\"",
       "/>"
     ],
     "description": "Renders a form with custom configuration, including action URI, query parameters, and form method. Supports a wide range of attributes including action, controller, extension name, and more. Allows additional attributes, custom data attributes, and error handling."
@@ -26,8 +26,8 @@
     "prefix": "vhRender",
     "body": [
       "<formvh:render",
-      "\tfactoryClass=\"${1:YourCustomFactoryClass}\"",
-      "\tprototypeName=\"${2:yourPrototype}\"",
+      "\tfactoryClass=\"${1:CustomFormFactory}\"",
+      "\tprototypeName=\"${2:customPrototype}\"",
       "/>"
     ],
     "description": "Main entry point to render a form into a Fluid template. Requires a factory class that implements FormFactoryInterface. Supports custom factory configurations and prototypes."
@@ -37,7 +37,7 @@
     "body": [
       "<formvh:renderAllFormValues",
       "\tas=\"${1:formValue}\"",
-      "\trenderable=\"${2:renderableElement}\"",
+      "\trenderable=\"${2:formElement}\"",
       "/>"
     ],
     "description": "Renders all values of a form. Outputs the values under the specified name in the template. Requires a RootRenderableInterface instance to provide the form values."
@@ -47,7 +47,7 @@
     "body": [
       "<formvh:renderFormValue",
       "\tas=\"${1:formValue}\"",
-      "\trenderable=\"${2:renderableElement}\"",
+      "\trenderable=\"${2:formElement}\"",
       "/>"
     ],
     "description": "Renders a single value of a form. Outputs the value under the specified name in the template. Requires a RenderableInterface instance to provide the form value."
@@ -56,7 +56,7 @@
     "prefix": "vhRenderRenderable",
     "body": [
       "<formvh:renderRenderable",
-      "\trenderable=\"${1:renderableElement}\"",
+      "\trenderable=\"${1:formElement}\"",
       "/>"
     ],
     "description": "Renders a renderable element within a form. Requires a RenderableInterface instance and integrates with the TYPO3 CMS Form MVC View to return the rendered content."
@@ -76,7 +76,7 @@
     "body": [
       "<formvh:translateElementProperty",
       "\telement=\"${1:formElement}\"",
-      "\tproperty=\"${2:property}\"",
+      "\tproperty=\"${2:label}\"",
       "\trenderingOptionProperty=\"${3:renderingOption}\"",
       "/>"
     ],
