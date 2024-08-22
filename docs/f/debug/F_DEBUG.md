@@ -9,13 +9,13 @@ A debuggable version of `<f:render>` that wraps the output with HTML for inspect
 
 ```html
 <f:debug.render
-    partial="${1:PartialName}"
-    section="${2:SectionName}"
-    arguments="${3:{_all}}"
-    contentAs="${4:content}"
-    debug="${5:true}"
-    default="${6:DefaultValue}"
-    optional="${7:false}"
+    partial="PartialName"
+    section="SectionName"
+    arguments="{_all}"
+    contentAs="content"
+    debug="true"
+    default="Default content"
+    optional="false"
 >
 </f:debug.render>
 ```

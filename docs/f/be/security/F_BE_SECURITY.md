@@ -9,7 +9,7 @@ Renders the content inside this tag only if the backend user is authenticated.
 
 ```html
 <f:be.security.ifAuthenticated>
-    $1
+    Content visible to authenticated users
 </f:be.security.ifAuthenticated>
 ```
 
@@ -25,7 +25,7 @@ Renders the content inside this tag only if the backend user has the specified r
 **Snippet Code:**
 
 ```html
-<f:be.security.ifHasRole role="$1">
-    $2
+<f:be.security.ifHasRole role="Administrator">
+    Content visible to users with the Administrator role
 </f:be.security.ifHasRole>
 ```

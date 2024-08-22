@@ -9,13 +9,13 @@ A ViewHelper for creating URIs to Extbase actions. This is useful for generating
 
 ```html
 <f:uri.action
-    action="${1}"
-    controller="${2}"
-    pluginName="${3}"
-    extensionName="${4}"
-    arguments="${5:array}"
+    action="index"
+    controller="Default"
+    pluginName="MyPlugin"
+    extensionName="MyExtension"
+    arguments="{arguments}"
 >
-    ${6}
+    URI to action
 </f:uri.action>
 ```
 
@@ -32,10 +32,10 @@ A ViewHelper for creating URIs to external targets. This is useful for linking t
 
 ```html
 <f:uri.external
-    defaultScheme="${1:https}"
-    uri="${2}"
+    defaultScheme="https"
+    uri="https://example.com"
 >
-    ${3}
+    External URI
 </f:uri.external>
 ```
 
@@ -52,13 +52,13 @@ Resizes a given image (if required) and returns its relative path. This ViewHelp
 
 ```html
 <f:uri.image
-    image="{${1:imageObject}}"
-    alt="${2:alt text}"
-    width="${3:width}"
-    height="${4:height}"
-    fileExtension="${5:fileExtension}"
+    image="{imageObject}"
+    alt="Alt text"
+    width="800"
+    height="auto"
+    fileExtension="jpg"
 >
-    ${6}
+    Image URI
 </f:uri.image>
 ```
 
@@ -75,18 +75,18 @@ A ViewHelper for creating URIs to TYPO3 pages. This snippet is useful for genera
 
 ```html
 <f:uri.page
-    absolute="${1:false}"
-    addQueryString="${2:false}"
-    additionalParams="${3:array}"
-    argumentsToBeExcludedFromQueryString="${4:array}"
-    language="${5}"
-    linkAccessRestrictedPages="${6:false}"
-    noCache="${7:false}"
-    pageType="${8:0}"
-    pageUid="${9}"
-    section="${10}"
+    absolute="false"
+    addQueryString="false"
+    additionalParams="{additionalParams}"
+    argumentsToBeExcludedFromQueryString="{argumentsToExclude}"
+    language="0"
+    linkAccessRestrictedPages="false"
+    noCache="false"
+    pageType="0"
+    pageUid="1"
+    section="section"
 >
-    ${11}
+    Page URI
 </f:uri.page>
 ```
 
@@ -103,12 +103,12 @@ A ViewHelper for creating URIs to resources. This is useful for linking to stati
 
 ```html
 <f:uri.resource
-    absolute="${1:false}"
-    extensionName="${2}"
-    path="${3}"
-    useCacheBusting="${4:true}"
+    absolute="false"
+    extensionName="MyExtension"
+    path="Resources/Public/Images/image.jpg"
+    useCacheBusting="true"
 >
-    ${5}
+    Resource URI
 </f:uri.resource>
 ```
 
@@ -124,7 +124,7 @@ A ViewHelper to create URIs from fields supported by the link wizard. This is us
 **Snippet Code:**
 
 ```html
-<f:uri.typolink parameter="${6}">
-    ${10}
+<f:uri.typolink parameter="1">
+    Typolink URI
 </f:uri.typolink>
 ```

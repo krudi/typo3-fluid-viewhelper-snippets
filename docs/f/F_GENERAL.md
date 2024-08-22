@@ -8,8 +8,9 @@ Declares new variables that are aliases of existing variables, simplifying templ
 **Snippet Code:**
 
 ```html
-<f:alias map="{${1:x}: '${2:foo}'}">
-    ${3:${1}}
+<f:alias map="{x: 'foo'}">
+    Content using alias
+    {x}
 </f:alias>
 ```
 
@@ -25,7 +26,7 @@ The Alias Inline ViewHelper allows you to declare new variables as aliases of ot
 **Snippet Code:**
 
 ```html
-{f:alias(map: {${1:x}: '${2:foo}'})}
+{f:alias(map: {x: 'foo'})}
 ```
 
 ---
@@ -40,8 +41,8 @@ Used within the <f:switch> ViewHelper as a single case. Matches a given value an
 **Snippet Code:**
 
 ```html
-<f:case value="${1}">
-    ${2}
+<f:case value="1">
+    Content for case 1
 </f:case>
 ```
 
@@ -57,12 +58,12 @@ Renders content objects defined in TypoScript, allowing for integration of compl
 
 ```html
 <f:cObject
-    currentValueKey="${1}"
-    data="${2}"
-    table="${3}"
-    typoscriptObjectPath="${4}"
+    currentValueKey="key"
+    data="{contentObject}"
+    table="tt_content"
+    typoscriptObjectPath="lib.contentElement"
 >
-    ${5}
+    CObject content
 </f:cObject>
 ```
 
@@ -79,10 +80,10 @@ Inline rendering of TypoScript content objects, particularly useful for embeddin
 
 ```html
 {f:cObject(
-    currentValueKey: '${1}',
-    data: '${2}',
-    table: '${3}',
-    typoscriptObjectPath: '${4}'
+    currentValueKey: 'key',
+    data: '{contentObject}',
+    table: 'tt_content',
+    typoscriptObjectPath: 'lib.contentElement'
 )}
 ```
 
@@ -99,7 +100,7 @@ Hides content within templates from being rendered, useful for developers to lea
 
 ```html
 <f:comment>
-    ${1}
+    This is a comment
 </f:comment>
 ```
 
@@ -115,9 +116,8 @@ Accesses PHP constants directly within templates, facilitating the use of config
 **Snippet Code:**
 
 ```html
-<f:constant name="${1}">
-    ${2}
-</f:constant>
+<f:constant name="TYPO3_MODE" />
+```
 
 ---
 
@@ -131,8 +131,8 @@ Counts the elements in an array or an object implementing Countable, returning t
 **Snippet Code:**
 
 ```html
-<f:count subject="${1}">
-    ${2}
+<f:count subject="{array}">
+    Counted items: {subject}
 </f:count>
 ```
 
@@ -148,7 +148,24 @@ Inline version for quickly obtaining counts of array or Countable objects, usefu
 **Snippet Code:**
 
 ```html
-{f:count(subject: '${1}')}
+{f:count(subject: '{array}')}
+```
+
+---
+
+### Cycle ViewHelper
+
+**Trigger the Snippet:** Type `fCycle` in your IDE or editor.
+
+**Description:**
+This ViewHelper cycles through the specified values.
+
+**Snippet Code:**
+
+```html
+<f:cycle values="{0,1,2}" as="item">
+    Item: {item}
+</f:cycle>
 ```
 
 ---
@@ -164,8 +181,8 @@ Inline version of the <f:cycle> ViewHelper, ideal for situations where you need 
 
 ```html
 {f:cycle(
-    values: '${1}',
-    as: '${2}'
+    values: '{0,1,2}',
+    as: 'item'
 )}
 ```
 
@@ -180,9 +197,8 @@ A basic <f:debug> ViewHelper that provides debugging information with a default 
 **Snippet Code:**
 
 ```html
-<f:debug title="Debug"
->
-    ${1:{_all}}
+<f:debug title="Debug">
+    {_all}
 </f:debug>
 ```
 
@@ -197,7 +213,7 @@ A ViewHelper that specifies the 'default' case when used within the <f:switch> V
 
 ```html
 <f:defaultCase>
-    ${1}
+    Default Content
 </f:defaultCase>
 ```
 
@@ -212,7 +228,7 @@ Defines the Else-Branch of a condition. Only effective when used inside an <f:if
 
 ```html
 <f:else>
-    ${1}
+    Else Content
 </f:else>
 ```
 
@@ -226,12 +242,12 @@ Defines the Else-Branch of a condition. Only effective when used inside an <f:if
 Checks if a feature flag is enabled and allows conditional rendering of content based on the feature's state.
 
 ```html
-<f:feature name="${1}">
+<f:feature name="featureFlag">
     <f:then>
-        ${2}
+        Feature Enabled
     </f:then>
     <f:else>
-        ${3}
+        Feature Disabled
     </f:else>
 </f:feature>
 ```
@@ -246,8 +262,8 @@ Checks if a feature flag is enabled and allows conditional rendering of content 
 The FirstViewHelper returns the first item of an array, useful when you need to access the initial element in a list.
 
 ```html
-<f:first value="${1}">
-    ${2}
+<f:first value="{array}">
+    First item: {value}
 </f:first>
 ```
 
@@ -261,7 +277,8 @@ The FirstViewHelper returns the first item of an array, useful when you need to 
 Inline version of the <f:first> ViewHelper, allowing quick access to the first element of an array within an expression.
 
 ```html
-{f:first(value: '${1}')}
+{f:first(value: '{array}')}
+```
 
 ---
 
@@ -274,10 +291,10 @@ Renders the flash messages as an unsorted list, useful for displaying user feedb
 
 ```html
 <f:flashMessages
-    as="${1:flashMessages}"
-    queueIdentifier="${2:defaultQueue}"
+    as="flashMessages"
+    queueIdentifier="default"
 >
-    ${3}
+    Flash Messages: {flashMessages}
 </f:flashMessages>
 ```
 
@@ -292,8 +309,8 @@ Inline version of the <f:flashMessages> ViewHelper for quick rendering of flash 
 
 ```html
 {f:flashMessages(
-    as: '${1:flashMessages}',
-    queueIdentifier: '${2:defaultQueue}'
+    as: 'flashMessages',
+    queueIdentifier: 'default'
 )}
 ```
 
@@ -308,13 +325,13 @@ Loop ViewHelper to iterate over arrays, useful for processing collections of ite
 
 ```html
 <f:for
-    each="{${1:array}}"
-    as="${2:item}"
-    key="${3:key}"
-    iteration="${4:iterator}"
-    reverse="${5:false}"
+    each="{items}"
+    as="item"
+    key="key"
+    iteration="iteration"
+    reverse="false"
 >
-    ${6}
+    Item: {item}, Key: {key}, Iteration: {iteration}
 </f:for>
 ```
 
@@ -329,12 +346,12 @@ Grouped loop ViewHelper to iterate over arrays, grouping by a specific property.
 
 ```html
 <f:groupedFor
-    each="{${1:array}}"
-    as="${2:item}"
-    groupBy="${3:property}"
-    groupKey="${4:groupKey}"
+    each="{items}"
+    as="group"
+    groupBy="property"
+    groupKey="groupKey"
 >
-    ${5}
+    Group: {group}, Group Key: {groupKey}
 </f:groupedFor>
 ```
 
@@ -348,10 +365,8 @@ Grouped loop ViewHelper to iterate over arrays, grouping by a specific property.
 Implements a basic if condition, useful for rendering content conditionally.
 
 ```html
-<f:if
-    condition="${1:{condition}}"
->
-    ${2}
+<f:if condition="{condition}">
+    Content if true
 </f:if>
 ```
 
@@ -365,9 +380,7 @@ Implements a basic if condition, useful for rendering content conditionally.
 Inline version of the <f:if> ViewHelper for basic conditional rendering.
 
 ```html
-{f:if(
-    condition: '${1:{condition}}'
-)}
+{f:if(condition: '{condition}', then: 'Content if true', else: 'Content if false')}
 ```
 
 ---
@@ -380,9 +393,13 @@ Inline version of the <f:if> ViewHelper for basic conditional rendering.
 Implements an if/else condition, useful for branching logic within your templates.
 
 ```html
-<f:if condition="${1:condition}">
-    <f:then>${2}</f:then>
-    <f:else>${3}</f:else>
+<f:if condition="{condition}">
+    <f:then>
+        Content if true
+    </f:then>
+    <f:else>
+        Content if false
+    </f:else>
 </f:if>
 ```
 
@@ -396,7 +413,7 @@ Implements an if/else condition, useful for branching logic within your template
 Inline version of the <f:if> ViewHelper with condition, then, and else attributes.
 
 ```html
-{f:if(condition: '${1:{condition} == 1}', then: '${2}', else: '${3}')}
+{f:if(condition: '{condition}', then: 'Content if true', else: 'Content if false')}
 ```
 
 ---
@@ -410,11 +427,11 @@ Resizes a given image and renders the respective img tag with selected attribute
 
 ```html
 <f:image
-    image="{${1:imageObject}}"
-    alt="${2:alt text}"
-    width="${3:width}"
-    height="${4:height}"
-    fileExtension="${5:fileExtension}"
+    image="{imageObject}"
+    alt="alt text"
+    width="800"
+    height="auto"
+    fileExtension="jpg"
 />
 ```
 
@@ -429,11 +446,11 @@ Inline version of the <f:image> ViewHelper with selected attributes, for quick i
 
 ```html
 {f:image(
-    image: '{${1:imageObject}}',
-    alt: '${2:alt text}',
-    width: '${3:width}',
-    height: '${4:height}',
-    fileExtension: '${5:fileExtension}'
+    image: '{imageObject}',
+    alt: 'alt text',
+    width: '800',
+    height: 'auto',
+    fileExtension: 'jpg'
 )}
 ```
 
@@ -447,7 +464,7 @@ Inline version of the <f:image> ViewHelper with selected attributes, for quick i
 Inline Fluid rendering ViewHelper to render Fluid code stored in a variable.
 
 ```html
-<f:inline code="${1:code}" />
+<f:inline code="someFluidCode" />
 ```
 
 ---
@@ -460,7 +477,7 @@ Inline Fluid rendering ViewHelper to render Fluid code stored in a variable.
 Inline version of the <f:inline> ViewHelper for rendering Fluid code stored in a variable.
 
 ```html
-{f:inline(code: '${1:code}')}
+{f:inline(code: 'someFluidCode')}
 ```
 
 ---
@@ -474,9 +491,9 @@ Combines elements from an array into a single string, useful for creating comma-
 
 ```html
 <f:join
-    value="{${1:array}}"
-    separator="${2:, }"
-    separatorLast="${3: and }"
+    value="{array}"
+    separator=", "
+    separatorLast=" and "
 />
 ```
 
@@ -490,11 +507,7 @@ Combines elements from an array into a single string, useful for creating comma-
 Inline version of the <f:join> ViewHelper for quick concatenation of array elements into a string.
 
 ```html
-{f:join(
-    value: '{${1:array}}',
-    separator: '${2:, }',
-    separatorLast: '${3: and }'
-)}
+{f:join(value: '{array}', separator: ', ', separatorLast: ' and ')}
 ```
 
 ---
@@ -509,7 +522,7 @@ Returns the last item of an array. This ViewHelper is useful for extracting the 
 **Snippet Code:**
 
 ```html
-<f:last value="{${1:0: 'first', 1: 'second'}}" />
+<f:last value="{array}" />
 ```
 
 ---
@@ -524,7 +537,7 @@ Selects a layout to be used for the current template. This is essential for sett
 **Snippet Code:**
 
 ```html
-<f:layout name="${1:main}" />
+<f:layout name="main" />
 ```
 
 ---
@@ -540,10 +553,13 @@ Renders a given media file with the correct HTML tag. This ViewHelper is particu
 
 ```html
 <f:media
-    file="{${1:file}}"
-    width="${2:400}"
-    height="${3:375}"
-    ${4:additionalConfig="{loop: '1', autoplay: '1'}"}
+    file="{file}"
+    width="400"
+     height="375"
+     additionalConfig="{
+        loop: '1',
+        autoplay: '1'
+    }"
 />
 ```
 
@@ -559,7 +575,7 @@ Use alternative text if content is null. This is useful for providing fallback v
 **Snippet Code:**
 
 ```html
-{${1:undefinedVariable} -> f:or(alternative=${2:fallback})}
+{undefinedVariable -> f:or(alternative='fallback')}
 ```
 
 ---
@@ -575,9 +591,9 @@ Renders a section or partial with specified arguments. This ViewHelper is integr
 
 ```html
 <f:render
-    section="${1:someSection}"
-    partial="${2:partialName}"
-    arguments="${3:{_all}}"
+    section="someSection"
+    partial="partialName"
+    arguments="{_all}"
 />
 ```
 
@@ -594,9 +610,9 @@ Replaces one or multiple strings with other strings. This ViewHelper is useful f
 
 ```html
 <f:replace
-    value="${1:Hello World}"
-    search="${2:World}"
-    replace="${3:Fluid}"
+    value="Hello World"
+    search="World"
+    replace="Fluid"
 />
 ```
 
@@ -612,10 +628,8 @@ Declares sections in templates for later use. Sections are useful for organizing
 **Snippet Code:**
 
 ```html
-<f:section
-    name="${1:sectionName}"
->
-    ${2:This is a section.}
+<f:section name="sectionName">
+    This is a section.
 </f:section>
 ```
 
@@ -632,7 +646,7 @@ Removes redundant spaces between HTML tags. This ViewHelper is helpful for minim
 
 ```html
 <f:spaceless>
-    ${1:<div><div><div>text\n\ntext</div></div></div>}
+    HTML content without spaces between tags
 </f:spaceless>
 ```
 
@@ -648,7 +662,7 @@ Splits a string by the specified separator. This ViewHelper is useful for breaki
 **Snippet Code:**
 
 ```html
-<f:split value="${1:1,5,8}" separator="${2:,}" limit="${3:2}" />
+<f:split value="1,5,8" separator="," limit="2" />
 ```
 
 ---
@@ -663,11 +677,9 @@ Switches content based on the value or expression. This ViewHelper is useful for
 **Snippet Code:**
 
 ```html
-<f:switch
-    expression="{${1:person.gender}}"
->
-    <f:case value="${2:male}">Mr.</f:case>
-    <f:case value="${3:female}">Mrs.</f:case>
+<f:switch expression="{person.gender}">
+    <f:case value="male">Mr.</f:case>
+    <f:case value="female">Mrs.</f:case>
     <f:defaultCase>Mr. / Mrs.</f:defaultCase>
 </f:switch>
 ```
@@ -685,7 +697,7 @@ Used within <f:if> to specify what should be rendered if the condition is true. 
 
 ```html
 <f:then>
-    ${1:content}
+    Content if condition is true
 </f:then>
 ```
 
@@ -702,10 +714,12 @@ Translates a key from locallang or custom locallang file. This ViewHelper is ess
 
 ```html
 <f:translate
-    key="${1:key1}"
-    extensionName="${2:MyExt}"
-    ${3:arguments=${4:{0: 'dog', 1: 'fox'}}
-    default="${5:default value}}"
+    key="LLL:EXT:my_ext/Resources/Private/Language/locallang.xlf:key" extensionName="my_ext"
+    arguments="{
+        0: 'dog',
+        1: 'fox'
+    }"
+    default="default value"
 />
 ```
 
@@ -721,8 +735,7 @@ Assigns a template variable. This ViewHelper is useful for setting variables wit
 **Snippet Code:**
 
 ```html
-<f:variable
-    name="${1:myvariable}"
-    value="${2:some value}"
-/>
+<f:variable name="myVariable">
+    Variable content
+</f:variable>
 ```

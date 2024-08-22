@@ -9,12 +9,12 @@ Renders a select box to switch between multiple actions and controllers, similar
 
 ```html
 <f:be.menus.actionMenu
-    additionalAttributes="${1:array}"
-    aria="${2:array}"
-    data="${3:array}"
-    defaultController="${4}"
+    additionalAttributes="{}"
+    aria="{}"
+    data="{}"
+    defaultController="DefaultController"
 >
-    $5
+    Menu items go here
 </f:be.menus.actionMenu>
 ```
 
@@ -31,13 +31,13 @@ Adds an item to an action menu in the backend with specified label, controller, 
 
 ```html
 <f:be.menus.actionMenuItem
-    label="$1"
-    controller="$2"
-    action="$3"
-    additionalAttributes="${4:array}"
-    arguments="${5:array}"
-    aria="${6:array}"
-    data="${7:array}"
+    label="Item Label"
+    controller="DefaultController"
+    action="index"
+    additionalAttributes="{}"
+    arguments="{}"
+    aria="{}"
+    data="{}"
 />
 ```
 
@@ -54,11 +54,11 @@ Groups options of an action menu.
 
 ```html
 <f:be.menus.actionMenuItemGroup
-    label="$1"
-    additionalAttributes="${2:array}"
-    aria="${3:array}"
-    data="${4:array}"
+    label="Group Label"
+    additionalAttributes="{}"
+    aria="{}"
+    data="{}"
 >
-    $5
+    Grouped menu items go here
 </f:be.menus.actionMenuItemGroup>
 ```

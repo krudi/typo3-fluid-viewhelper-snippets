@@ -9,11 +9,12 @@ Generates a link to edit a specific record identified by its UID and table. You 
 
 ```html
 <be:link.editRecord
-    uid="${1:42}"
-    table="${2:a_table}"
-    ${3:returnUrl="foo/bar"}
-    ${4:fields=""}
+    uid="42"
+    table="tt_content"
+    returnUrl="foo/bar"
+    fields="title,subtitle"
 />
+```
 
 ---
 
@@ -28,10 +29,10 @@ Generates a link to create a new record in a specified table. You can specify th
 
 ```html
 <be:link.newRecord
-    table="${1:a_table}"
-    ${2:pid=""}
-    ${3:uid="-17"}
-    ${4:returnUrl="foo/bar"}
-    ${5:defaultValues="{}"}
+    table="tt_content"
+    pid="1"
+    uid="-17"
+    returnUrl="foo/bar"
+    defaultValues="{tt_content: {header: 'New Header'}}"
 />
 ```

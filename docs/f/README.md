@@ -132,6 +132,7 @@
 
 ### Content Transformation
 - [Transform HTML ViewHelper](./transform/F_TRANSFORM.md#transform-html-viewhelper)
+- [Transform HTML Inline ViewHelper](./transform/F_TRANSFORM.md#transform-html-inline-viewhelper)
 
 ### URI Management
 - [Uri Action ViewHelper](./uri/F_URI.md#uri-action-viewhelper)

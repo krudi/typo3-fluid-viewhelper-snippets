@@ -8,13 +8,13 @@ Renders a styled content infobox in the backend with various states.
 **Snippet Code:**
 
 ```html
-<f:be.infobox title="$1"
-    message="$2"
-    state="${3:-2}"
-    iconName="${4}"
-    disableIcon="${5:false}"
+<f:be.infobox title="Information"
+    message="This is an info message."
+    state="0"
+    iconName="actions-info"
+    disableIcon="false"
 >
-    $6
+    Additional content here.
 </f:be.infobox>
 ```
 
@@ -30,14 +30,14 @@ Creates URIs to backend modules.
 **Snippet Code:**
 
 ```html
-<f:be.link route="$1"
-    parameters="${2:array}"
-    referenceType="${3:'absolute'}"
-    additionalAttributes="${4:array}"
-    aria="${5:array}"
-    data="${6:array}"
+<f:be.link route="moduleName"
+    parameters="{}"
+    referenceType="absolute"
+    additionalAttributes="{}"
+    aria="{}"
+    data="{}"
 >
-    $7
+    Link Text
 </f:be.link>
 ```
 
@@ -54,12 +54,12 @@ Registers backend module resources like CSS and JavaScript using the PageRendere
 
 ```html
 <f:be.pageRenderer
-    pageTitle="$1"
-    includeCssFiles="${2:array}"
-    includeJsFiles="${3:array}"
-    addJsInlineLabels="${4:array}"
-    includeJavaScriptModules="${5:array}"
-    addInlineSettings="${6:array}"
+    pageTitle="My Module"
+    includeCssFiles="['EXT:my_extension/Resources/Public/Css/style.css']"
+    includeJsFiles="['EXT:my_extension/Resources/Public/JavaScript/script.js']"
+    addJsInlineLabels="{}"
+    includeJavaScriptModules="[]"
+    addInlineSettings="{}"
 />
 ```
 
@@ -75,18 +75,18 @@ Renders a record list as known from the TYPO3 list module.
 **Snippet Code:**
 
 ```html
-<f:be.tableList tableName="$1"
-    fieldList="${2:array}"
-    storagePid="${3:1}"
-    levels="${4:0}"
-    filter="$5"
-    recordsPerPage="${6:0}"
-    sortField="$7"
-    sortDescending="${8:false}"
-    readOnly="${9:false}"
-    enableClickMenu="${10:true}"
-    enableControlPanels="${11:false}"
-    clickTitleMode="${12}"
+<f:be.tableList tableName="tt_content"
+    fieldList="['uid', 'header', 'bodytext']"
+    storagePid="1"
+    levels="0"
+    filter=""
+    recordsPerPage="10"
+    sortField="sorting"
+    sortDescending="false"
+    readOnly="false"
+    enableClickMenu="true"
+    enableControlPanels="true"
+    clickTitleMode="edit"
 />
 ```
 
@@ -102,8 +102,8 @@ Creates URIs to backend modules.
 **Snippet Code:**
 
 ```html
-<f:be.uri route="$1"
-    parameters="${2:array}"
-    referenceType="${3:'absolute'}"
+<f:be.uri route="moduleName"
+    parameters="{}"
+    referenceType="absolute"
 />
 ```

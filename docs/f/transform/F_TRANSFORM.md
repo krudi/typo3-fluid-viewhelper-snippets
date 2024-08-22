@@ -9,9 +9,24 @@ This ViewHelper transforms HTML and substitutes internal link scheme aspects. It
 
 ```html
 <f:transform.html
-    onFailure="${1:removeEnclosure}"
-    selector="${2:a.href}"
+    onFailure="removeEnclosure"
+    selector="a.href"
 >
-    ${3}
+    <a href="t3://page?uid=1" class="home">Home</a>
 </f:transform.html>
+```
+
+---
+
+### Transform HTML ViewHelper
+
+**Trigger the Snippet:** Type `fTransformHtmlInline` in your IDE or editor.
+
+**Description:**
+Inline version of the <f:transform.html> ViewHelper for transforming HTML.
+
+**Snippet Code:**
+
+```html
+{content -> f:transform.html(selector: 'a.href', onFailure: 'removeEnclosure')}
 ```

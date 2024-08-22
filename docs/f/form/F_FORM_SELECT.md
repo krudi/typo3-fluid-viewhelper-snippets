@@ -9,11 +9,12 @@ Adds custom <optgroup> tags inside an <f:form.select>, supporting further child 
 
 ```html
 <f:form.select.optgroup
-    additionalAttributes="${1:array}"
-    data="${2:array}"
-    disabled="${3:false}"
+    additionalAttributes="{}"
+    data="{}"
+    disabled="false"
+    label="Group Label"
 >
-    ${4}
+    <f:form.select.option value="1">Option 1</f:form.select.option>
 </f:form.select.optgroup>
 ```
 
@@ -30,11 +31,11 @@ Adds custom <option> tags inside an <f:form.select>. This allows you to define i
 
 ```html
 <f:form.select.option
-    additionalAttributes="${1:array}"
-    data="${2:array}"
-    selected="${3}"
-    value="${4}"
+    additionalAttributes="{}"
+    data="{}"
+    selected="false"
+    value="optionValue"
 >
-    ${5}
+    Option Label
 </f:form.select.option>
 ```

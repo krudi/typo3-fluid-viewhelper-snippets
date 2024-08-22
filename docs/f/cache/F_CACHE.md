@@ -9,7 +9,7 @@ Disables template compiling for the full template file to a PHP class.
 
 ```html
 <f:cache.disable>
-    $1
+    Cache is disabled for this block
 </f:cache.disable>
 ```
 
@@ -26,7 +26,7 @@ Forces the output of the enclosed template code to be compiled to a static strin
 
 ```html
 <f:cache.static>
-    $1
+    This block will be statically cached
 </f:cache.static>
 ```
 
@@ -42,7 +42,7 @@ Inserts variables that apply only during cache warmup and if no other variables 
 **Snippet Code:**
 
 ```html
-<f:cache.warmup variables="${1:{foo: bar}}">
-    $2
+<f:cache.warmup variables="{foo: 'bar'}">
+    Content rendered during cache warmup
 </f:cache.warmup>
 ```

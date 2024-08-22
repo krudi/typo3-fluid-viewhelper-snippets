@@ -9,10 +9,10 @@ Generates a URI for editing a specific record. The URI includes parameters for t
 
 ```html
 <be:uri.editRecord
-    uid="${1:42}"
-    table="${2:a_table}"
-    returnUrl="${3:foo/bar}"
-    fields="${4:title,subtitle}"
+    uid="42"
+    table="tt_content"
+    returnUrl="foo/bar"
+    fields="title,subtitle"
 />
 ```
 
@@ -29,10 +29,10 @@ Generates a URI for creating a new record. The URI includes parameters for the t
 
 ```html
 <be:uri.newRecord
-    table="${1:a_table}"
-    returnUrl="${2:foo/bar}"
-    pid="${3:17}"
-    uid="${4:-17}"
-    defaultValues="${5:{a_table: {a_field: 'value'}}}"
+    table="tt_content"
+    returnUrl="foo/bar"
+    pid="17"
+    uid="-17"
+    defaultValues="{tt_content: {header: 'New Header'}}"
 />
 ```

@@ -9,9 +9,9 @@ Renders the avatar for a specified backend user, including the `<img>` tag. You 
 
 ```html
 <be:avatar
-    backendUser="${1:user.uid}"
-    size="${2:32}"
-    showIcon="${3:true}"
+    backendUser="user.uid"
+    size="32"
+    showIcon="true"
 />
 ```
 
@@ -28,8 +28,8 @@ Accesses a specific column within a LanguageColumn object. Requires the column n
 
 ```html
 <be:languageColumn
-    columnNumber="${1:1}"
-    languageColumn="${2:1}"
+    columnNumber="1"
+    languageColumn="1"
 />
 ```
 
@@ -46,8 +46,8 @@ Creates an internal link to a backend module. You can provide additional link ar
 
 ```html
 <be:moduleLink
-    route="${1:pages_new}"
-    arguments="${2:{id:pageUid}}"
+    route="pages_new"
+    arguments="{id:pageUid}"
 />
 ```
 
@@ -64,9 +64,9 @@ Generates an `<img>` tag for rendering thumbnails. The ViewHelper supports vario
 
 ```html
 <be:thumbnail
-    image="${1:file.resource}"
-    width="${2:thumbnail.width}"
-    height="${3:thumbnail.height}"
-    context="${4:Image.Preview}"
+    image="file.resource"
+    width="150"
+    height="150"
+    context="Image.Preview"
 />
 ```

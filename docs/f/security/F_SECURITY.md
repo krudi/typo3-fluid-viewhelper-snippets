@@ -9,12 +9,12 @@ This ViewHelper implements an ifAuthenticated/else condition for frontend users.
 
 ```html
 <f:security.ifAuthenticated>
-    <f:then>
-        ${1:This is being shown whenever a FE user is logged in}
-    </f:then>
-    <f:else>
-        ${2:This is being displayed if no FE user is logged in}
-    </f:else>
+  <f:then>
+    You are logged in as a frontend user.
+  </f:then>
+  <f:else>
+    Please log in to access this content.
+  </f:else>
 </f:security.ifAuthenticated>
 ```
 
@@ -30,13 +30,13 @@ This ViewHelper implements an ifHasRole/else condition for frontend groups. It a
 **Snippet Code:**
 
 ```html
-<f:security.ifHasRole role="${1:Administrator}">
-    <f:then>
-        ${2:This is being shown in case you have the role.}
-    </f:then>
-    <f:else>
-        ${3:This is being displayed in case you do not have the role.}
-    </f:else>
+<f:security.ifHasRole role="Administrator">
+  <f:then>
+    Welcome, Administrator!
+  </f:then>
+  <f:else>
+    You do not have the necessary permissions.
+  </f:else>
 </f:security.ifHasRole>
 ```
 
@@ -53,6 +53,6 @@ This ViewHelper resolves the nonce attribute from the global server request obje
 
 ```html
 <script nonce="{f:security.nonce()}">
-    ${1:const inline = 'script';}
+  const inlineScript = 'This script is secured with a nonce.';
 </script>
 ```

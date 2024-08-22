@@ -8,7 +8,7 @@ Normalizes a path that uses EXT: syntax or an absolute URL to an absolute web pa
 **Snippet Code:**
 
 ```html
-<core:normalizedUrl pathOrUrl="${1:https://foo.bar/img.jpg}" />
+<core:normalizedUrl pathOrUrl="https://foo.bar/img.jpg" />
 ```
 
 ---
@@ -23,7 +23,7 @@ Displays an icon for a FAL resource (file or folder).
 **Snippet Code:**
 
 ```html
-<core:iconForResource resource="{${1:file.resource}}" />
+<core:iconForResource resource="{file.resource}" />
 ```
 
 ---
@@ -39,9 +39,9 @@ Displays an icon identified by an icon identifier.
 
 ```html
 <core:icon
-    title="${1:Open actions menu}"
-    identifier="${2:actions-menu}"
-    alternativeMarkupIdentifier="${3:inline}"
+    title="Open actions menu"
+    identifier="actions-menu"
+    alternativeMarkupIdentifier="inline"
 />
 ```
 
@@ -58,7 +58,7 @@ Displays an icon for a specific record.
 
 ```html
 <core:iconForRecord
-    table="${1:tt_content}"
-    row="{${2:record}}"
+    table="tt_content"
+    row="{record}"
 />
 ```

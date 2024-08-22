@@ -8,9 +8,8 @@ A ViewHelper that passes the given content through TYPO3's html-sanitizer to mit
 **Snippet Code:**
 
 ```html
-<f:sanitize.html
-    build="${1:default}"
->
-    ${2}
+<f:sanitize.html build="default">
+    <p>This content will be sanitized.</p>
 </f:sanitize.html>
+
 ```

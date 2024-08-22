@@ -9,10 +9,10 @@ Creates a button, such as a reset or submit button, in a form.
 
 ```html
 <f:form.button
-    type="${1:reset}"
-    name="${2:buttonName}"
+    type="submit"
+    name="submitButton"
 >
-    ${3:Button Label}
+    Submit
 </f:form.button>
 ```
 
@@ -29,8 +29,8 @@ Creates a basic checkbox input element.
 
 ```html
 <f:form.checkbox
-    name="${1:myCheckBox}"
-    value="${2:someValue}"
+    name="myCheckBox"
+    value="1"
 />
 ```
 
@@ -47,9 +47,9 @@ Creates a checkbox input element with a preselected value.
 
 ```html
 <f:form.checkbox
-    name="${1:myCheckBox}"
-    value="${2:someValue}"
-    checked="${3:{object.value} == 5}"
+    name="myCheckBox"
+    value="1"
+    checked="{object.value} == 1"
 />
 ```
 
@@ -66,9 +66,9 @@ Creates a checkbox input element bound to a property, with multiple selections.
 
 ```html
 <f:form.checkbox
-    property="${1:interests}"
-    value="${2:TYPO3}"
-    multiple="${3:1}"
+    property="interests"
+    value="TYPO3"
+    multiple="1"
 />
 ```
 
@@ -85,8 +85,8 @@ Renders a select tag with all available countries as options.
 
 ```html
 <f:form.countrySelect
-    name="${1:country}"
-    value="${2:{defaultCountry}}"
+    name="country"
+    value="DE"
 >
 ```
 
@@ -103,8 +103,8 @@ Renders a hidden input field.
 
 ```html
 <f:form.hidden
-    name="${1:myHiddenValue}"
-    value="${2:42}"
+    name="myHiddenValue"
+    value="42"
 />
 ```
 
@@ -121,8 +121,8 @@ Creates a password input field.
 
 ```html
 <f:form.password
-    name="${1:name}"
-    value="${2:value}"
+    name="password"
+    value=""
 />
 ```
 
@@ -139,8 +139,8 @@ Creates a password input field.
 
 ```html
 <f:form.radio
-    name="${1:myRadioButton}"
-    value="${2:someValue}"
+    name="myRadioButton"
+    value="1"
 />
 ```
 
@@ -157,14 +157,36 @@ Creates a radio button input element bound to a property.
 
 ```html
 <f:form.radio
-    property="${1:newsletter}"
-    value="${2:1}"
+    property="newsletter"
+    value="1"
 />
 ```
 
 ---
 
-### Form Radio Multiple ViewHelper
+### Form Radio Bound ViewHelper
+
+**Trigger the Snippet:** Type `fFormRadioMultiple` in your IDE or editor to trigger this snippet.
+
+**Description:**
+Creates multiple radio button input elements.
+
+**Snippet Code:**
+
+```html
+<f:form.radio
+    name="myRadioButton"
+    value="option1"
+/>
+<f:form.radio
+    name="myRadioButton"
+    value="option2"
+/>
+```
+
+---
+
+### Form Select Basic ViewHelper
 
 **Trigger the Snippet:** Type `fFormSelectBasic` in your IDE or editor to trigger this snippet.
 
@@ -175,8 +197,8 @@ Creates a basic select dropdown list.
 
 ```html
 <f:form.select
-    name="${1:paymentOptions}"
-    options="${2:{payPal: 'PayPal International Services', visa: 'VISA Card'}}"
+    name="paymentOptions"
+    options="{'paypal': 'PayPal', 'visa': 'VISA'}"
 />
 ```
 
@@ -193,9 +215,9 @@ Creates a select dropdown list with a preselected option.
 
 ```html
 <f:form.select
-    name="${1:paymentOptions}"
-    options="${2:{payPal: 'PayPal International Services', visa: 'VISA Card'}}"
-    value="${3:visa}"
+    name="paymentOptions"
+    options="{'paypal': 'PayPal', 'visa': 'VISA'}"
+    value="visa"
 />
 ```
 
@@ -212,8 +234,7 @@ Creates a select dropdown list with grouped options.
 
 ```html
 <f:form.select
-    name="${1:myproperty}"
->
+    name="options">
     <f:form.select.option value="1">Option one</f:form.select.option>
     <f:form.select.option value="2">Option two</f:form.select.option>
     <f:form.select.optgroup label="Group 1">
@@ -236,10 +257,10 @@ Creates a submit button.
 
 ```html
 <f:form.submit
-    name="${1:mySubmit}"
-    value="${2:Send Mail}"
+    name="mySubmit"
+    value="Submit"
 >
-    ${3:<button>dummy button</button>}
+    Additional content
 </f:form.submit>
 ```
 
@@ -256,8 +277,8 @@ Creates a textarea field.
 
 ```html
 <f:form.textarea
-    name="${1:myTextArea}"
-    value="${2:This is shown inside the textarea}"
+    name="myTextArea"
+    value="Enter your text here"
 />
 ```
 
@@ -274,8 +295,8 @@ Creates a text field input element.
 
 ```html
 <f:form.textfield
-    name="${1:myTextBox}"
-    value="${2:default value}"
+    name="myTextBox"
+    value="default value"
 />
 ```
 
@@ -292,8 +313,8 @@ Generates an input file element.
 
 ```html
 <f:form.upload
-    name="${1:name}"
-    value="${1:value}"
+    name="fileUpload"
+    value=""
 />
 ```
 
@@ -310,9 +331,9 @@ Outputs validation results.
 
 ```html
 <f:form.validationResults
-    for="${1}"
-    as="${2:'validationResults'}"
+    for="object"
+    as="validationResults"
 >
-    ${3}
+    validation messages
 </f:form.validationResults>
 ```

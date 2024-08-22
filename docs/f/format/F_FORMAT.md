@@ -9,12 +9,12 @@ Formats an integer with a byte count into a human-readable form.
 
 ```html
 <f:format.bytes
-    decimalSeparator="${1:.}"
-    decimals="${2:0}"
-    thousandsSeparator="${3:,}"
-    units="${4}"
+    decimalSeparator="."
+    decimals="2"
+    thousandsSeparator=","
+    units="['B', 'KB', 'MB', 'GB', 'TB']"
 >
-    $5
+    1048576
 </f:format.bytes>
 ```
 
@@ -30,7 +30,7 @@ Formats an integer with a byte count into a human-readable form using the inline
 **Snippet Code:**
 
 ```html
-{${1:fileSize} -> f:format.bytes(decimalSeparator: '${2:.}', decimals: ${3:0}, thousandsSeparator: '${4:,}', units: '${5}')}
+{fileSize -> f:format.bytes(decimalSeparator: '.', decimals: 2, thousandsSeparator: ',', units: ['B', 'KB', 'MB', 'GB', 'TB'])}
 ```
 
 ---
@@ -45,8 +45,8 @@ Modifies the case of an input string to upper- or lowercase or capitalization.
 **Snippet Code:**
 
 ```html
-<f:format.case mode="${1:upper}">
-    $value
+<f:format.case mode="upper">
+    some text
 </f:format.case>
 ```
 
@@ -62,7 +62,7 @@ Modifies the case of an input string to upper- or lowercase or capitalization us
 **Snippet Code:**
 
 ```html
-{${1:someVariable} -> f:format.case(case: '${2:upper}')}
+{someVariable -> f:format.case(mode: 'upper')}
 ```
 
 ---
@@ -78,7 +78,7 @@ Outputs an argument/value without any escaping and wraps it with CDATA tags.
 
 ```html
 <f:format.cdata>
-    $1
+    some content
 </f:format.cdata>
 ```
 
@@ -94,7 +94,7 @@ Outputs an argument/value without any escaping and wraps it with CDATA tags usin
 **Snippet Code:**
 
 ```html
-{${1:string} -> f:format.cdata()}
+{string -> f:format.cdata()}
 ```
 
 ---
@@ -110,12 +110,12 @@ Crops the text between its opening and closing tags to a specified length, respe
 
 ```html
 <f:format.crop
-    append="${1:&hellip;}"
-    maxCharacters="${2:10}"
-    respectHtml="${3:true}"
-    respectWordBoundaries="${4:true}"
+    append="&hellip;"
+    maxCharacters="100"
+    respectHtml="true"
+    respectWordBoundaries="true"
 >
-    $5
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 </f:format.crop>
 ```
 
@@ -131,7 +131,7 @@ Crops the text to a specified length, respecting HTML entities and word boundari
 **Snippet Code:**
 
 ```html
-{${1:someLongText} -> f:format.crop(append: '${2:&hellip;}', maxCharacters: ${3:10}, respectHtml: ${4:true}, respectWordBoundaries: ${5:true})}
+{someLongText -> f:format.crop(append: '&hellip;', maxCharacters: 100, respectHtml: true, respectWordBoundaries: true)}
 ```
 
 ---
@@ -147,15 +147,15 @@ Formats a given float to a currency representation. This ViewHelper is useful fo
 
 ```html
 <f:format.currency
-    currencySign="${1:$}"
-    decimalSeparator="${2:.}"
-    decimals="${3:2}"
-    prependCurrency="${4:true}"
-    separateCurrency="${5:false}"
-    thousandsSeparator="${6:,}"
-    useDash="${7:false}"
+    currencySign="$"
+    decimalSeparator="."
+    decimals="2"
+    prependCurrency="true"
+    separateCurrency="false"
+    thousandsSeparator=","
+    useDash="false"
 >
-    $8
+    1234.56
 </f:format.currency>
 ```
 
@@ -171,7 +171,7 @@ Formats a given float to a currency representation using the inline syntax.
 **Snippet Code:**
 
 ```html
-{${1:someNumber} -> f:format.currency(thousandsSeparator: '${2:,}', currencySign: '${3:EUR}', decimalSeparator: '${4:.}', decimals: ${5:2}, prependCurrency: ${6:true}, separateCurrency: ${7:false}, useDash: ${8:false})}
+{someNumber -> f:format.currency(thousandsSeparator: ',', currencySign: 'USD', decimalSeparator: '.', decimals: 2, prependCurrency: true, separateCurrency: false, useDash: false)}
 ```
 
 ---
@@ -187,13 +187,12 @@ Formats an object implementing `\DateTimeInterface`. This ViewHelper is especial
 
 ```html
 <f:format.date
-    base="${1}"
-    date="${2}"
-    format="${3:Y-m-d}"
-    locale="${4}"
-    pattern="${5}"
+    base="now"
+    date=""
+    format="Y-m-d"
+    locale=""
+    pattern=""
 >
-    $6
 </f:format.date>
 ```
 
@@ -209,7 +208,7 @@ Formats an object implementing \DateTimeInterface using the inline syntax.
 **Snippet Code:**
 
 ```html
-{f:format.date(base: '${1}', date: ${2:dateObject}, format: '${3:Y-m-d}', locale: '${4}', pattern: '${5}')}
+{f:format.date(base: 'now', date: dateObject, format: 'Y-m-d', locale: '', pattern: '')}
 ```
 
 ---
@@ -225,13 +224,12 @@ Renders a string by passing it to a TYPO3 parseFunc, which allows for complex pa
 
 ```html
 <f:format.html
-    current="${1}"
-    currentValueKey="${2}"
-    data="${3}"
-    parseFuncTSPath="${4:lib.parseFunc_RTE}"
-    table="${5}"
+    current="someText"
+    currentValueKey=""
+    data=""
+    parseFuncTSPath="lib.parseFunc_RTE"
+    table="tt_content"
 >
-    $6
 </f:format.html>
 ```
 
@@ -247,7 +245,7 @@ Renders a string by passing it to a TYPO3 parseFunc using the inline syntax.
 **Snippet Code:**
 
 ```html
-{${1:someText} -> f:format.html(parseFuncTSPath: '${2:lib.parseFunc}')}
+{someText -> f:format.html(parseFuncTSPath: 'lib.parseFunc_RTE')}
 ```
 
 ---
@@ -263,11 +261,11 @@ Applies `htmlentities()` escaping to a value. This ViewHelper is useful for enco
 
 ```html
 <f:format.htmlentities
-    doubleEncode="${1:true}"
-    encoding="${2:UTF-8}"
-    keepQuotes="${3:false}"
+    doubleEncode="true"
+    encoding="UTF-8"
+    keepQuotes="false"
 >
-    $4
+    some <b>HTML</b> content
 </f:format.htmlentities>
 ```
 
@@ -283,7 +281,7 @@ Applies htmlentities() escaping to a value using the inline syntax.
 **Snippet Code:**
 
 ```html
-{${1:text} -> f:format.htmlentities(encoding: '${2:ISO-8859-1}', doubleEncode: ${3:true}, keepQuotes: ${4:false})}
+{text -> f:format.htmlentities(encoding: 'UTF-8', doubleEncode: true, keepQuotes: false)}
 ```
 
 ---
@@ -299,10 +297,10 @@ Applies `htmlentities()` escaping to a value. This ViewHelper is useful for enco
 
 ```html
 <f:format.htmlentitiesDecode
-    encoding="${1:UTF-8}"
-    keepQuotes="${2:false}"
+    encoding="UTF-8"
+    keepQuotes="false"
 >
-    $3
+    some &lt;b&gt;HTML&lt;/b&gt; content
 </f:format.htmlentitiesDecode>
 ```
 
@@ -318,7 +316,7 @@ Applies html_entity_decode() to a value using the inline syntax.
 **Snippet Code:**
 
 ```html
-{${1:text} -> f:format.htmlentitiesDecode(encoding: '${2:ISO-8859-1}', keepQuotes: ${3:false})}
+{text -> f:format.htmlentitiesDecode(encoding: 'UTF-8', keepQuotes: false)}
 ```
 
 ---
@@ -334,11 +332,11 @@ Applies PHP `htmlspecialchars()` escaping to a value. This ViewHelper helps prev
 
 ```html
 <f:format.htmlspecialchars
-    doubleEncode="${1:true}"
-    encoding="${2:UTF-8}"
-    keepQuotes="${3:false}"
+    doubleEncode="true"
+    encoding="UTF-8"
+    keepQuotes="false"
 >
-    $4
+    some <b>HTML</b> content
 </f:format.htmlspecialchars>
 ```
 
@@ -354,7 +352,7 @@ Applies PHP htmlspecialchars() escaping to a value using the inline syntax.
 **Snippet Code:**
 
 ```html
-{${1:text} -> f:format.htmlspecialchars(encoding: '${2:ISO-8859-1}', doubleEncode: ${3:true}, keepQuotes: ${4:false})}
+{text -> f:format.htmlspecialchars(encoding: 'UTF-8', doubleEncode: true, keepQuotes: false)}
 ```
 
 ---
@@ -370,8 +368,8 @@ Wrapper for PHP's json_encode function. This ViewHelper is used to convert array
 **Snippet Code:**
 
 ```html
-<f:format.json forceObject="${1:false}">
-    $2
+<f:format.json forceObject="false">
+    {foo: 'bar', bar: 'baz'}
 </f:format.json>
 ```
 
@@ -387,7 +385,7 @@ Converts arrays or objects into JSON formatted strings using the inline syntax.
 **Snippet Code:**
 
 ```html
-{f:format.json(forceObject: ${1:false}, value: ${2:{foo: 'bar', bar: 'baz'}})}
+{text -> f:format.htmlspecialchars(encoding: 'UTF-8', doubleEncode: true, keepQuotes: false)}
 ```
 
 ---
@@ -403,7 +401,7 @@ Wrapper for PHP's nl2br function. This ViewHelper converts new lines (`\n`) in a
 
 ```html
 <f:format.nl2br>
-    $1
+    Line one\nLine two
 </f:format.nl2br>
 ```
 
@@ -419,7 +417,7 @@ Converts new lines (\n) in a string to <br> HTML tags using the inline syntax.
 **Snippet Code:**
 
 ```html
-{${1:text_with_linebreaks} -> f:format.nl2br()}
+{text_with_linebreaks -> f:format.nl2br()}
 ```
 
 ---
@@ -434,12 +432,13 @@ Formats a number with custom precision, decimal point, and grouped thousands. Us
 
 ```html
 <f:format.number
-    decimalSeparator="${1:.}"
-    decimals="${2:2}"
-    thousandsSeparator="${3:,}"
+    decimalSeparator="."
+    decimals="2"
+    thousandsSeparator=","
 >
-    $4
+    1234567.89
 </f:format.number>
+```
 
 ---
 
@@ -453,7 +452,7 @@ Formats a number with custom precision, decimal point, and grouped thousands usi
 **Snippet Code:**
 
 ```html
-{${1:number} -> f:format.number(decimals: ${2:1}, decimalSeparator: '${3:,}', thousandsSeparator: '${4:.}')}
+{number -> f:format.number(decimals: 2, decimalSeparator: '.', thousandsSeparator: ',')}
 ```
 
 ---
@@ -469,11 +468,11 @@ Formats a string using PHP's `str_pad` function, adding padding to the specified
 
 ```html
 <f:format.padding
-    padLength="${1:10}"
-    padString="${2: }"
-    padType="${3:right}"
+    padLength="10"
+    padString=" "
+    padType="right"
 >
-    $4
+    content
 </f:format.padding>
 ```
 
@@ -489,7 +488,7 @@ Formats a string using PHP's str_pad function, adding padding to the specified s
 **Snippet Code:**
 
 ```html
-{${1:TYPO3} -> f:format.padding(padLength: ${2:10}, padString: '${3:-=}', padType: '${4:right}')}
+{TYPO3 -> f:format.padding(padLength: 10, padString: '-=', padType: 'right')}
 ```
 
 ---
@@ -504,8 +503,8 @@ A ViewHelper for formatting values using the printf function, which allows for c
 **Snippet Code:**
 
 ```html
-<f:format.printf arguments="${1:array}">
-    $3
+<f:format.printf arguments="['TYPO3']">
+    Hello, %s!
 </f:format.printf>
 ```
 
@@ -521,7 +520,7 @@ Formats values using the printf function with inline syntax, allowing for custom
 **Snippet Code:**
 
 ```html
-{${1:someText} -> f:format.printf(arguments: ${2:{1: 'TYPO3'}})}
+{someText -> f:format.printf(arguments: ['TYPO3'])}
 ```
 
 ---
@@ -537,7 +536,7 @@ Outputs a value without any escaping, preserving the raw data.
 
 ```html
 <f:format.raw>
-    ${1}
+    some unescaped content
 </f:format.raw>
 ```
 
@@ -553,7 +552,7 @@ Outputs a value without any escaping, preserving the raw data using the inline s
 **Snippet Code:**
 
 ```html
-{${1:string} -> f:format.raw()}
+{string -> f:format.raw()}
 ```
 
 ---
@@ -568,8 +567,8 @@ Removes HTML and PHP tags from a string, optionally allowing certain tags.
 **Snippet Code:**
 
 ```html
-<f:format.stripTags allowedTags="${1}">
-    $2
+<f:format.stripTags allowedTags="<b><i>">
+    some <b>HTML</b> content
 </f:format.stripTags>
 ```
 
@@ -585,7 +584,7 @@ Removes HTML and PHP tags from a string using the inline syntax, optionally allo
 **Snippet Code:**
 
 ```html
-{${1:text} -> f:format.stripTags(allowedTags: '${2}')}
+{text -> f:format.stripTags(allowedTags: '<b><i>')}
 ```
 
 ---
@@ -601,10 +600,10 @@ Strips whitespace (or other specified characters) from the beginning and end of 
 
 ```html
 <f:format.trim
-    characters="${1}"
-    side="${2:both}"
+    characters=""
+    side="both"
 >
-    $3
+    some text
 </f:format.trim>
 ```
 
@@ -620,7 +619,7 @@ Strips whitespace (or other specified characters) from the beginning and end of 
 **Snippet Code:**
 
 ```html
-{${1:yourString} -> f:format.trim(side: '${2:right}', characters: '${3}')}
+{yourString -> f:format.trim(side: 'both', characters: ' ')}
 ```
 
 ---
@@ -636,7 +635,7 @@ Encodes a string using rawurlencode according to RFC 3986, making it safe to use
 
 ```html
 <f:format.urlencode>
-    ${1}
+    https://example.com/?q=some_value
 </f:format.urlencode>
 ```
 
@@ -652,5 +651,5 @@ Encodes a string using rawurlencode according to RFC 3986, making it safe to use
 **Snippet Code:**
 
 ```html
-{${1:text} -> f:format.urlencode()}
+{text -> f:format.urlencode()}
 ```
