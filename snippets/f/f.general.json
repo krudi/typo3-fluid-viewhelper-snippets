@@ -79,7 +79,7 @@
     },
     "Backend Debug ViewHelper": {
         "prefix": "fDebug",
-        "body": ["<f:debug title=\"${1:'Debug'}\">", "\t{${2:_all}}", "</f:debug>"],
+        "body": ["<f:debug title=\"${1:Debug}\">", "\t{${2:_all}}", "</f:debug>"],
         "description": "A basic <f:debug> ViewHelper with title='Debug' and {_all} as content."
     },
     "Default Case ViewHelper": {
