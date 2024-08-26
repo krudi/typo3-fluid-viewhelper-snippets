@@ -22,34 +22,22 @@
     },
     "Format Case ViewHelper": {
         "prefix": "fFormatCase",
-        "body": [
-            "<f:format.case mode=\"${1:upper}\">",
-            "\t${2:some text}",
-            "</f:format.case>"
-        ],
+        "body": ["<f:format.case mode=\"${1:upper}\">", "\t${2:some text}", "</f:format.case>"],
         "description": "Modifies the case of an input string to upper- or lowercase or capitalization."
     },
     "Format Case Inline": {
         "prefix": "fFormatCaseInline",
-        "body": [
-            "{${1:someVariable} -> f:format.case(mode: '${2:upper}')}"
-        ],
+        "body": ["{${1:someVariable} -> f:format.case(mode: '${2:upper}')}"],
         "description": "Inline version of the f:format.case ViewHelper."
     },
     "Format Cdata ViewHelper": {
         "prefix": "fFormatCdata",
-        "body": [
-            "<f:format.cdata>",
-            "\t${1:some content}",
-            "</f:format.cdata>"
-        ],
+        "body": ["<f:format.cdata>", "\t${1:some content}", "</f:format.cdata>"],
         "description": "Outputs an argument/value without any escaping and wraps it with CDATA tags."
     },
     "Format Cdata Inline": {
         "prefix": "fFormatCdataInline",
-        "body": [
-            "{${1:string} -> f:format.cdata()}"
-        ],
+        "body": ["{${1:string} -> f:format.cdata()}"],
         "description": "Inline version of the f:format.cdata ViewHelper."
     },
     "Format Crop ViewHelper": {
@@ -136,9 +124,7 @@
     },
     "Format HTML Inline": {
         "prefix": "fFormatHtmlInline",
-        "body": [
-            "{${1:someText} -> f:format.html(parseFuncTSPath: '${2:lib.parseFunc_RTE}')}"
-        ],
+        "body": ["{${1:someText} -> f:format.html(parseFuncTSPath: '${2:lib.parseFunc_RTE}')}"],
         "description": "Inline version of the f:format.html ViewHelper."
     },
     "Format Htmlentities ViewHelper": {
@@ -175,9 +161,7 @@
     },
     "Format HtmlentitiesDecode Inline": {
         "prefix": "fFormatHtmlentitiesDecodeInline",
-        "body": [
-            "{${1:text} -> f:format.htmlentitiesDecode(encoding: '${2:UTF-8}', keepQuotes: ${3:false})}"
-        ],
+        "body": ["{${1:text} -> f:format.htmlentitiesDecode(encoding: '${2:UTF-8}', keepQuotes: ${3:false})}"],
         "description": "Inline version of the f:format.htmlentitiesDecode ViewHelper."
     },
     "Format Htmlspecialchars ViewHelper": {
@@ -202,34 +186,22 @@
     },
     "Format Json ViewHelper": {
         "prefix": "fFormatJson",
-        "body": [
-            "<f:format.json forceObject=\"${1:false}\">",
-            "\t${2:{foo: 'bar', bar: 'baz'}}",
-            "</f:format.json>"
-        ],
+        "body": ["<f:format.json forceObject=\"${1:false}\">", "\t${2:{foo: 'bar', bar: 'baz'}}", "</f:format.json>"],
         "description": "Wrapper for PHP's json_encode function."
     },
     "Format Json Inline": {
         "prefix": "fFormatJsonInline",
-        "body": [
-            "{f:format.json(forceObject: ${1:false}, value: ${2:{foo: 'bar', bar: 'baz'}})}"
-        ],
+        "body": ["{f:format.json(forceObject: ${1:false}, value: ${2:{foo: 'bar', bar: 'baz'}})}"],
         "description": "Inline version of the f:format.json ViewHelper."
     },
     "Format Nl2br ViewHelper": {
         "prefix": "fFormatNl2br",
-        "body": [
-            "<f:format.nl2br>",
-            "\t${1:Line one\nLine two}",
-            "</f:format.nl2br>"
-        ],
+        "body": ["<f:format.nl2br>", "\t${1:Line one\nLine two}", "</f:format.nl2br>"],
         "description": "Wrapper for PHP's nl2br function."
     },
     "Format Nl2br Inline": {
         "prefix": "fFormatNl2brInline",
-        "body": [
-            "{${1:text_with_linebreaks} -> f:format.nl2br()}"
-        ],
+        "body": ["{${1:text_with_linebreaks} -> f:format.nl2br()}"],
         "description": "Inline version of the f:format.nl2br ViewHelper."
     },
     "Format Number ViewHelper": {
@@ -267,41 +239,27 @@
     },
     "Format Padding Inline": {
         "prefix": "fFormatPaddingInline",
-        "body": [
-            "{${1:TYPO3} -> f:format.padding(padLength: ${2:10}, padString: '${3:-=}', padType: '${4:right}')}"
-        ],
+        "body": ["{${1:TYPO3} -> f:format.padding(padLength: ${2:10}, padString: '${3:-=}', padType: '${4:right}')}"],
         "description": "Inline version of the f:format.padding ViewHelper."
     },
     "Format Printf ViewHelper": {
         "prefix": "fFormatPrintf",
-        "body": [
-            "<f:format.printf arguments=\"${1:['TYPO3']}\">",
-            "\t${2:Hello, %s!}",
-            "</f:format.printf>"
-        ],
+        "body": ["<f:format.printf arguments=\"${1:['TYPO3']}\">", "\t${2:Hello, %s!}", "</f:format.printf>"],
         "description": "A ViewHelper for formatting values with printf."
     },
     "Format Printf Inline": {
         "prefix": "fFormatPrintfInline",
-        "body": [
-            "{${1:someText} -> f:format.printf(arguments: ${2:['TYPO3']})}"
-        ],
+        "body": ["{${1:someText} -> f:format.printf(arguments: ${2:['TYPO3']})}"],
         "description": "Inline version of the f:format.printf ViewHelper."
     },
     "Format Raw ViewHelper": {
         "prefix": "fFormatRaw",
-        "body": [
-            "<f:format.raw>",
-            "\t$${1:some unescaped content}",
-            "</f:format.raw>"
-        ],
+        "body": ["<f:format.raw>", "\t$${1:some unescaped content}", "</f:format.raw>"],
         "description": "Outputs an argument/value without any escaping."
     },
     "Format Raw Inline": {
         "prefix": "fFormatRawInline",
-        "body": [
-            "{${1:string} -> f:format.raw()}"
-        ],
+        "body": ["{${1:string} -> f:format.raw()}"],
         "description": "Inline version of the f:format.raw ViewHelper."
     },
     "Format StripTags ViewHelper": {
@@ -315,9 +273,7 @@
     },
     "Format StripTags Inline": {
         "prefix": "fFormatStripTagsInline",
-        "body": [
-            "{${1:text} -> f:format.stripTags(allowedTags: '${2:<b><i>}')}"
-        ],
+        "body": ["{${1:text} -> f:format.stripTags(allowedTags: '${2:<b><i>}')}"],
         "description": "Inline version of the f:format.stripTags ViewHelper."
     },
     "Format Trim ViewHelper": {
@@ -334,25 +290,17 @@
     },
     "Format Trim Inline": {
         "prefix": "fFormatTrimInline",
-        "body": [
-            "{${1:yourString} -> f:format.trim(side: '${2:both}', characters: '${3} ')}"
-        ],
+        "body": ["{${1:yourString} -> f:format.trim(side: '${2:both}', characters: '${3} ')}"],
         "description": "Inline version of the f:format.trim ViewHelper."
     },
     "Format Urlencode ViewHelper": {
         "prefix": "fFormatUrlencode",
-        "body": [
-            "<f:format.urlencode>",
-            "\t${1:https://example.com/?q=some_value}",
-            "</f:format.urlencode>"
-        ],
+        "body": ["<f:format.urlencode>", "\t${1:https://example.com/?q=some_value}", "</f:format.urlencode>"],
         "description": "Encodes the given string using rawurlencode according to RFC 3986."
     },
     "Format Urlencode Inline": {
         "prefix": "fFormatUrlencodeInline",
-        "body": [
-            "{${1:text} -> f:format.urlencode()}"
-        ],
+        "body": ["{${1:text} -> f:format.urlencode()}"],
         "description": "Inline version of the f:format.urlencode ViewHelper."
     }
 }

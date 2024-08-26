@@ -1,27 +1,17 @@
 {
     "Alias ViewHelper": {
         "prefix": "fAlias",
-        "body": [
-            "<f:alias map=\"{${1:aliasName}: '${2:originalVariable}'}\">",
-            "\t${3:{aliasName}}",
-            "</f:alias>"
-        ],
+        "body": ["<f:alias map=\"{${1:aliasName}: '${2:originalVariable}'}\">", "\t${3:{aliasName}}", "</f:alias>"],
         "description": "Declares new variables which are aliases of other variables."
     },
     "Alias Inline ViewHelper": {
         "prefix": "fAliasInline",
-        "body": [
-            "{f:alias(map: {${1:aliasName}: '${2:originalVariable}'})}"
-        ],
+        "body": ["{f:alias(map: {${1:aliasName}: '${2:originalVariable}'})}"],
         "description": "Inline version of the <f:alias> ViewHelper."
     },
     "Case ViewHelper": {
         "prefix": "fCase",
-        "body": [
-            "<f:case value=\"${1:'defaultValue'}\">",
-            "\t${2:'Case Content'}",
-            "</f:case>"
-        ],
+        "body": ["<f:case value=\"${1:'defaultValue'}\">", "\t${2:'Case Content'}", "</f:case>"],
         "description": "Case ViewHelper that is only usable within the f:switch ViewHelper."
     },
     "CObject ViewHelper": {
@@ -52,34 +42,22 @@
     },
     "Comment ViewHelper": {
         "prefix": "fComment",
-        "body": [
-            "<f:comment>",
-            "\t${1:'This is a comment.'}",
-            "</f:comment>"
-        ],
+        "body": ["<f:comment>", "\t${1:'This is a comment.'}", "</f:comment>"],
         "description": "This ViewHelper prevents rendering of any content inside the tag."
     },
     "Constant ViewHelper": {
         "prefix": "fConstant",
-        "body": [
-            "<f:constant name=\"${1:TYPO3_MODE}\" />"
-        ],
+        "body": ["<f:constant name=\"${1:TYPO3_MODE}\" />"],
         "description": "Wrapper for PHP's constant function."
     },
     "Count ViewHelper": {
         "prefix": "fCount",
-        "body": [
-            "<f:count subject=\"{${1:array}}\">",
-            "\t${2:Counted Items: {subject}}",
-            "</f:count>"
-        ],
+        "body": ["<f:count subject=\"{${1:array}}\">", "\t${2:Counted Items: {subject}}", "</f:count>"],
         "description": "This ViewHelper counts elements of the specified array or countable object."
     },
     "Count Inline ViewHelper": {
         "prefix": "fCountInline",
-        "body": [
-            "{f:count(subject: '{${1:array}}')}"
-        ],
+        "body": ["{f:count(subject: '{${1:array}}')}"],
         "description": "Inline version of the <f:count> ViewHelper."
     },
     "Cycle ViewHelper": {
@@ -96,39 +74,22 @@
     },
     "Cycle Inline ViewHelper": {
         "prefix": "fCycleInline",
-        "body": [
-            "{f:cycle(",
-            "\tvalues: '{${1:0,1,2}}',",
-            "\tas: '${2:item}'",
-            ")}"
-        ],
+        "body": ["{f:cycle(", "\tvalues: '{${1:0,1,2}}',", "\tas: '${2:item}'", ")}"],
         "description": "Inline version of the <f:cycle> ViewHelper."
     },
     "Backend Debug ViewHelper": {
         "prefix": "fDebug",
-        "body": [
-            "<f:debug title=\"${1:'Debug'}\">",
-            "\t{${2:_all}}",
-            "</f:debug>"
-        ],
+        "body": ["<f:debug title=\"${1:'Debug'}\">", "\t{${2:_all}}", "</f:debug>"],
         "description": "A basic <f:debug> ViewHelper with title='Debug' and {_all} as content."
     },
     "Default Case ViewHelper": {
         "prefix": "fDefaultCase",
-        "body": [
-            "<f:defaultCase>",
-            "\t${1:'Default Content'}",
-            "</f:defaultCase>"
-        ],
+        "body": ["<f:defaultCase>", "\t${1:'Default Content'}", "</f:defaultCase>"],
         "description": "A ViewHelper which specifies the 'default' case when used within the f:switch ViewHelper."
     },
     "Else ViewHelper": {
         "prefix": "fElse",
-        "body": [
-            "<f:else>",
-            "\t${1:'Else Content'}",
-            "</f:else>"
-        ],
+        "body": ["<f:else>", "\t${1:'Else Content'}", "</f:else>"],
         "description": "Else-Branch of a condition. Only has an effect inside of f:if."
     },
     "Feature ViewHelper": {
@@ -147,18 +108,12 @@
     },
     "First ViewHelper": {
         "prefix": "fFirst",
-        "body": [
-            "<f:first value=\"{${1:array}}\">",
-            "\t${2:First item: {value}}",
-            "</f:first>"
-        ],
+        "body": ["<f:first value=\"{${1:array}}\">", "\t${2:First item: {value}}", "</f:first>"],
         "description": "The FirstViewHelper returns the first item of an array."
     },
     "First Inline ViewHelper": {
         "prefix": "fFirstInline",
-        "body": [
-            "{f:first(value: '{${1:array}}')}"
-        ],
+        "body": ["{f:first(value: '{${1:array}}')}"],
         "description": "Inline version of the <f:first> ViewHelper."
     },
     "FlashMessages ViewHelper": {
@@ -175,12 +130,7 @@
     },
     "FlashMessages Inline ViewHelper": {
         "prefix": "fFlashMessagesInline",
-        "body": [
-            "{f:flashMessages(",
-            "\tas: '${1:flashMessages}',",
-            "\tqueueIdentifier: '${2:default}'",
-            ")}"
-        ],
+        "body": ["{f:flashMessages(", "\tas: '${1:flashMessages}',", "\tqueueIdentifier: '${2:default}'", ")}"],
         "description": "Inline version of the <f:flashMessages> ViewHelper."
     },
     "For ViewHelper": {
@@ -214,11 +164,7 @@
     },
     "If ViewHelper": {
         "prefix": "fIf",
-        "body": [
-            "<f:if condition=\"{${1:condition}}\">",
-            "\t${2:Content if true}",
-            "</f:if>"
-        ],
+        "body": ["<f:if condition=\"{${1:condition}}\">", "\t${2:Content if true}", "</f:if>"],
         "description": "Implements a basic if condition."
     },
     "If Inline ViewHelper": {
@@ -277,16 +223,12 @@
     },
     "Inline ViewHelper": {
         "prefix": "fInline",
-        "body": [
-            "<f:inline code=\"${1:someFluidCode}\" />"
-        ],
+        "body": ["<f:inline code=\"${1:someFluidCode}\" />"],
         "description": "Inline Fluid rendering ViewHelper to render Fluid code stored in a variable."
     },
     "Inline Inline ViewHelper": {
         "prefix": "fInlineInline",
-        "body": [
-            "{f:inline(code: '${1:someFluidCode}')}"
-        ],
+        "body": ["{f:inline(code: '${1:someFluidCode}')}"],
         "description": "Inline version of the <f:inline> ViewHelper."
     },
     "Join ViewHelper": {
@@ -313,16 +255,12 @@
     },
     "f:last ViewHelper": {
         "prefix": "fLast",
-        "body": [
-            "<f:last value=\"{${1:array}}\" />"
-        ],
+        "body": ["<f:last value=\"{${1:array}}\" />"],
         "description": "Returns the last item of an array."
     },
     "f:layout ViewHelper": {
         "prefix": "fLayout",
-        "body": [
-            "<f:layout name=\"${1:Default}\" />"
-        ],
+        "body": ["<f:layout name=\"${1:Default}\" />"],
         "description": "Selects a layout to be used for the current template."
     },
     "f:media ViewHelper": {
@@ -342,9 +280,7 @@
     },
     "f:or ViewHelper": {
         "prefix": "fOr",
-        "body": [
-            "{${1:undefinedVariable} -> f:or(alternative=${2:'Fallback content'})}"
-        ],
+        "body": ["{${1:undefinedVariable} -> f:or(alternative=${2:'Fallback content'})}"],
         "description": "Use alternative text if content is null."
     },
     "f:render ViewHelper": {
@@ -371,31 +307,17 @@
     },
     "f:section ViewHelper": {
         "prefix": "fSection",
-        "body": [
-            "<f:section name=\"${1:sectionName}\">",
-            "\t${2:This is a section.}",
-            "</f:section>"
-        ],
+        "body": ["<f:section name=\"${1:sectionName}\">", "\t${2:This is a section.}", "</f:section>"],
         "description": "Declares sections in templates for later use."
     },
     "f:spaceless ViewHelper": {
         "prefix": "fSpaceless",
-        "body": [
-            "<f:spaceless>",
-            "\t${2:HTML content without spaces between tags.}",
-            "</f:spaceless>"
-        ],
+        "body": ["<f:spaceless>", "\t${2:HTML content without spaces between tags.}", "</f:spaceless>"],
         "description": "Removes redundant spaces between HTML tags."
     },
     "f:split ViewHelper": {
         "prefix": "fSplit",
-        "body": [
-            "<f:split",
-            "\tvalue=\"${1:'1,5,8'}\"",
-            "\tseparator=\"${2:,}\"",
-            "\tlimit=\"${3:0}\"",
-            "/>"
-        ],
+        "body": ["<f:split", "\tvalue=\"${1:'1,5,8'}\"", "\tseparator=\"${2:,}\"", "\tlimit=\"${3:0}\"", "/>"],
         "description": "Splits a string by the specified separator."
     },
     "f:switch ViewHelper": {
@@ -407,11 +329,7 @@
     },
     "f:then ViewHelper": {
         "prefix": "fThen",
-        "body": [
-            "<f:then>",
-            "\t${1:Content if condition is true}",
-            "</f:then>"
-        ],
+        "body": ["<f:then>", "\t${1:Content if condition is true}", "</f:then>"],
         "description": "Used within <f:if> to specify what should be rendered if the condition is true."
     },
     "f:translate ViewHelper": {
@@ -431,11 +349,7 @@
     },
     "f:variable ViewHelper": {
         "prefix": "fVariable",
-        "body": [
-            "<f:variable name=\"${1:myVariable}\">",
-            "\t${2:'Variable content'}",
-            "</f:variable>"
-        ],
+        "body": ["<f:variable name=\"${1:myVariable}\">", "\t${2:'Variable content'}", "</f:variable>"],
         "description": "Assigns a template variable."
     }
 }

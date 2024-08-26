@@ -1,29 +1,21 @@
 {
-  "Backend Cache Disable ViewHelper": {
-    "prefix": "fCacheDisable",
-    "body": [
-      "<f:cache.disable>",
-      "\t${1:Cache is disabled for this block}",
-      "</f:cache.disable>"
-    ],
-    "description": "Disables template compiling for the full template file to a PHP class."
-  },
-  "Backend Cache Static ViewHelper": {
-    "prefix": "fCacheStatic",
-    "body": [
-      "<f:cache.static>",
-      "\t${1:This block will be statically cached}",
-      "</f:cache.static>"
-    ],
-    "description": "Forces the output of the enclosed template code to be compiled to a static string."
-  },
-  "Backend Cache Warmup ViewHelper": {
-    "prefix": "fCacheWarmup",
-    "body": [
-      "<f:cache.warmup variables=\"${1:{foo: 'bar'}}\">",
-      "\t${2:Content rendered during cache warmup}",
-      "</f:cache.warmup>"
-    ],
-    "description": "Inserts variables that apply only during cache warmup and if no other variables are specified."
-  }
+    "Backend Cache Disable ViewHelper": {
+        "prefix": "fCacheDisable",
+        "body": ["<f:cache.disable>", "\t${1:Cache is disabled for this block}", "</f:cache.disable>"],
+        "description": "Disables template compiling for the full template file to a PHP class."
+    },
+    "Backend Cache Static ViewHelper": {
+        "prefix": "fCacheStatic",
+        "body": ["<f:cache.static>", "\t${1:This block will be statically cached}", "</f:cache.static>"],
+        "description": "Forces the output of the enclosed template code to be compiled to a static string."
+    },
+    "Backend Cache Warmup ViewHelper": {
+        "prefix": "fCacheWarmup",
+        "body": [
+            "<f:cache.warmup variables=\"${1:{foo: 'bar'}}\">",
+            "\t${2:Content rendered during cache warmup}",
+            "</f:cache.warmup>"
+        ],
+        "description": "Inserts variables that apply only during cache warmup and if no other variables are specified."
+    }
 }

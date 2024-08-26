@@ -1,200 +1,155 @@
 {
-  "Form Button ViewHelper": {
-    "prefix": "fFormButton",
-    "body": [
-      "<f:form.button",
-      "\ttype=\"${1:submit}\"",
-      "\tname=\"${2:submitButton}\"",
-      ">",
-      "\t${3:Submit}",
-      "</f:form.button>"
-    ],
-    "description": "Creates a button, such as a reset or submit button."
-  },
-  "Form Checkbox Basic ViewHelper": {
-    "prefix": "fFormCheckboxBasic",
-    "body": [
-      "<f:form.checkbox",
-      "\tname=\"${1:myCheckBox}\"",
-      "\tvalue=\"${2:1}\"",
-      "/>"
-    ],
-    "description": "Creates a basic checkbox input element."
-  },
-  "Form Checkbox Preselected ViewHelper": {
-    "prefix": "fFormCheckboxPreselected",
-    "body": [
-      "<f:form.checkbox",
-      "\tname=\"${1:myCheckBox}\"",
-      "\tvalue=\"${2:1}\"",
-      "\tchecked=\"${3:{object.value} == 1}\"",
-      "/>"
-    ],
-    "description": "Creates a checkbox input element with a preselected value."
-  },
-  "Form Checkbox Bound ViewHelper": {
-    "prefix": "fFormCheckboxBound",
-    "body": [
-      "<f:form.checkbox",
-      "\tproperty=\"${1:interests}\"",
-      "\tvalue=\"${2:TYPO3}\"",
-      "\tmultiple=\"${3:1}\"",
-      "/>"
-    ],
-    "description": "Creates a checkbox input element bound to a property, with multiple selections."
-  },
-  "Form Country Select ViewHelper": {
-    "prefix": "fFormCountrySelect",
-    "body": [
-      "<f:form.countrySelect",
-      "\tname=\"${1:country}\"",
-      "\tvalue=\"${2:DE}\"",
-      ">"
-    ],
-    "description": "Renders a select tag with all available countries as options."
-  },
-  "Form Hidden ViewHelper": {
-    "prefix": "fFormHidden",
-    "body": [
-      "<f:form.hidden",
-      "\tname=\"${1:myHiddenValue}\"",
-      "\tvalue=\"${2:42}\"",
-      "/>"
-    ],
-    "description": "Renders a hidden input field."
-  },
-  "Form Password ViewHelper": {
-    "prefix": "fFormPassword",
-    "body": [
-      "<f:form.password",
-      "\tname=\"${1:password}\"",
-      "\tvalue=\"${2}\"",
-      "/>"
-    ],
-    "description": "Creates a password input field."
-  },
-  "Form Radio Basic ViewHelper": {
-    "prefix": "fFormRadioBasic",
-    "body": [
-      "<f:form.radio",
-      "\tname=\"${1:myRadioButton}\"",
-      "\tvalue=\"${2:1}\"",
-      "/>"
-    ],
-    "description": "Creates a basic radio button input element."
-  },
-  "Form Radio Bound ViewHelper": {
-    "prefix": "fFormRadioBound",
-    "body": [
-      "<f:form.radio",
-      "\tproperty=\"${1:newsletter}\"",
-      "\tvalue=\"${2:1}\"",
-      "/>"
-    ],
-    "description": "Creates a radio button input element bound to a property."
-  },
-  "Form Radio Multiple ViewHelper": {
-    "prefix": "fFormRadioMultiple",
-    "body": [
-      "<f:form.radio",
-      "\tname=\"${1:myRadioButton}\"",
-      "\tvalue=\"${2:option1}\"",
-      "/>",
-      "<f:form.radio",
-      "\tname=\"${3:myRadioButton}\"",
-      "\tvalue=\"${4:option2}\"",
-      "/>"
-    ],
-    "description": "Creates multiple radio button input elements."
-  },
-  "Form Select Basic ViewHelper": {
-    "prefix": "fFormSelectBasic",
-    "body": [
-      "<f:form.select",
-      "\tname=\"${1:paymentOptions}\"",
-      "\toptions=\"${2:{'paypal': 'PayPal', 'visa': 'VISA'}}\"",
-      "/>"
-    ],
-    "description": "Creates a basic select dropdown list."
-  },
-  "Form Select Preselected ViewHelper": {
-    "prefix": "fFormSelectPreselected",
-    "body": [
-      "<f:form.select",
-      "\tname=\"${1:paymentOptions}\"",
-      "\toptions=\"${2:{'paypal': 'PayPal', 'visa': 'VISA'}}\"",
-      "\tvalue=\"${3:visa}\"",
-      "/>"
-    ],
-    "description": "Creates a select dropdown list with a preselected option."
-  },
-  "Form Select Grouped ViewHelper": {
-    "prefix": "fFormSelectGrouped",
-    "body": [
-      "<f:form.select",
-      "\tname=\"${1:options}\">",
-      "\t<f:form.select.option value=\"1\">Option one</f:form.select.option>",
-      "\t<f:form.select.option value=\"2\">Option two</f:form.select.option>",
-      "\t<f:form.select.optgroup label=\"Group 1\">",
-      "\t\t<f:form.select.option value=\"3\">Grouped option one</f:form.select.option>",
-      "\t\t<f:form.select.option value=\"4\">Grouped option two</f:form.select.option>",
-      "\t</f:form.select.optgroup>",
-      "</f:form.select>"
-    ],
-    "description": "Creates a select dropdown list with grouped options."
-  },
-  "Form Submit ViewHelper": {
-    "prefix": "fFormSubmit",
-    "body": [
-      "<f:form.submit",
-      "\tname=\"${1:mySubmit}\"",
-      "\tvalue=\"${2:Submit}\"",
-      ">",
-      "\t${3}",
-      "</f:form.submit>"
-    ],
-    "description": "Creates a submit button."
-  },
-  "Form Textarea ViewHelper": {
-    "prefix": "fFormTextarea",
-    "body": [
-      "<f:form.textarea",
-      "\tname=\"${1:myTextArea}\"",
-      "\tvalue=\"${2:Enter your text here}\"",
-      "/>"
-    ],
-    "description": "Creates a textarea field."
-  },
-  "Form Textfield ViewHelper": {
-    "prefix": "fFormTextfield",
-    "body": [
-      "<f:form.textfield",
-      "\tname=\"${1:myTextBox}\"",
-      "\tvalue=\"${2:default value}\"",
-      "/>"
-    ],
-    "description": "Creates a text field input element."
-  },
-  "Form Upload ViewHelper": {
-    "prefix": "fFormUpload",
-    "body": [
-      "<f:form.upload",
-      "\tname=\"${1:fileUpload}\"",
-      "\tvalue=\"${2}\"",
-      "/>"
-    ],
-    "description": "Generates an input file element."
-  },
-  "Form ValidationResults ViewHelper": {
-    "prefix": "fFormValidationResults",
-    "body": [
-      "<f:form.validationResults",
-      "\tfor=\"${1:object}\"",
-      "\tas=\"${2:validationResults}\"",
-      ">",
-      "\t${3:validation messages}",
-      "</f:form.validationResults>"
-    ],
-    "description": "Outputs validation results."
-  }
+    "Form Button ViewHelper": {
+        "prefix": "fFormButton",
+        "body": [
+            "<f:form.button",
+            "\ttype=\"${1:submit}\"",
+            "\tname=\"${2:submitButton}\"",
+            ">",
+            "\t${3:Submit}",
+            "</f:form.button>"
+        ],
+        "description": "Creates a button, such as a reset or submit button."
+    },
+    "Form Checkbox Basic ViewHelper": {
+        "prefix": "fFormCheckboxBasic",
+        "body": ["<f:form.checkbox", "\tname=\"${1:myCheckBox}\"", "\tvalue=\"${2:1}\"", "/>"],
+        "description": "Creates a basic checkbox input element."
+    },
+    "Form Checkbox Preselected ViewHelper": {
+        "prefix": "fFormCheckboxPreselected",
+        "body": [
+            "<f:form.checkbox",
+            "\tname=\"${1:myCheckBox}\"",
+            "\tvalue=\"${2:1}\"",
+            "\tchecked=\"${3:{object.value} == 1}\"",
+            "/>"
+        ],
+        "description": "Creates a checkbox input element with a preselected value."
+    },
+    "Form Checkbox Bound ViewHelper": {
+        "prefix": "fFormCheckboxBound",
+        "body": [
+            "<f:form.checkbox",
+            "\tproperty=\"${1:interests}\"",
+            "\tvalue=\"${2:TYPO3}\"",
+            "\tmultiple=\"${3:1}\"",
+            "/>"
+        ],
+        "description": "Creates a checkbox input element bound to a property, with multiple selections."
+    },
+    "Form Country Select ViewHelper": {
+        "prefix": "fFormCountrySelect",
+        "body": ["<f:form.countrySelect", "\tname=\"${1:country}\"", "\tvalue=\"${2:DE}\"", ">"],
+        "description": "Renders a select tag with all available countries as options."
+    },
+    "Form Hidden ViewHelper": {
+        "prefix": "fFormHidden",
+        "body": ["<f:form.hidden", "\tname=\"${1:myHiddenValue}\"", "\tvalue=\"${2:42}\"", "/>"],
+        "description": "Renders a hidden input field."
+    },
+    "Form Password ViewHelper": {
+        "prefix": "fFormPassword",
+        "body": ["<f:form.password", "\tname=\"${1:password}\"", "\tvalue=\"${2}\"", "/>"],
+        "description": "Creates a password input field."
+    },
+    "Form Radio Basic ViewHelper": {
+        "prefix": "fFormRadioBasic",
+        "body": ["<f:form.radio", "\tname=\"${1:myRadioButton}\"", "\tvalue=\"${2:1}\"", "/>"],
+        "description": "Creates a basic radio button input element."
+    },
+    "Form Radio Bound ViewHelper": {
+        "prefix": "fFormRadioBound",
+        "body": ["<f:form.radio", "\tproperty=\"${1:newsletter}\"", "\tvalue=\"${2:1}\"", "/>"],
+        "description": "Creates a radio button input element bound to a property."
+    },
+    "Form Radio Multiple ViewHelper": {
+        "prefix": "fFormRadioMultiple",
+        "body": [
+            "<f:form.radio",
+            "\tname=\"${1:myRadioButton}\"",
+            "\tvalue=\"${2:option1}\"",
+            "/>",
+            "<f:form.radio",
+            "\tname=\"${3:myRadioButton}\"",
+            "\tvalue=\"${4:option2}\"",
+            "/>"
+        ],
+        "description": "Creates multiple radio button input elements."
+    },
+    "Form Select Basic ViewHelper": {
+        "prefix": "fFormSelectBasic",
+        "body": [
+            "<f:form.select",
+            "\tname=\"${1:paymentOptions}\"",
+            "\toptions=\"${2:{'paypal': 'PayPal', 'visa': 'VISA'}}\"",
+            "/>"
+        ],
+        "description": "Creates a basic select dropdown list."
+    },
+    "Form Select Preselected ViewHelper": {
+        "prefix": "fFormSelectPreselected",
+        "body": [
+            "<f:form.select",
+            "\tname=\"${1:paymentOptions}\"",
+            "\toptions=\"${2:{'paypal': 'PayPal', 'visa': 'VISA'}}\"",
+            "\tvalue=\"${3:visa}\"",
+            "/>"
+        ],
+        "description": "Creates a select dropdown list with a preselected option."
+    },
+    "Form Select Grouped ViewHelper": {
+        "prefix": "fFormSelectGrouped",
+        "body": [
+            "<f:form.select",
+            "\tname=\"${1:options}\">",
+            "\t<f:form.select.option value=\"1\">Option one</f:form.select.option>",
+            "\t<f:form.select.option value=\"2\">Option two</f:form.select.option>",
+            "\t<f:form.select.optgroup label=\"Group 1\">",
+            "\t\t<f:form.select.option value=\"3\">Grouped option one</f:form.select.option>",
+            "\t\t<f:form.select.option value=\"4\">Grouped option two</f:form.select.option>",
+            "\t</f:form.select.optgroup>",
+            "</f:form.select>"
+        ],
+        "description": "Creates a select dropdown list with grouped options."
+    },
+    "Form Submit ViewHelper": {
+        "prefix": "fFormSubmit",
+        "body": [
+            "<f:form.submit",
+            "\tname=\"${1:mySubmit}\"",
+            "\tvalue=\"${2:Submit}\"",
+            ">",
+            "\t${3}",
+            "</f:form.submit>"
+        ],
+        "description": "Creates a submit button."
+    },
+    "Form Textarea ViewHelper": {
+        "prefix": "fFormTextarea",
+        "body": ["<f:form.textarea", "\tname=\"${1:myTextArea}\"", "\tvalue=\"${2:Enter your text here}\"", "/>"],
+        "description": "Creates a textarea field."
+    },
+    "Form Textfield ViewHelper": {
+        "prefix": "fFormTextfield",
+        "body": ["<f:form.textfield", "\tname=\"${1:myTextBox}\"", "\tvalue=\"${2:default value}\"", "/>"],
+        "description": "Creates a text field input element."
+    },
+    "Form Upload ViewHelper": {
+        "prefix": "fFormUpload",
+        "body": ["<f:form.upload", "\tname=\"${1:fileUpload}\"", "\tvalue=\"${2}\"", "/>"],
+        "description": "Generates an input file element."
+    },
+    "Form ValidationResults ViewHelper": {
+        "prefix": "fFormValidationResults",
+        "body": [
+            "<f:form.validationResults",
+            "\tfor=\"${1:object}\"",
+            "\tas=\"${2:validationResults}\"",
+            ">",
+            "\t${3:validation messages}",
+            "</f:form.validationResults>"
+        ],
+        "description": "Outputs validation results."
+    }
 }
