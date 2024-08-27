@@ -30,8 +30,8 @@
         "vscode": "^1.0.0"
     },
     "scripts": {
-        "lint:files": "prettier --check \"**/*.{json,yml,yaml}\"",
-        "lint:files:fix": "prettier --write \"**/*.{json,yml,yaml}\""
+        "lint:files": "prettier --check \"**/*.{js,ts,css,html,xml,yaml,yml,json,json5,graphql,gql}\"",
+        "lint:files:fix": "prettier --write \"**/*.{js,ts,css,html,xml,yaml,yml,json,json5,graphql,gql}\""
     },
     "preview": true,
     "categories": [
