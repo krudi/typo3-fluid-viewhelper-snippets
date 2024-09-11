@@ -725,6 +725,47 @@ Translates a key from locallang or custom locallang file. This ViewHelper is ess
 
 ---
 
+### Translate Inline ViewHelper
+
+**Trigger the Snippet:** Type `fTranslateInline` in your IDE or editor.
+
+**Description:**
+Translates a key inline from a locallang or custom locallang file. This is useful for embedding translations directly inside a text string within a Fluid template.
+
+**Snippet Code:**
+
+```html
+{f:translate(
+    key: 'LLL:EXT:my_ext/Resources/Private/Language/locallang.xlf:key',
+    extensionName: 'my_ext'
+)}
+```
+
+---
+
+### Translate Inline ViewHelper (with additional conditions)
+
+**Trigger the Snippet:** Type `fTranslateArgumentsInline` in your IDE or editor.
+
+**Description:**
+Translates a key inline from a locallang or custom locallang file with additional options like arguments and default fallback text. This is useful when your translation involves dynamic placeholders.
+
+**Snippet Code:**
+
+```html
+{f:translate(
+    key: 'LLL:EXT:my_ext/Resources/Private/Language/locallang.xlf:key',
+    extensionName: 'my_ext',
+    arguments: {
+        0: 'dog',
+        1: 'fox'
+    },
+    default: 'Default translation'
+)}
+```
+
+---
+
 ### Variable ViewHelper
 
 **Trigger the Snippet:** Type `fVariable` in your IDE or editor.

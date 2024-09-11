@@ -347,6 +347,31 @@
         ],
         "description": "Translates a key from locallang or custom locallang file."
     },
+    "f:translateInline ViewHelper": {
+        "prefix": "fTranslateInline",
+        "body": [
+            "{f:translate(",
+            "\tkey: '${1:LLL:EXT:my_ext/Resources/Private/Language/locallang.xlf:key}',",
+            "\textensionName: '${2:my_ext}',",
+            ")}"
+        ],
+        "description": "Translates a key inline from locallang or custom locallang file."
+    },
+    "f:translateInline ViewHelper (with additional conditions": {
+        "prefix": "fTranslateArgumentsInline",
+        "body": [
+            "{f:translate(",
+            "\tkey: '${1:LLL:EXT:my_ext/Resources/Private/Language/locallang.xlf:key}',",
+            "\textensionName: '${2:my_ext}',",
+            "\targuments: {",
+            "\t\t0: '${3:argument1}',",
+            "\t\t1: '${4:argument2}'",
+            "\t},",
+            "\tdefault: '${5:Default translation}'",
+            ")}"
+        ],
+        "description": "Translates a key inline from locallang or custom locallang file."
+    },
     "f:variable ViewHelper": {
         "prefix": "fVariable",
         "body": ["<f:variable name=\"${1:myVariable}\">", "\t${2:'Variable content'}", "</f:variable>"],
