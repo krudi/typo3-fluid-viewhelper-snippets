@@ -1,11 +1,11 @@
 {
-    "Sanitize HTML ViewHelper": {
-        "prefix": "fSanitizeHtml",
-        "body": [
-            "<f:sanitize.html build=\"${1:default}\">",
-            "\t${2:<p>This content will be sanitized.</p>}",
-            "</f:sanitize.html>"
-        ],
-        "description": "Passes a given content through typo3/html-sanitizer to mitigate potential cross-site scripting occurrences."
-    }
+  "Sanitize HTML ViewHelper": {
+    "prefix": "fSanitizeHtml",
+    "body": [
+      "<f:sanitize.html build=\"${1:default}\">",
+      "\t${2:<p>This content will be sanitized.</p>}",
+      "</f:sanitize.html>"
+    ],
+    "description": "Passes a given content through typo3/html-sanitizer to mitigate potential cross-site scripting occurrences."
+  }
 }
