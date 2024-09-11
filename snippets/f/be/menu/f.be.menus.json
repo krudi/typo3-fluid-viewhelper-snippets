@@ -1,41 +1,41 @@
 {
-    "Backend ActionMenu ViewHelper": {
-        "prefix": "fBeMenusActionMenu",
-        "body": [
-            "<f:be.menus.actionMenu",
-            "\tadditionalAttributes=\"${1:{}}\"",
-            "\taria=\"${2:{}}\"",
-            "\tdata=\"${3:{}}\"",
-            "\tdefaultController=\"${4:DefaultController}\"",
-            ">",
-            "\t${5:Menu items go here}",
-            "</f:be.menus.actionMenu>"
-        ],
-        "description": "Renders a select box to switch between multiple actions and controllers, similar to TYPO3's funcMenu."
-    },
-    "Backend ActionMenuItem ViewHelper": {
-        "prefix": "fBeMenusActionMenuItem",
-        "body": [
-            "<f:be.menus.actionMenuItem label=\"${1:Item Label}\" controller=\"${2:DefaultController}\" action=\"${3:index}\"",
-            "\tadditionalAttributes=\"${4:{}}\"",
-            "\targuments=\"${5:{}}\"",
-            "\taria=\"${6:{}}\"",
-            "\tdata=\"${7:{}}\"",
-            "/>"
-        ],
-        "description": "Adds an item to an action menu in the backend with specified label, controller, and action."
-    },
-    "Backend ActionMenuItemGroup ViewHelper": {
-        "prefix": "fBeMenusActionMenuItemGroup",
-        "body": [
-            "<f:be.menus.actionMenuItemGroup label=\"${1:Group Label}\"",
-            "\tadditionalAttributes=\"${2:{}}\"",
-            "\taria=\"${3:{}}\"",
-            "\tdata=\"${4:{}}\"",
-            ">",
-            "\t${5:Grouped menu items go here}",
-            "</f:be.menus.actionMenuItemGroup>"
-        ],
-        "description": "Groups options of an action menu."
-    }
+  "Backend ActionMenu ViewHelper": {
+    "prefix": "fBeMenusActionMenu",
+    "body": [
+      "<f:be.menus.actionMenu",
+      "\tadditionalAttributes=\"${1:{}}\"",
+      "\taria=\"${2:{}}\"",
+      "\tdata=\"${3:{}}\"",
+      "\tdefaultController=\"${4:DefaultController}\"",
+      ">",
+      "\t${5:Menu items go here}",
+      "</f:be.menus.actionMenu>"
+    ],
+    "description": "Renders a select box to switch between multiple actions and controllers, similar to TYPO3's funcMenu."
+  },
+  "Backend ActionMenuItem ViewHelper": {
+    "prefix": "fBeMenusActionMenuItem",
+    "body": [
+      "<f:be.menus.actionMenuItem label=\"${1:Item Label}\" controller=\"${2:DefaultController}\" action=\"${3:index}\"",
+      "\tadditionalAttributes=\"${4:{}}\"",
+      "\targuments=\"${5:{}}\"",
+      "\taria=\"${6:{}}\"",
+      "\tdata=\"${7:{}}\"",
+      "/>"
+    ],
+    "description": "Adds an item to an action menu in the backend with specified label, controller, and action."
+  },
+  "Backend ActionMenuItemGroup ViewHelper": {
+    "prefix": "fBeMenusActionMenuItemGroup",
+    "body": [
+      "<f:be.menus.actionMenuItemGroup label=\"${1:Group Label}\"",
+      "\tadditionalAttributes=\"${2:{}}\"",
+      "\taria=\"${3:{}}\"",
+      "\tdata=\"${4:{}}\"",
+      ">",
+      "\t${5:Grouped menu items go here}",
+      "</f:be.menus.actionMenuItemGroup>"
+    ],
+    "description": "Groups options of an action menu."
+  }
 }

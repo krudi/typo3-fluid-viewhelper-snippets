@@ -1,326 +1,326 @@
 {
-    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-    "name": "TsConfig",
-    "patterns": [
-        {
-            "include": "#comments"
-        },
-        {
-            "include": "#includes"
-        },
-        {
-            "include": "#conditions"
-        },
-        {
-            "comment": "Everything after the equal sign, adjusted to exclude duplicate handling",
-            "begin": "(=)(\\s?)",
-            "captures": {
-                "0": {
-                    "name": "keyword.operator.assignment.typoscript"
-                }
-            },
-            "end": "(?:\n|$)",
-            "name": "string.interpolated.typoscript",
-            "patterns": [
-                {
-                    "include": "#cobjects"
-                },
-                {
-                    "include": "#constants"
-                },
-                {
-                    "include": "#interpolation"
-                },
-                {
-                    "include": "#strings"
-                },
-                {
-                    "include": "#arrays"
-                }
-            ]
-        }
-    ],
-    "repository": {
-        "comments": {
-            "patterns": [
-                {
-                    "begin": "/\\*",
-                    "captures": {
-                        "0": {
-                            "name": "punctuation.definition.comment.tsconfig"
-                        }
-                    },
-                    "end": "\\*/",
-                    "name": "comment.block.tsconfig"
-                },
-                {
-                    "begin": "(^\\s+)?(?=//)",
-                    "beginCaptures": {
-                        "1": {
-                            "name": "punctuation.whitespace.comment.leading.tsconfig"
-                        }
-                    },
-                    "end": "(?!\\G)",
-                    "patterns": [
-                        {
-                            "begin": "//",
-                            "beginCaptures": {
-                                "0": {
-                                    "name": "punctuation.definition.comment.tsconfig"
-                                }
-                            },
-                            "end": "\\n|(?=\\?>)",
-                            "name": "comment.line.double-slash.tsconfig"
-                        }
-                    ]
-                },
-                {
-                    "begin": "(^\\s+)?(?=#)",
-                    "beginCaptures": {
-                        "1": {
-                            "name": "punctuation.whitespace.comment.leading.tsconfig"
-                        }
-                    },
-                    "end": "(?!\\G)",
-                    "patterns": [
-                        {
-                            "begin": "#",
-                            "beginCaptures": {
-                                "0": {
-                                    "name": "punctuation.definition.comment.tsconfig"
-                                }
-                            },
-                            "end": "\\n|(?=\\?>)",
-                            "name": "comment.line.number-sign.tsconfig"
-                        }
-                    ]
-                }
-            ]
-        },
-        "constants": {
-            "patterns": [
-                {
-                    "name": "variable.other.tsconfig",
-                    "match": "{\\$.*}"
-                }
-            ]
-        },
-        "conditions": {
-            "patterns": [
-                {
-                    "name": "keyword.control.condition.tsconfig",
-                    "begin": "^\\s*\\[",
-                    "beginCaptures": {
-                        "0": {
-                            "name": "punctuation.definition.condition.begin.tsconfig"
-                        }
-                    },
-                    "end": "\\]",
-                    "endCaptures": {
-                        "0": {
-                            "name": "punctuation.definition.condition.end.tsconfig"
-                        }
-                    },
-                    "contentName": "meta.condition.tsconfig",
-                    "patterns": [
-                        {
-                            "include": "#fullVariableExpressions"
-                        },
-                        {
-                            "include": "#logicalOperators"
-                        },
-                        {
-                            "include": "#functions"
-                        },
-                        {
-                            "include": "#strings"
-                        }
-                    ]
-                }
-            ]
-        },
-        "logicalOperators": {
-            "patterns": [
-                {
-                    "name": "keyword.operator.logical.tsconfig",
-                    "match": "\\b(and|or|not|&&|\\|\\||==|!=|<>|>=|<=)\\b"
-                }
-            ]
-        },
-        "functions": {
-            "patterns": [
-                {
-                    "name": "support.function.condition.tsconfig",
-                    "match": "\\b(date|like|traverse|compatVersion|getenv|feature|site|getRecord|calc|stdWrap)\\b"
-                }
-            ]
-        },
-        "fullVariableExpressions": {
-            "patterns": [
-                {
-                    "name": "variable.other.tsconfig",
-                    "match": "\\b(backend|page|layout|user|tree|workspace|typo3|frontend|plugin|module|applicationContext)\\b(\\.[a-zA-Z_][a-zA-Z0-9_]*)*"
-                }
-            ]
-        },
-        "cobjects": {
-            "patterns": [
-                {
-                    "name": "support.class.cobject.tsconfig",
-                    "match": "\\b(TEXT|SVG|RECORDS|PAGEVIEW|IMG_RESOURCE|FILES|COA|COA_INT|FLUIDTEMPLATE|USER|USER_INT|HMENU|TMENU|IMAGE|CONTENT|LOAD_REGISTER|RESTORE_REGISTER)\\b"
-                }
-            ]
-        },
-        "arrays": {
-            "patterns": [
-                {
-                    "name": "meta.array.tsconfig",
-                    "begin": "\\[",
-                    "beginCaptures": {
-                        "0": {
-                            "name": "punctuation.definition.array.begin.tsconfig"
-                        }
-                    },
-                    "end": "\\]",
-                    "endCaptures": {
-                        "0": {
-                            "name": "punctuation.definition.array.end.tsconfig"
-                        }
-                    },
-                    "patterns": [
-                        {
-                            "include": "#strings"
-                        },
-                        {
-                            "include": "#constants"
-                        }
-                    ]
-                }
-            ]
-        },
-        "interpolation": {
-            "patterns": [
-                {
-                    "match": "\\\\[0-7]{1,3}",
-                    "name": "constant.numeric.octal.tsconfig"
-                },
-                {
-                    "match": "\\\\x[0-9A-Fa-f]{1,2}",
-                    "name": "constant.numeric.hex.tsconfig"
-                },
-                {
-                    "match": "\\\\[enrt\\\\\\$\\\"]",
-                    "name": "constant.character.escape.tsconfig"
-                }
-            ]
-        },
-        "string-double-quoted": {
-            "begin": "\"",
-            "beginCaptures": {
-                "0": {
-                    "name": "punctuation.definition.string.begin.tsconfig"
-                }
-            },
-            "end": "\"",
-            "endCaptures": {
-                "0": {
-                    "name": "punctuation.definition.string.end.tsconfig"
-                }
-            },
-            "name": "string.quoted.double.tsconfig",
-            "patterns": [
-                {
-                    "include": "#interpolation"
-                }
-            ]
-        },
-        "string-single-quoted": {
-            "begin": "'",
-            "beginCaptures": {
-                "0": {
-                    "name": "punctuation.definition.string.begin.tsconfig"
-                }
-            },
-            "end": "'",
-            "endCaptures": {
-                "0": {
-                    "name": "punctuation.definition.string.end.tsconfig"
-                }
-            },
-            "name": "string.quoted.single.tsconfig",
-            "patterns": [
-                {
-                    "match": "\\\\[\\\\']",
-                    "name": "constant.character.escape.tsconfig"
-                }
-            ]
-        },
-        "strings": {
-            "patterns": [
-                {
-                    "include": "#string-double-quoted"
-                },
-                {
-                    "include": "#string-single-quoted"
-                }
-            ]
-        },
-        "include_at_rule": {
-            "begin": "\\s*((@)import\\b)\\s*['\"]",
-            "captures": {
-                "1": {
-                    "name": "keyword.control.include.tsconfig"
-                }
-            },
-            "end": "['\"]",
-            "name": "meta.include.tsconfig",
-            "patterns": [
-                {
-                    "include": "#strings"
-                },
-                {
-                    "name": "string.import.path.tsconfig",
-                    "match": "(EXT:[a-zA-Z0-9_/]+\\.tsconfig)"
-                }
-            ]
-        },
-        "include_tag_rule": {
-            "begin": "<INCLUDE_TYPOSCRIPT:",
-            "beginCaptures": {
-                "0": {
-                    "name": "support.function.tsconfig"
-                }
-            },
-            "end": ">",
-            "endCaptures": {
-                "0": {
-                    "name": "support.function.tsconfig"
-                }
-            },
-            "patterns": [
-                {
-                    "name": "variable.parameter.tsconfig",
-                    "match": "(source|extensions|condition)(=)"
-                },
-                {
-                    "include": "#strings"
-                },
-                {
-                    "name": "string.import.path.tsconfig",
-                    "match": "(EXT:[a-zA-Z0-9_/]+\\.tsconfig)"
-                }
-            ]
-        },
-        "includes": {
-            "patterns": [
-                {
-                    "include": "#include_at_rule"
-                },
-                {
-                    "include": "#include_tag_rule"
-                }
-            ]
-        }
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "TsConfig",
+  "patterns": [
+    {
+      "include": "#comments"
     },
-    "scopeName": "source.tsconfig"
+    {
+      "include": "#includes"
+    },
+    {
+      "include": "#conditions"
+    },
+    {
+      "comment": "Everything after the equal sign, adjusted to exclude duplicate handling",
+      "begin": "(=)(\\s?)",
+      "captures": {
+        "0": {
+          "name": "keyword.operator.assignment.typoscript"
+        }
+      },
+      "end": "(?:\n|$)",
+      "name": "string.interpolated.typoscript",
+      "patterns": [
+        {
+          "include": "#cobjects"
+        },
+        {
+          "include": "#constants"
+        },
+        {
+          "include": "#interpolation"
+        },
+        {
+          "include": "#strings"
+        },
+        {
+          "include": "#arrays"
+        }
+      ]
+    }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "begin": "/\\*",
+          "captures": {
+            "0": {
+              "name": "punctuation.definition.comment.tsconfig"
+            }
+          },
+          "end": "\\*/",
+          "name": "comment.block.tsconfig"
+        },
+        {
+          "begin": "(^\\s+)?(?=//)",
+          "beginCaptures": {
+            "1": {
+              "name": "punctuation.whitespace.comment.leading.tsconfig"
+            }
+          },
+          "end": "(?!\\G)",
+          "patterns": [
+            {
+              "begin": "//",
+              "beginCaptures": {
+                "0": {
+                  "name": "punctuation.definition.comment.tsconfig"
+                }
+              },
+              "end": "\\n|(?=\\?>)",
+              "name": "comment.line.double-slash.tsconfig"
+            }
+          ]
+        },
+        {
+          "begin": "(^\\s+)?(?=#)",
+          "beginCaptures": {
+            "1": {
+              "name": "punctuation.whitespace.comment.leading.tsconfig"
+            }
+          },
+          "end": "(?!\\G)",
+          "patterns": [
+            {
+              "begin": "#",
+              "beginCaptures": {
+                "0": {
+                  "name": "punctuation.definition.comment.tsconfig"
+                }
+              },
+              "end": "\\n|(?=\\?>)",
+              "name": "comment.line.number-sign.tsconfig"
+            }
+          ]
+        }
+      ]
+    },
+    "constants": {
+      "patterns": [
+        {
+          "name": "variable.other.tsconfig",
+          "match": "{\\$.*}"
+        }
+      ]
+    },
+    "conditions": {
+      "patterns": [
+        {
+          "name": "keyword.control.condition.tsconfig",
+          "begin": "^\\s*\\[",
+          "beginCaptures": {
+            "0": {
+              "name": "punctuation.definition.condition.begin.tsconfig"
+            }
+          },
+          "end": "\\]",
+          "endCaptures": {
+            "0": {
+              "name": "punctuation.definition.condition.end.tsconfig"
+            }
+          },
+          "contentName": "meta.condition.tsconfig",
+          "patterns": [
+            {
+              "include": "#fullVariableExpressions"
+            },
+            {
+              "include": "#logicalOperators"
+            },
+            {
+              "include": "#functions"
+            },
+            {
+              "include": "#strings"
+            }
+          ]
+        }
+      ]
+    },
+    "logicalOperators": {
+      "patterns": [
+        {
+          "name": "keyword.operator.logical.tsconfig",
+          "match": "\\b(and|or|not|&&|\\|\\||==|!=|<>|>=|<=)\\b"
+        }
+      ]
+    },
+    "functions": {
+      "patterns": [
+        {
+          "name": "support.function.condition.tsconfig",
+          "match": "\\b(date|like|traverse|compatVersion|getenv|feature|site|getRecord|calc|stdWrap)\\b"
+        }
+      ]
+    },
+    "fullVariableExpressions": {
+      "patterns": [
+        {
+          "name": "variable.other.tsconfig",
+          "match": "\\b(backend|page|layout|user|tree|workspace|typo3|frontend|plugin|module|applicationContext)\\b(\\.[a-zA-Z_][a-zA-Z0-9_]*)*"
+        }
+      ]
+    },
+    "cobjects": {
+      "patterns": [
+        {
+          "name": "support.class.cobject.tsconfig",
+          "match": "\\b(TEXT|SVG|RECORDS|PAGEVIEW|IMG_RESOURCE|FILES|COA|COA_INT|FLUIDTEMPLATE|USER|USER_INT|HMENU|TMENU|IMAGE|CONTENT|LOAD_REGISTER|RESTORE_REGISTER)\\b"
+        }
+      ]
+    },
+    "arrays": {
+      "patterns": [
+        {
+          "name": "meta.array.tsconfig",
+          "begin": "\\[",
+          "beginCaptures": {
+            "0": {
+              "name": "punctuation.definition.array.begin.tsconfig"
+            }
+          },
+          "end": "\\]",
+          "endCaptures": {
+            "0": {
+              "name": "punctuation.definition.array.end.tsconfig"
+            }
+          },
+          "patterns": [
+            {
+              "include": "#strings"
+            },
+            {
+              "include": "#constants"
+            }
+          ]
+        }
+      ]
+    },
+    "interpolation": {
+      "patterns": [
+        {
+          "match": "\\\\[0-7]{1,3}",
+          "name": "constant.numeric.octal.tsconfig"
+        },
+        {
+          "match": "\\\\x[0-9A-Fa-f]{1,2}",
+          "name": "constant.numeric.hex.tsconfig"
+        },
+        {
+          "match": "\\\\[enrt\\\\\\$\\\"]",
+          "name": "constant.character.escape.tsconfig"
+        }
+      ]
+    },
+    "string-double-quoted": {
+      "begin": "\"",
+      "beginCaptures": {
+        "0": {
+          "name": "punctuation.definition.string.begin.tsconfig"
+        }
+      },
+      "end": "\"",
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.definition.string.end.tsconfig"
+        }
+      },
+      "name": "string.quoted.double.tsconfig",
+      "patterns": [
+        {
+          "include": "#interpolation"
+        }
+      ]
+    },
+    "string-single-quoted": {
+      "begin": "'",
+      "beginCaptures": {
+        "0": {
+          "name": "punctuation.definition.string.begin.tsconfig"
+        }
+      },
+      "end": "'",
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.definition.string.end.tsconfig"
+        }
+      },
+      "name": "string.quoted.single.tsconfig",
+      "patterns": [
+        {
+          "match": "\\\\[\\\\']",
+          "name": "constant.character.escape.tsconfig"
+        }
+      ]
+    },
+    "strings": {
+      "patterns": [
+        {
+          "include": "#string-double-quoted"
+        },
+        {
+          "include": "#string-single-quoted"
+        }
+      ]
+    },
+    "include_at_rule": {
+      "begin": "\\s*((@)import\\b)\\s*['\"]",
+      "captures": {
+        "1": {
+          "name": "keyword.control.include.tsconfig"
+        }
+      },
+      "end": "['\"]",
+      "name": "meta.include.tsconfig",
+      "patterns": [
+        {
+          "include": "#strings"
+        },
+        {
+          "name": "string.import.path.tsconfig",
+          "match": "(EXT:[a-zA-Z0-9_/]+\\.tsconfig)"
+        }
+      ]
+    },
+    "include_tag_rule": {
+      "begin": "<INCLUDE_TYPOSCRIPT:",
+      "beginCaptures": {
+        "0": {
+          "name": "support.function.tsconfig"
+        }
+      },
+      "end": ">",
+      "endCaptures": {
+        "0": {
+          "name": "support.function.tsconfig"
+        }
+      },
+      "patterns": [
+        {
+          "name": "variable.parameter.tsconfig",
+          "match": "(source|extensions|condition)(=)"
+        },
+        {
+          "include": "#strings"
+        },
+        {
+          "name": "string.import.path.tsconfig",
+          "match": "(EXT:[a-zA-Z0-9_/]+\\.tsconfig)"
+        }
+      ]
+    },
+    "includes": {
+      "patterns": [
+        {
+          "include": "#include_at_rule"
+        },
+        {
+          "include": "#include_tag_rule"
+        }
+      ]
+    }
+  },
+  "scopeName": "source.tsconfig"
 }
