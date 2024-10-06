@@ -1,44 +1,44 @@
 {
-  "CSS Asset ViewHelper": {
-    "prefix": "fAssetCss",
-    "body": [
-      "<f:asset.css",
-      "\tidentifier=\"${1:identifier123}\"",
-      "\tsrc=\"${2:EXT:my_ext/Resources/Public/Css/foo.css}\"",
-      "/>"
-    ],
-    "description": "Includes a CSS file in TYPO3 templates, identified by a unique identifier."
-  },
-  "CSS Asset Inline ViewHelper": {
-    "prefix": "fAssetCssInline",
-    "body": [
-      "<f:asset.css identifier=\"${1:identifier123}\">",
-      "\t${2:/* Inline CSS content here */}",
-      "</f:asset.css>"
-    ],
-    "description": "Includes inline CSS in TYPO3 templates, identified by a unique identifier."
-  },
-  "Script Asset ViewHelper": {
-    "prefix": "fAssetScript",
-    "body": [
-      "<f:asset.script",
-      "\tidentifier=\"${1:identifier123}\"",
-      "\tsrc=\"${2:EXT:my_ext/Resources/Public/JavaScript/foo.js}\"",
-      "\tuseNonce=\"1\"",
-      "/>"
-    ],
-    "description": "Includes a JavaScript file in TYPO3 templates, identified by a unique identifier."
-  },
-  "Script Inline ViewHelper": {
-    "prefix": "fAssetScriptInline",
-    "body": [
-      "<f:asset.script",
-      "\tidentifier=\"${1:identifier123}\"",
-      "\tuseNonce=\"1\"",
-      ">",
-      "\t${2:// Inline JavaScript content here}",
-      "</f:asset.script>"
-    ],
-    "description": "Includes inline JavaScript in TYPO3 templates, identified by a unique identifier."
-  }
+    "CSS Asset ViewHelper": {
+        "prefix": "fAssetCss",
+        "body": [
+            "<f:asset.css",
+            "\tidentifier=\"${1:identifier123}\"",
+            "\tsrc=\"${2:EXT:my_ext/Resources/Public/Css/foo.css}\"",
+            "/>"
+        ],
+        "description": "Includes a CSS file in TYPO3 templates, identified by a unique identifier."
+    },
+    "CSS Asset Inline ViewHelper": {
+        "prefix": "fAssetCssInline",
+        "body": [
+            "<f:asset.css identifier=\"${1:identifier123}\">",
+            "\t${2:/* Inline CSS content here */}",
+            "</f:asset.css>"
+        ],
+        "description": "Includes inline CSS in TYPO3 templates, identified by a unique identifier."
+    },
+    "Script Asset ViewHelper": {
+        "prefix": "fAssetScript",
+        "body": [
+            "<f:asset.script",
+            "\tidentifier=\"${1:identifier123}\"",
+            "\tsrc=\"${2:EXT:my_ext/Resources/Public/JavaScript/foo.js}\"",
+            "\tuseNonce=\"1\"",
+            "/>"
+        ],
+        "description": "Includes a JavaScript file in TYPO3 templates, identified by a unique identifier."
+    },
+    "Script Inline ViewHelper": {
+        "prefix": "fAssetScriptInline",
+        "body": [
+            "<f:asset.script",
+            "\tidentifier=\"${1:identifier123}\"",
+            "\tuseNonce=\"1\"",
+            ">",
+            "\t${2:// Inline JavaScript content here}",
+            "</f:asset.script>"
+        ],
+        "description": "Includes inline JavaScript in TYPO3 templates, identified by a unique identifier."
+    }
 }

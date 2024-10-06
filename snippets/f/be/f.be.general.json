@@ -1,74 +1,74 @@
 {
-  "Backend Infobox ViewHelper": {
-    "prefix": "fBeInfobox",
-    "body": [
-      "<f:be.infobox title=\"${1:Information}\"",
-      "\tmessage=\"${2:This is an info message.}\"",
-      "\tstate=\"${3:0}\"",
-      "\ticonName=\"${4:actions-info}\"",
-      "\tdisableIcon=\"${5:false}\"",
-      ">",
-      "\t${6:Additional content here.}",
-      "</f:be.infobox>"
-    ],
-    "description": "Renders a styled content infobox in the backend with various states."
-  },
-  "Backend Link ViewHelper": {
-    "prefix": "fBeLink",
-    "body": [
-      "<f:be.link route=\"${1:moduleName}\"",
-      "\tparameters=\"${2:{}}\"",
-      "\treferenceType=\"${3:absolute}\"",
-      "\tadditionalAttributes=\"${4:{}}\"",
-      "\taria=\"${5:{}}\"",
-      "\tdata=\"${6:{}}\"",
-      ">",
-      "\t${7:Link Text}",
-      "</f:be.link>"
-    ],
-    "description": "Creates URIs to backend modules."
-  },
-  "Backend PageRenderer ViewHelper": {
-    "prefix": "fBePageRenderer",
-    "body": [
-      "<f:be.pageRenderer",
-      "\tpageTitle=\"${1:My Module}\"",
-      "\tincludeCssFiles=\"${2:['EXT:my_extension/Resources/Public/Css/style.css']}\"",
-      "\tincludeJsFiles=\"${3:['EXT:my_extension/Resources/Public/JavaScript/script.js']}\"",
-      "\taddJsInlineLabels=\"${4:{}}\"",
-      "\tincludeJavaScriptModules=\"${5:[]}\"",
-      "\taddInlineSettings=\"${6:{}}\"",
-      "/>"
-    ],
-    "description": "Registers backend module resources like CSS and JavaScript using the PageRenderer."
-  },
-  "Backend TableList ViewHelper": {
-    "prefix": "fBeTableList",
-    "body": [
-      "<f:be.tableList tableName=\"${1:tt_content}\"",
-      "\tfieldList=\"${2:['uid', 'header', 'bodytext']}\"",
-      "\tstoragePid=\"${3:1}\"",
-      "\tlevels=\"${4:0}\"",
-      "\tfilter=\"${5:}\"",
-      "\trecordsPerPage=\"${6:10}\"",
-      "\tsortField=\"${7:sorting}\"",
-      "\tsortDescending=\"${8:false}\"",
-      "\treadOnly=\"${9:false}\"",
-      "\tenableClickMenu=\"${10:true}\"",
-      "\tenableControlPanels=\"${11:true}\"",
-      "\tclickTitleMode=\"${12:edit}\"",
-      "/>"
-    ],
-    "description": "Renders a record list as known from the TYPO3 list module."
-  },
-  "Backend Uri ViewHelper": {
-    "prefix": "fBeUri",
-    "body": [
-      "<f:be.uri route=\"${1:moduleName}\"",
-      "\tparameters=\"${2:{}}\"",
-      "\treferenceType=\"${3:absolute}\"",
-      "/>"
-    ],
-    "description": "Creates URIs to backend modules."
-  }
+    "Backend Infobox ViewHelper": {
+        "prefix": "fBeInfobox",
+        "body": [
+            "<f:be.infobox title=\"${1:Information}\"",
+            "\tmessage=\"${2:This is an info message.}\"",
+            "\tstate=\"${3:0}\"",
+            "\ticonName=\"${4:actions-info}\"",
+            "\tdisableIcon=\"${5:false}\"",
+            ">",
+            "\t${6:Additional content here.}",
+            "</f:be.infobox>"
+        ],
+        "description": "Renders a styled content infobox in the backend with various states."
+    },
+    "Backend Link ViewHelper": {
+        "prefix": "fBeLink",
+        "body": [
+            "<f:be.link route=\"${1:moduleName}\"",
+            "\tparameters=\"${2:{}}\"",
+            "\treferenceType=\"${3:absolute}\"",
+            "\tadditionalAttributes=\"${4:{}}\"",
+            "\taria=\"${5:{}}\"",
+            "\tdata=\"${6:{}}\"",
+            ">",
+            "\t${7:Link Text}",
+            "</f:be.link>"
+        ],
+        "description": "Creates URIs to backend modules."
+    },
+    "Backend PageRenderer ViewHelper": {
+        "prefix": "fBePageRenderer",
+        "body": [
+            "<f:be.pageRenderer",
+            "\tpageTitle=\"${1:My Module}\"",
+            "\tincludeCssFiles=\"${2:['EXT:my_extension/Resources/Public/Css/style.css']}\"",
+            "\tincludeJsFiles=\"${3:['EXT:my_extension/Resources/Public/JavaScript/script.js']}\"",
+            "\taddJsInlineLabels=\"${4:{}}\"",
+            "\tincludeJavaScriptModules=\"${5:[]}\"",
+            "\taddInlineSettings=\"${6:{}}\"",
+            "/>"
+        ],
+        "description": "Registers backend module resources like CSS and JavaScript using the PageRenderer."
+    },
+    "Backend TableList ViewHelper": {
+        "prefix": "fBeTableList",
+        "body": [
+            "<f:be.tableList tableName=\"${1:tt_content}\"",
+            "\tfieldList=\"${2:['uid', 'header', 'bodytext']}\"",
+            "\tstoragePid=\"${3:1}\"",
+            "\tlevels=\"${4:0}\"",
+            "\tfilter=\"${5:}\"",
+            "\trecordsPerPage=\"${6:10}\"",
+            "\tsortField=\"${7:sorting}\"",
+            "\tsortDescending=\"${8:false}\"",
+            "\treadOnly=\"${9:false}\"",
+            "\tenableClickMenu=\"${10:true}\"",
+            "\tenableControlPanels=\"${11:true}\"",
+            "\tclickTitleMode=\"${12:edit}\"",
+            "/>"
+        ],
+        "description": "Renders a record list as known from the TYPO3 list module."
+    },
+    "Backend Uri ViewHelper": {
+        "prefix": "fBeUri",
+        "body": [
+            "<f:be.uri route=\"${1:moduleName}\"",
+            "\tparameters=\"${2:{}}\"",
+            "\treferenceType=\"${3:absolute}\"",
+            "/>"
+        ],
+        "description": "Creates URIs to backend modules."
+    }
 }
