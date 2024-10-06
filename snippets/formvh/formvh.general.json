@@ -1,85 +1,85 @@
 {
-  "Custom Form ViewHelper": {
-    "prefix": "vhForm",
-    "body": [
-      "<formvh:form",
-      "\tname=\"${1:formName}\"",
-      "\taction=\"${2:submit}\"",
-      "\tmethod=\"${3:post}\"",
-      "\tcontroller=\"${4:Main}\"",
-      "\textensionName=\"${5:MyExtension}\"",
-      "\tformat=\"${6:html}\"",
-      "/>"
-    ],
-    "description": "Renders a form with custom configuration, including action URI, query parameters, and form method. Supports a wide range of attributes including action, controller, extension name, and more. Allows additional attributes, custom data attributes, and error handling."
-  },
-  "Grid Column Class Auto Configuration ViewHelper": {
-    "prefix": "vhGridColumnClassAutoConfiguration",
-    "body": [
-      "<formvh:gridColumnClassAutoConfiguration",
-      "\telement=\"${1:element}\"",
-      "/>"
-    ],
-    "description": "Automatically configures grid column classes for a given renderable element. Requires a RootRenderableInterface instance to operate. Used to ensure consistent grid column styling in forms."
-  },
-  "Render Form ViewHelper": {
-    "prefix": "vhRender",
-    "body": [
-      "<formvh:render",
-      "\tfactoryClass=\"${1:CustomFormFactory}\"",
-      "\tprototypeName=\"${2:customPrototype}\"",
-      "/>"
-    ],
-    "description": "Main entry point to render a form into a Fluid template. Requires a factory class that implements FormFactoryInterface. Supports custom factory configurations and prototypes."
-  },
-  "Render All Form Values ViewHelper": {
-    "prefix": "vhRenderAllFormValues",
-    "body": [
-      "<formvh:renderAllFormValues",
-      "\tas=\"${1:formValue}\"",
-      "\trenderable=\"${2:formElement}\"",
-      "/>"
-    ],
-    "description": "Renders all values of a form. Outputs the values under the specified name in the template. Requires a RootRenderableInterface instance to provide the form values."
-  },
-  "Render Form Value ViewHelper": {
-    "prefix": "vhRenderFormValue",
-    "body": [
-      "<formvh:renderFormValue",
-      "\tas=\"${1:formValue}\"",
-      "\trenderable=\"${2:formElement}\"",
-      "/>"
-    ],
-    "description": "Renders a single value of a form. Outputs the value under the specified name in the template. Requires a RenderableInterface instance to provide the form value."
-  },
-  "Render Renderable ViewHelper": {
-    "prefix": "vhRenderRenderable",
-    "body": [
-      "<formvh:renderRenderable",
-      "\trenderable=\"${1:formElement}\"",
-      "/>"
-    ],
-    "description": "Renders a renderable element within a form. Requires a RenderableInterface instance and integrates with the TYPO3 CMS Form MVC View to return the rendered content."
-  },
-  "Translate Element Error ViewHelper": {
-    "prefix": "vhTranslateElementError",
-    "body": [
-      "<formvh:translateElementError",
-      "\telement=\"${1:formElement}\"",
-      "\terror=\"${2:error}\"",
-      "/>"
-    ],
-    "description": "Translates error messages for a form element. Requires both a Form Element and an Error object to perform the translation, making error messages localized for the user."
-  },
-  "Translate Element Property ViewHelper": {
-    "prefix": "vhTranslateElementProperty",
-    "body": [
-      "<formvh:translateElementProperty",
-      "\telement=\"${1:formElement}\"",
-      "\tproperty=\"${2:label}\"",
-      "\trenderingOptionProperty=\"${3:renderingOption}\"",
-      "/>"
-    ],
-    "description": "Translates properties of a form element, allowing for localization of form fields and options. Requires a Form Element and the property to translate, along with optional rendering options."
-  }
+    "Custom Form ViewHelper": {
+        "prefix": "vhForm",
+        "body": [
+            "<formvh:form",
+            "\tname=\"${1:formName}\"",
+            "\taction=\"${2:submit}\"",
+            "\tmethod=\"${3:post}\"",
+            "\tcontroller=\"${4:Main}\"",
+            "\textensionName=\"${5:MyExtension}\"",
+            "\tformat=\"${6:html}\"",
+            "/>"
+        ],
+        "description": "Renders a form with custom configuration, including action URI, query parameters, and form method. Supports a wide range of attributes including action, controller, extension name, and more. Allows additional attributes, custom data attributes, and error handling."
+    },
+    "Grid Column Class Auto Configuration ViewHelper": {
+        "prefix": "vhGridColumnClassAutoConfiguration",
+        "body": [
+            "<formvh:gridColumnClassAutoConfiguration",
+            "\telement=\"${1:element}\"",
+            "/>"
+        ],
+        "description": "Automatically configures grid column classes for a given renderable element. Requires a RootRenderableInterface instance to operate. Used to ensure consistent grid column styling in forms."
+    },
+    "Render Form ViewHelper": {
+        "prefix": "vhRender",
+        "body": [
+            "<formvh:render",
+            "\tfactoryClass=\"${1:CustomFormFactory}\"",
+            "\tprototypeName=\"${2:customPrototype}\"",
+            "/>"
+        ],
+        "description": "Main entry point to render a form into a Fluid template. Requires a factory class that implements FormFactoryInterface. Supports custom factory configurations and prototypes."
+    },
+    "Render All Form Values ViewHelper": {
+        "prefix": "vhRenderAllFormValues",
+        "body": [
+            "<formvh:renderAllFormValues",
+            "\tas=\"${1:formValue}\"",
+            "\trenderable=\"${2:formElement}\"",
+            "/>"
+        ],
+        "description": "Renders all values of a form. Outputs the values under the specified name in the template. Requires a RootRenderableInterface instance to provide the form values."
+    },
+    "Render Form Value ViewHelper": {
+        "prefix": "vhRenderFormValue",
+        "body": [
+            "<formvh:renderFormValue",
+            "\tas=\"${1:formValue}\"",
+            "\trenderable=\"${2:formElement}\"",
+            "/>"
+        ],
+        "description": "Renders a single value of a form. Outputs the value under the specified name in the template. Requires a RenderableInterface instance to provide the form value."
+    },
+    "Render Renderable ViewHelper": {
+        "prefix": "vhRenderRenderable",
+        "body": [
+            "<formvh:renderRenderable",
+            "\trenderable=\"${1:formElement}\"",
+            "/>"
+        ],
+        "description": "Renders a renderable element within a form. Requires a RenderableInterface instance and integrates with the TYPO3 CMS Form MVC View to return the rendered content."
+    },
+    "Translate Element Error ViewHelper": {
+        "prefix": "vhTranslateElementError",
+        "body": [
+            "<formvh:translateElementError",
+            "\telement=\"${1:formElement}\"",
+            "\terror=\"${2:error}\"",
+            "/>"
+        ],
+        "description": "Translates error messages for a form element. Requires both a Form Element and an Error object to perform the translation, making error messages localized for the user."
+    },
+    "Translate Element Property ViewHelper": {
+        "prefix": "vhTranslateElementProperty",
+        "body": [
+            "<formvh:translateElementProperty",
+            "\telement=\"${1:formElement}\"",
+            "\tproperty=\"${2:label}\"",
+            "\trenderingOptionProperty=\"${3:renderingOption}\"",
+            "/>"
+        ],
+        "description": "Translates properties of a form element, allowing for localization of form fields and options. Requires a Form Element and the property to translate, along with optional rendering options."
+    }
 }

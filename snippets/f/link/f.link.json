@@ -1,100 +1,100 @@
 {
-  "Link Action ViewHelper": {
-    "prefix": "fLinkAction",
-    "body": [
-      "<f:link.action",
-      "\taction=\"${1:index}\"",
-      "\tcontroller=\"${2:Default}\"",
-      "\tpluginName=\"${3:MyPlugin}\"",
-      "\textensionName=\"${4:MyExtension}\"",
-      "\targuments=\"{${5:arguments}}\"",
-      ">",
-      "\t${6:Link Text}",
-      "</f:link.action>"
-    ],
-    "description": "A ViewHelper for creating links to extbase actions."
-  },
-  "Link Action Inline ViewHelper": {
-    "prefix": "fLinkActionInline",
-    "body": [
-      "{f:link.action(",
-      "\taction: '${1:index}',",
-      "\tcontroller: '${2:Default}',",
-      "\tpluginName: '${3:MyPlugin}',",
-      "\textensionName: '${4:MyExtension}',",
-      "\targuments: {${5:arguments}}",
-      ")}"
-    ],
-    "description": "Inline version of the ViewHelper for creating links to extbase actions."
-  },
-  "Link Email ViewHelper": {
-    "prefix": "fLinkEmail",
-    "body": [
-      "<f:link.email email=\"${1:example@example.com}\">",
-      "\t${2:Send Email}",
-      "</f:link.email>"
-    ],
-    "description": "Email link ViewHelper. Generates an email link."
-  },
-  "Link Email Inline ViewHelper": {
-    "prefix": "fLinkEmailInline",
-    "body": ["{f:link.email(email: '${1:example@example.com}')}"],
-    "description": "Inline version of the ViewHelper for creating an email link."
-  },
-  "Link External ViewHelper": {
-    "prefix": "fLinkExternal",
-    "body": [
-      "<f:link.external uri=\"${1:https://example.com}\">",
-      "\t${2:Visit Example}",
-      "</f:link.external>"
-    ],
-    "description": "A ViewHelper for creating links to external targets."
-  },
-  "Link External Inline ViewHelper": {
-    "prefix": "fLinkExternalInline",
-    "body": ["{f:link.external(uri: '${1:https://example.com}')}"],
-    "description": "Inline version of the ViewHelper for creating links to external targets."
-  },
-  "Link File ViewHelper": {
-    "prefix": "fLinkFile",
-    "body": [
-      "<f:link.file file=\"${1:fileObject}\">",
-      "\t${2:Download File}",
-      "</f:link.file>"
-    ],
-    "description": "A ViewHelper for creating links to a file (FAL)."
-  },
-  "Link File Inline ViewHelper": {
-    "prefix": "fLinkFileInline",
-    "body": ["{f:link.file(file: '${1:fileObject}')}"],
-    "description": "Inline version of the ViewHelper for creating links to a file (FAL)."
-  },
-  "Link Page ViewHelper": {
-    "prefix": "fLinkPage",
-    "body": [
-      "<f:link.page pageUid=\"${1:1}\">",
-      "\t${2:Go to Home}",
-      "</f:link.page>"
-    ],
-    "description": "A ViewHelper for creating links to TYPO3 pages."
-  },
-  "Link Page Inline ViewHelper": {
-    "prefix": "fLinkPageInline",
-    "body": ["{f:link.page(pageUid: '${1:1}')}"],
-    "description": "Inline version of the ViewHelper for creating links to TYPO3 pages."
-  },
-  "Link Typolink ViewHelper": {
-    "prefix": "fLinkTypolink",
-    "body": [
-      "<f:link.typolink parameter=\"${1:1}\">",
-      "\t${2:Go to Home}",
-      "</f:link.typolink>"
-    ],
-    "description": "A ViewHelper to create links from fields supported by the link wizard."
-  },
-  "Link Typolink Inline ViewHelper": {
-    "prefix": "fLinkTypolinkInline",
-    "body": ["{f:link.typolink(parameter: '${1:1}')}"],
-    "description": "Inline version of the ViewHelper to create links from fields supported by the link wizard."
-  }
+    "Link Action ViewHelper": {
+        "prefix": "fLinkAction",
+        "body": [
+            "<f:link.action",
+            "\taction=\"${1:index}\"",
+            "\tcontroller=\"${2:Default}\"",
+            "\tpluginName=\"${3:MyPlugin}\"",
+            "\textensionName=\"${4:MyExtension}\"",
+            "\targuments=\"{${5:arguments}}\"",
+            ">",
+            "\t${6:Link Text}",
+            "</f:link.action>"
+        ],
+        "description": "A ViewHelper for creating links to extbase actions."
+    },
+    "Link Action Inline ViewHelper": {
+        "prefix": "fLinkActionInline",
+        "body": [
+            "{f:link.action(",
+            "\taction: '${1:index}',",
+            "\tcontroller: '${2:Default}',",
+            "\tpluginName: '${3:MyPlugin}',",
+            "\textensionName: '${4:MyExtension}',",
+            "\targuments: {${5:arguments}}",
+            ")}"
+        ],
+        "description": "Inline version of the ViewHelper for creating links to extbase actions."
+    },
+    "Link Email ViewHelper": {
+        "prefix": "fLinkEmail",
+        "body": [
+            "<f:link.email email=\"${1:example@example.com}\">",
+            "\t${2:Send Email}",
+            "</f:link.email>"
+        ],
+        "description": "Email link ViewHelper. Generates an email link."
+    },
+    "Link Email Inline ViewHelper": {
+        "prefix": "fLinkEmailInline",
+        "body": ["{f:link.email(email: '${1:example@example.com}')}"],
+        "description": "Inline version of the ViewHelper for creating an email link."
+    },
+    "Link External ViewHelper": {
+        "prefix": "fLinkExternal",
+        "body": [
+            "<f:link.external uri=\"${1:https://example.com}\">",
+            "\t${2:Visit Example}",
+            "</f:link.external>"
+        ],
+        "description": "A ViewHelper for creating links to external targets."
+    },
+    "Link External Inline ViewHelper": {
+        "prefix": "fLinkExternalInline",
+        "body": ["{f:link.external(uri: '${1:https://example.com}')}"],
+        "description": "Inline version of the ViewHelper for creating links to external targets."
+    },
+    "Link File ViewHelper": {
+        "prefix": "fLinkFile",
+        "body": [
+            "<f:link.file file=\"${1:fileObject}\">",
+            "\t${2:Download File}",
+            "</f:link.file>"
+        ],
+        "description": "A ViewHelper for creating links to a file (FAL)."
+    },
+    "Link File Inline ViewHelper": {
+        "prefix": "fLinkFileInline",
+        "body": ["{f:link.file(file: '${1:fileObject}')}"],
+        "description": "Inline version of the ViewHelper for creating links to a file (FAL)."
+    },
+    "Link Page ViewHelper": {
+        "prefix": "fLinkPage",
+        "body": [
+            "<f:link.page pageUid=\"${1:1}\">",
+            "\t${2:Go to Home}",
+            "</f:link.page>"
+        ],
+        "description": "A ViewHelper for creating links to TYPO3 pages."
+    },
+    "Link Page Inline ViewHelper": {
+        "prefix": "fLinkPageInline",
+        "body": ["{f:link.page(pageUid: '${1:1}')}"],
+        "description": "Inline version of the ViewHelper for creating links to TYPO3 pages."
+    },
+    "Link Typolink ViewHelper": {
+        "prefix": "fLinkTypolink",
+        "body": [
+            "<f:link.typolink parameter=\"${1:1}\">",
+            "\t${2:Go to Home}",
+            "</f:link.typolink>"
+        ],
+        "description": "A ViewHelper to create links from fields supported by the link wizard."
+    },
+    "Link Typolink Inline ViewHelper": {
+        "prefix": "fLinkTypolinkInline",
+        "body": ["{f:link.typolink(parameter: '${1:1}')}"],
+        "description": "Inline version of the ViewHelper to create links from fields supported by the link wizard."
+    }
 }
