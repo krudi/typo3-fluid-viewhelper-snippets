@@ -197,9 +197,7 @@ A basic <f:debug> ViewHelper that provides debugging information with a default 
 **Snippet Code:**
 
 ```html
-<f:debug title="Debug">
-    {_all}
-</f:debug>
+<f:debug title="Debug">{_all}</f:debug>
 ```
 
 ---
