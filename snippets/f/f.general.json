@@ -96,11 +96,7 @@
     },
     "Backend Debug ViewHelper": {
         "prefix": "fDebug",
-        "body": [
-            "<f:debug title=\"${1:Debug}\">",
-            "\t{${2:_all}}",
-            "</f:debug>"
-        ],
+        "body": ["<f:debug title=\"${1:Debug}\">{${2:_all}}</f:debug>"],
         "description": "A basic <f:debug> ViewHelper with title='Debug' and {_all} as content."
     },
     "Default Case ViewHelper": {
@@ -377,7 +373,11 @@
     "f:switch ViewHelper": {
         "prefix": "fSwitch",
         "body": [
-            "<f:switch expression=\"{${1:variable}}\">\n\t<f:case value=\"${2:'value1'}\">First case</f:case>\n\t<f:case value=\"${3:'value2'}\">Second case</f:case>\n\t<f:defaultCase>Default case</f:defaultCase>\n</f:switch>"
+            "<f:switch expression=\"${1:variable}\">",
+            "\t<f:case value=\"${2:value}\">First case</f:case>",
+            "\t<f:case value=\"${3:value2}\">Second case</f:case>",
+            "\t<f:defaultCase>Default case</f:defaultCase>",
+            "</f:switch>"
         ],
         "description": "Switches content based on the value or expression."
     },
