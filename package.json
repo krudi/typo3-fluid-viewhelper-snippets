@@ -164,6 +164,10 @@
             {
                 "language": "html",
                 "path": "./snippets/formvh/formvh.general.json"
+            },
+            {
+                "language": "html",
+                "path": "./snippets/cb/cb.general.json"
             }
         ]
     },

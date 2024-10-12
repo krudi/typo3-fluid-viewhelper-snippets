@@ -20,6 +20,9 @@ All snippets included in this extension are created and adjusted based on the [T
 ### Forms (`formvh:*`)
 - [Forms Documentation](./docs/formvh/README.md)
 
+### ContentBlocks (`f:*` and `cb:*`)
+- [ContentBlocks Documentation](./docs/cb/README.md)
+
 ## Syntax Support
 
 This extension also provides syntax support for [TypoScript](https://docs.typo3.org/m/typo3/reference-typoscript/main/en-us/Index.html) and [TSConfig](https://docs.typo3.org/m/typo3/reference-tsconfig/main/en-us/Index.html#start).

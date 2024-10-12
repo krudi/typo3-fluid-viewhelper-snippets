@@ -1,0 +1,43 @@
+{
+    "Translate ViewHelper (ContentBlocks)": {
+        "prefix": "cbTranslate",
+        "body": [
+            "<f:translate",
+            "\tkey=\"{cb:languagePath(name: '${1:vendor/name}')}:${2:key}\"",
+            "\textensionName=\"${3:my_ext}\"",
+            "\targuments=\"{",
+            "\t\t0: '${4:argument1}',",
+            "\t\t1: '${5:argument2}'",
+            "\t}\"",
+            "\tdefault=\"${6:Default translation}\"",
+            "/>"
+        ],
+        "description": "Translates a key using custom languagePath syntax for ContentBlocks."
+    },
+    "Translate Inline ViewHelper (ContentBlocks)": {
+        "prefix": "cbTranslateInline",
+        "body": [
+            "{f:translate(key: '{cb:languagePath(name: '${1:vendor/name}')}:${2:key}')}"
+        ],
+        "description": "Translates an inline key using custom languagePath syntax for ContentBlocks."
+    },
+    "Uri Resource Inline ViewHelper (ContentBlocks)": {
+        "prefix": "cbUriResourceInline",
+        "body": ["{cb:uri.resource(path: '${1:foo.webp}')}"],
+        "description": "An inline version of the Uri Resource ViewHelper for ContentBlocks."
+    },
+    "CSS Asset ViewHelper (ContentBlocks)": {
+        "prefix": "cbAssetPathCss",
+        "body": [
+            "<f:asset.css identifier=\"${1:css}\" href=\"{cb:assetPath(name: '${2:vendor/name}')}/${3:frontend.css}\" />"
+        ],
+        "description": "Includes a CSS file in TYPO3 templates, identified by a unique identifier for ContentBlocks."
+    },
+    "Script Asset ViewHelper (ContentBlocks)": {
+        "prefix": "cbAssetPathScript",
+        "body": [
+            "<f:asset.script identifier=\"${1:js}\" href=\"{cb:assetPath(name: '${2:vendor/name}')}/${3:frontend.js}\" />"
+        ],
+        "description": "Includes a JavaScript file in TYPO3 templates, identified by a unique identifier for ContentBlocks."
+    }
+}
