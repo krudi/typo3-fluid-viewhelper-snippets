@@ -1,6 +1,6 @@
 {
     "name": "typo3-fluid-viewhelper-snippets",
-    "version": "0.1.12",
+    "version": "0.1.13",
     "description": "Integrate TYPO3 code snippets easily to Visual Studio Code. Improve your TYPO3 development with a collection of popular snippets, designed for quick access and efficient coding.",
     "licenses": [
         {
