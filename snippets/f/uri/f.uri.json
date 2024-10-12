@@ -61,19 +61,12 @@
         ],
         "description": "A ViewHelper for creating URIs to TYPO3 pages."
     },
-    "Uri Resource ViewHelper": {
-        "prefix": "fUriResource",
+    "Uri Resource Inline ViewHelper": {
+        "prefix": "fUriResourceInline",
         "body": [
-            "<f:uri.resource",
-            "\tabsolute=\"${1:false}\"",
-            "\textensionName=\"${2:MyExtension}\"",
-            "\tpath=\"${3:Resources/Public/Images/image.jpg}\"",
-            "\tuseCacheBusting=\"${4:true}\"",
-            ">",
-            "\t${5}",
-            "</f:uri.resource>"
+            "{f:uri.resource(path: '${1:EXT:my_ext/Resources/Public/Images/foo.webp}')}"
         ],
-        "description": "A ViewHelper for creating URIs to resources."
+        "description": "An inline version of the Uri Resource ViewHelper."
     },
     "Uri Typolink ViewHelper": {
         "prefix": "fUriTypolink",

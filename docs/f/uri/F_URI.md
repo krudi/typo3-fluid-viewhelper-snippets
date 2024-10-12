@@ -92,7 +92,7 @@ A ViewHelper for creating URIs to TYPO3 pages. This snippet is useful for genera
 
 ---
 
-### Uri Resource ViewHelper
+### Uri Resource Inline ViewHelper
 
 **Trigger the Snippet:** Type `fUriPage` in your IDE or editor.
 
@@ -102,14 +102,8 @@ A ViewHelper for creating URIs to resources. This is useful for linking to stati
 **Snippet Code:**
 
 ```html
-<f:uri.resource
-    absolute="false"
-    extensionName="MyExtension"
-    path="Resources/Public/Images/image.jpg"
-    useCacheBusting="true"
->
-    Resource URI
-</f:uri.resource>
+{f:uri.resource(path: 'EXT:my_ext/Resources/Public/Images/foo.webp')}
+
 ```
 
 ---
