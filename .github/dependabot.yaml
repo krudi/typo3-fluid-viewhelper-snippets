@@ -28,3 +28,4 @@ updates:
                   - 'prettier'
               update-types:
                   - 'minor'
+                  - 'patch'
