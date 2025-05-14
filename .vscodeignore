@@ -1,8 +1,6 @@
 # Extension files
 
 samples
-screenshots
-assets
 docs
 tsconfig.json
 prettier.config.ts
