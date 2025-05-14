@@ -2,6 +2,11 @@
 
 samples
 screenshots
+assets
+docs
+tsconfig.json
+prettier.config.ts
+.editorconfig
 
 # Dependency directories
 
