@@ -172,7 +172,7 @@
         ]
     },
     "devDependencies": {
-        "@types/node": "^22.15.32",
+        "@types/node": "^22.15.33",
         "prettier": "^3.6.1",
         "ts-node": "^10.9.2",
         "typescript": "^5.8.3"
