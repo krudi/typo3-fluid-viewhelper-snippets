@@ -1,31 +1,23 @@
 version: 2
 updates:
-    - package-ecosystem: 'github-actions'
-      directory: '/'
+    - package-ecosystem: "github-actions"
+      directory: "/"
       schedule:
-          interval: 'daily'
+          interval: "daily"
       labels:
-          - 'dependencies'
+          - "dependencies"
       commit-message:
-          prefix: 'build(deps)'
+          prefix: "build(deps)"
 
-    - package-ecosystem: 'npm'
-      directory: '/'
+    - package-ecosystem: "npm"
+      directory: "/"
       schedule:
-          interval: 'daily'
+          interval: "daily"
       labels:
-          - 'dependencies'
+          - "dependencies"
       commit-message:
-          prefix: 'build(deps)'
+          prefix: "build(deps)"
       ignore:
-          - dependency-name: '*'
+          - dependency-name: "*"
             update-types:
-                - 'version-update:semver-major'
-
-      groups:
-          linting-and-formatting:
-              patterns:
-                  - 'prettier'
-              update-types:
-                  - 'minor'
-                  - 'patch'
+                - "version-update:semver-major"
