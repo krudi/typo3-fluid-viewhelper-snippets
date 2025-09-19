@@ -26,8 +26,8 @@
     },
     "scripts": {
         "typecheck": "tsc -p tsconfig.json --noEmit",
-        "lint:files": "prettier --check \"**/*.{js,ts,css,html,yaml,yml,json,json5,graphql,gql}\"",
-        "lint:files:fix": "prettier --write \"**/*.{js,ts,css,html,yaml,yml,json,json5,graphql,gql}\""
+        "lint:prettier": "prettier --check \"**/*.{js,ts,css,html,yaml,yml,json,json5,graphql,gql}\"",
+        "lint:prettier:fix": "prettier --write \"**/*.{js,ts,css,html,yaml,yml,json,json5,graphql,gql}\""
     },
     "preview": true,
     "categories": [
