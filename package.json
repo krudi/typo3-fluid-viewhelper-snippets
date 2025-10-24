@@ -168,7 +168,7 @@
         ]
     },
     "devDependencies": {
-        "@krudi/prettier-config": "^0.1.4",
+        "@krudi/prettier-config": "^0.1.5",
         "@krudi/typescript-config": "^0.1.4",
         "@types/node": "^22.18.12",
         "prettier": "^3.6.2",
