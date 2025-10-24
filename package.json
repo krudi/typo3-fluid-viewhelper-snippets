@@ -170,7 +170,7 @@
     "devDependencies": {
         "@krudi/prettier-config": "^0.1.4",
         "@krudi/typescript-config": "^0.1.4",
-        "@types/node": "^22.18.8",
+        "@types/node": "^22.18.12",
         "prettier": "^3.6.2",
         "ts-node": "^10.9.2",
         "typescript": "^5.9.3"
