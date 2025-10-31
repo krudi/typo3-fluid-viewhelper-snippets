@@ -1,4 +1,5 @@
 {
+    "$schema": "https://json.schemastore.org/package.json",
     "name": "typo3-fluid-viewhelper-snippets",
     "version": "0.3.0",
     "description": "Integrate TYPO3 code snippets easily to Visual Studio Code. Improve your TYPO3 development with a collection of popular snippets, designed for quick access and efficient coding.",
@@ -24,6 +25,7 @@
     "engines": {
         "vscode": "^1.0.0"
     },
+    "packageManager": "npm@11.6.2",
     "scripts": {
         "typecheck": "tsc -p tsconfig.json --noEmit",
         "lint:prettier": "prettier --check \"**/*.{js,ts,css,html,yaml,yml,json,json5,graphql,gql}\"",
@@ -169,8 +171,8 @@
     },
     "devDependencies": {
         "@krudi/prettier-config": "^0.1.6",
-        "@krudi/typescript-config": "^0.1.4",
-        "@types/node": "^22.18.12",
+        "@krudi/typescript-config": "^0.1.7",
+        "@types/node": "^24.9.2",
         "prettier": "^3.6.2",
         "ts-node": "^10.9.2",
         "typescript": "^5.9.3"
