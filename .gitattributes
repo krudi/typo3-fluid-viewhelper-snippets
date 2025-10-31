@@ -1,0 +1,44 @@
+* text=auto eol=lf
+
+# Extension
+*.ts            text eol=lf
+*.tsx           text eol=lf
+*.js            text eol=lf
+*.jsx           text eol=lf
+*.mjs           text eol=lf
+*.cjs           text eol=lf
+*.d.ts          text eol=lf
+
+# Configuration & content
+*.json          text eol=lf diff=json
+*.jsonc         text eol=lf diff=json
+*.yaml          text eol=lf diff=yaml
+*.yml           text eol=lf diff=yaml
+*.tmLanguage    text eol=lf
+*.plist         text eol=lf
+*.md            text eol=lf diff=markdown
+*.txt           text eol=lf
+
+# Styles & assets
+*.css           text eol=lf diff=css
+*.svg           text eol=lf
+*.png           binary
+*.jpg           binary
+*.jpeg          binary
+*.gif           binary
+*.webp          binary
+*.woff          binary
+*.woff2         binary
+
+# Export rules
+/.github/        export-ignore
+/.vscode/        export-ignore
+node_modules/    export-ignore
+dist/            export-ignore
+coverage/        export-ignore
+reports/         export-ignore
+.env             export-ignore
+.env.*           export-ignore
+*.log            export-ignore
+*.cache          export-ignore
+*.tmp            export-ignore
