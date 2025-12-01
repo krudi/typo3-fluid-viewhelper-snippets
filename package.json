@@ -2,13 +2,13 @@
     "$schema": "https://json.schemastore.org/package.json",
     "name": "typo3-fluid-viewhelper-snippets",
     "version": "0.3.0",
-    "description": "Integrate TYPO3 code snippets easily to Visual Studio Code. Improve your TYPO3 development with a collection of popular snippets, designed for quick access and efficient coding.",
+    "description": "TYPO3 Fluid ViewHelper snippets plus TypoScript and TSConfig syntax highlighting for Visual Studio Code.",
     "license": "MIT",
     "publisher": "krudi",
     "private": false,
     "homepage": "https://gitlab.com/krudi/typo3-fluid-viewhelper-snippets#readme",
     "bugs": {
-        "url": "https://gitlab.com/krudi/typo3-fluid-viewhelper-snippets/issue"
+        "url": "https://github.com/krudi/typo3-fluid-viewhelper-snippets/issues"
     },
     "keywords": [
         "vscode",
@@ -16,7 +16,10 @@
         "snippets",
         "typo3",
         "fluid",
-        "viewhelpers"
+        "viewhelpers",
+        "typoscript",
+        "tsconfig",
+        "syntax-highlighting"
     ],
     "repository": {
         "type": "git",

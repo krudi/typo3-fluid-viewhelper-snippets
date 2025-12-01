@@ -1,6 +1,6 @@
 # typo3-fluid-viewhelper-snippets
 
-Integrate TYPO3 code snippets easily to [Visual Studio Code](https://code.visualstudio.com). Improve your TYPO3 development with a collection of popular snippets, designed for quick access and efficient coding.
+TYPO3 Fluid ViewHelper snippets plus TypoScript and TSConfig syntax highlighting for [Visual Studio Code](https://code.visualstudio.com).
 
 ## Source of snippets
 
@@ -16,20 +16,20 @@ All snippets included in this extension are created and adjusted based on the [T
 
 ## Quick examples
 
-### fAssetCss
-Trigger: `fAssetCss`
+### fAssetCss (trigger: `fAssetCss`)
+
 ```html
 <f:asset.css identifier="site-css" src="EXT:my_ext/Resources/Public/Css/main.css" />
 ```
 
-### fFormatDateInline
-Trigger: `fFormatDateInline`
+### fFormatDateInline (trigger: `fFormatDateInline`)
+
 ```html
 {f:format.date(date: event.startDate, format: 'Y-m-d H:i')}
 ```
 
-### fFormSelectGrouped
-Trigger: `fFormSelectGrouped`
+### fFormSelectGrouped (trigger: `fFormSelectGrouped`)
+
 ```html
 <f:form.select name="options">
     <f:form.select.option value="1">Option one</f:form.select.option>
@@ -39,14 +39,14 @@ Trigger: `fFormSelectGrouped`
 </f:form.select>
 ```
 
-### cbTranslateInline
-Trigger: `cbTranslateInline`
+### cbTranslateInline (trigger: `cbTranslateInline`)
+
 ```html
 {f:translate(key: "{cb:languagePath(name: 'vendor/name')}:title")}
 ```
 
-### fFormatBytes
-Trigger: `fFormatBytes`
+### fFormatBytes (trigger: `fFormatBytes`)
+
 ```html
 <f:format.bytes
     decimalSeparator="."
@@ -58,9 +58,36 @@ Trigger: `fFormatBytes`
 </f:format.bytes>
 ```
 
+### fPageHeaderData (trigger: `fPageHeaderData`)
+
+```html
+<f:page.headerData>
+    <link rel="preconnect" href="https://cdn.example.com">
+    <link rel="dns-prefetch" href="//cdn.example.com">
+</f:page.headerData>
+```
+
+### fPageMeta (trigger: `fPageMeta`)
+
+```html
+<f:page.meta
+    property="og:image"
+    subProperties="{width: 1200, height: 630, alt: 'Article image'}"
+>
+    {item.image.url}
+</f:page.meta>
+```
+
 ## Syntax Support
 
 This extension also provides syntax support for [TypoScript](https://docs.typo3.org/m/typo3/reference-typoscript/main/en-us/Index.html) and [TSConfig](https://docs.typo3.org/m/typo3/reference-tsconfig/main/en-us/Index.html#start).
+
+## Developing and testing locally
+
+- Install dependencies: `npm install`.
+- Open the repo in VS Code and start an Extension Development Host: press `F5` (or run “Debug: Start Debugging”).
+- In the new window, open `samples/sample.typoscript` or `samples/sample.tsconfig` to verify syntax highlighting and snippet triggers.
+- To test a packaged build, run `vsce package` (after `npm install -g @vscode/vsce`), then in VS Code choose “Extensions” → “...” → “Install from VSIX...” and select the generated `.vsix`.
 
 ## Issue
 
