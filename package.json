@@ -112,6 +112,10 @@
             },
             {
                 "language": "html",
+                "path": "./snippets/f/page/f.page.json"
+            },
+            {
+                "language": "html",
                 "path": "./snippets/f/sanitize/f.sanitize.json"
             },
             {

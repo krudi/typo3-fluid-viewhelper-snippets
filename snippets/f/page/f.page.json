@@ -1,0 +1,43 @@
+{
+    "Page HeaderData ViewHelper": {
+        "prefix": "fPageHeaderData",
+        "body": [
+            "<f:page.headerData>",
+            "\t${1:<!-- custom head content -->}",
+            "</f:page.headerData>"
+        ],
+        "description": "Inject arbitrary markup into the <head> via PageRenderer header data."
+    },
+    "Page FooterData ViewHelper": {
+        "prefix": "fPageFooterData",
+        "body": [
+            "<f:page.footerData>",
+            "\t${1:<!-- custom footer scripts -->}",
+            "</f:page.footerData>"
+        ],
+        "description": "Inject arbitrary markup before </body> via PageRenderer footer data."
+    },
+    "Page Title ViewHelper": {
+        "prefix": "fPageTitle",
+        "body": [
+            "<f:page.title>",
+            "\t${1:Page Title}",
+            "</f:page.title>"
+        ],
+        "description": "Set the page title from within Fluid templates."
+    },
+    "Page Meta ViewHelper": {
+        "prefix": "fPageMeta",
+        "body": [
+            "<f:page.meta",
+            "\tproperty=\"${1:og:image}\"",
+            "\tsubProperties=\"{width: ${2:1200}, height: ${3:630}, alt: '${4:Article image}'${5:}}\"",
+            "\ttype=\"${6:property}\"",
+            "\treplace=\"${7:false}\"",
+            ">",
+            "\t{${8:item.image.url}}",
+            "</f:page.meta>"
+        ],
+        "description": "Add meta tags via the MetaTagManager API from Fluid templates."
+    }
+}
