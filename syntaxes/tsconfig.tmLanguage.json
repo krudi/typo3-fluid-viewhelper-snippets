@@ -280,7 +280,7 @@
                 },
                 {
                     "name": "string.import.path.tsconfig",
-                    "match": "(EXT:[a-zA-Z0-9_/]+\\.tsconfig)"
+                    "match": "(EXT:[a-zA-Z0-9_\\-./*]+\\.tsconfig)"
                 }
             ]
         },
@@ -307,7 +307,7 @@
                 },
                 {
                     "name": "string.import.path.tsconfig",
-                    "match": "(EXT:[a-zA-Z0-9_/]+\\.tsconfig)"
+                    "match": "(EXT:[a-zA-Z0-9_\\-./*]+\\.tsconfig)"
                 }
             ]
         },

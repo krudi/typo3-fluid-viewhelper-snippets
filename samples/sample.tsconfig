@@ -18,3 +18,4 @@ TCEFORM.tt_content.layout {
 [END]
 
 @import 'EXT:site_package/Configuration/TSconfig/somefile.tsconfig'
+@import 'EXT:site_package/Configuration/TSconfig/*.tsconfig'
