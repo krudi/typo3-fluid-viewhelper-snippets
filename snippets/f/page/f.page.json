@@ -19,11 +19,7 @@
     },
     "Page Title ViewHelper": {
         "prefix": "fPageTitle",
-        "body": [
-            "<f:page.title>",
-            "\t${1:Page Title}",
-            "</f:page.title>"
-        ],
+        "body": ["<f:page.title>", "\t${1:Page Title}", "</f:page.title>"],
         "description": "Set the page title from within Fluid templates."
     },
     "Page Meta ViewHelper": {
