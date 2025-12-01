@@ -6,22 +6,57 @@ Integrate TYPO3 code snippets easily to [Visual Studio Code](https://code.visual
 
 All snippets included in this extension are created and adjusted based on the [TYPO3 ViewHelper Reference](https://docs.typo3.org/other/typo3/view-helper-reference/main/en-us/). These snippets are designed to make coding easier and are still being developed. Continual additions and improvements are made to cover more needs and stay up-to-date with the latest TYPO3 features.
 
-## Overview
+## What's inside
 
-### ViewHelpers (`f:*`)
-- [ViewHelpers Documentation](./docs/f/README.md)
+- `f:*` Fluid ViewHelpers for assets, formatting, links, security, and more
+- `be:*` backend helpers such as module links, thumbnails, and user avatars
+- `core:*` core utilities including context helpers and various PSR-14 events
+- `formvh:*` forms (translation, render section, errors, and dynamic fields)
+- `cb:*` Content Blocks utilities like asset paths and translations
 
-### Backend (`be:*`)
-- [General Backend](./docs/be/README.md)
+## Quick examples
 
-### Core (`core:*`)
-- [Core Documentation](./docs/core/README.md)
+### fAssetCss
+Trigger: `fAssetCss`
+```html
+<f:asset.css identifier="site-css" src="EXT:my_ext/Resources/Public/Css/main.css" />
+```
 
-### Forms (`formvh:*`)
-- [Forms Documentation](./docs/formvh/README.md)
+### fFormatDateInline
+Trigger: `fFormatDateInline`
+```html
+{f:format.date(date: event.startDate, format: 'Y-m-d H:i')}
+```
 
-### ContentBlocks (`f:*` and `cb:*`)
-- [ContentBlocks Documentation](./docs/cb/README.md)
+### fFormSelectGrouped
+Trigger: `fFormSelectGrouped`
+```html
+<f:form.select name="options">
+    <f:form.select.option value="1">Option one</f:form.select.option>
+    <f:form.select.optgroup label="Group 1">
+        <f:form.select.option value="2">Grouped option</f:form.select.option>
+    </f:form.select.optgroup>
+</f:form.select>
+```
+
+### cbTranslateInline
+Trigger: `cbTranslateInline`
+```html
+{f:translate(key: "{cb:languagePath(name: 'vendor/name')}:title")}
+```
+
+### fFormatBytes
+Trigger: `fFormatBytes`
+```html
+<f:format.bytes
+    decimalSeparator="."
+    decimals="2"
+    thousandsSeparator=","
+    units="['B', 'KB', 'MB', 'GB', 'TB']"
+>
+    1048576
+</f:format.bytes>
+```
 
 ## Syntax Support
 
