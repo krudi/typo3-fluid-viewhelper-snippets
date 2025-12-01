@@ -82,13 +82,6 @@ All snippets included in this extension are created and adjusted based on the [T
 
 This extension also provides syntax support for [TypoScript](https://docs.typo3.org/m/typo3/reference-typoscript/main/en-us/Index.html) and [TSConfig](https://docs.typo3.org/m/typo3/reference-tsconfig/main/en-us/Index.html#start).
 
-## Developing and testing locally
-
-- Install dependencies: `npm install`.
-- Open the repo in VS Code and start an Extension Development Host: press `F5` (or run “Debug: Start Debugging”).
-- In the new window, open `samples/sample.typoscript` or `samples/sample.tsconfig` to verify syntax highlighting and snippet triggers.
-- To test a packaged build, run `vsce package` (after `npm install -g @vscode/vsce`), then in VS Code choose “Extensions” → “...” → “Install from VSIX...” and select the generated `.vsix`.
-
 ## Issue
 
 Have you found a bug in this project or have a suggestion for a new feature? Create a new ticket for the bug or feature, which can be found on the [GitHub](https://github.com/krudi/typo3-fluid-viewhelper-snippets/issues) page.
