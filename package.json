@@ -31,8 +31,8 @@
     "packageManager": "npm@11.6.2",
     "scripts": {
         "typecheck": "tsc -p tsconfig.json --noEmit",
-        "lint:prettier": "prettier --check \"**/*.{js,ts,css,html,yaml,yml,json,json5,graphql,gql}\"",
-        "lint:prettier:fix": "prettier --write \"**/*.{js,ts,css,html,yaml,yml,json,json5,graphql,gql}\""
+        "lint:prettier": "prettier --check . --cache --cache-strategy metadata --cache-location .cache/.prettiercache \"**/*.{js,ts,css,html,yaml,yml,json,json5,graphql,gql}\"",
+        "lint:prettier:fix": "prettier --write . --cache --cache-strategy metadata --cache-location .cache/.prettiercache \"**/*.{js,ts,css,html,yaml,yml,json,json5,graphql,gql}\""
     },
     "preview": true,
     "categories": [
