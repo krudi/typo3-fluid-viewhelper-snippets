@@ -1,20 +1,12 @@
 {
     "Page HeaderData ViewHelper": {
         "prefix": "fPageHeaderData",
-        "body": [
-            "<f:page.headerData>",
-            "\t${1:<!-- custom head content -->}",
-            "</f:page.headerData>"
-        ],
+        "body": ["<f:page.headerData>", "\t${1:<!-- custom head content -->}", "</f:page.headerData>"],
         "description": "Inject arbitrary markup into the <head> via PageRenderer header data."
     },
     "Page FooterData ViewHelper": {
         "prefix": "fPageFooterData",
-        "body": [
-            "<f:page.footerData>",
-            "\t${1:<!-- custom footer scripts -->}",
-            "</f:page.footerData>"
-        ],
+        "body": ["<f:page.footerData>", "\t${1:<!-- custom footer scripts -->}", "</f:page.footerData>"],
         "description": "Inject arbitrary markup before </body> via PageRenderer footer data."
     },
     "Page Title ViewHelper": {

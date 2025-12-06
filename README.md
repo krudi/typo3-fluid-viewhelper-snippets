@@ -1,10 +1,14 @@
 # typo3-fluid-viewhelper-snippets
 
-TYPO3 Fluid ViewHelper snippets plus TypoScript and TSConfig syntax highlighting for [Visual Studio Code](https://code.visualstudio.com).
+TYPO3 Fluid ViewHelper snippets plus TypoScript and TSConfig syntax highlighting for
+[Visual Studio Code](https://code.visualstudio.com).
 
 ## Source of snippets
 
-All snippets included in this extension are created and adjusted based on the [TYPO3 ViewHelper Reference](https://docs.typo3.org/other/typo3/view-helper-reference/main/en-us/). These snippets are designed to make coding easier and are still being developed. Continual additions and improvements are made to cover more needs and stay up-to-date with the latest TYPO3 features.
+All snippets included in this extension are created and adjusted based on the
+[TYPO3 ViewHelper Reference](https://docs.typo3.org/other/typo3/view-helper-reference/main/en-us/). These snippets are
+designed to make coding easier and are still being developed. Continual additions and improvements are made to cover
+more needs and stay up-to-date with the latest TYPO3 features.
 
 ## What's inside
 
@@ -19,7 +23,10 @@ All snippets included in this extension are created and adjusted based on the [T
 ### fAssetCss (trigger: `fAssetCss`)
 
 ```html
-<f:asset.css identifier="site-css" src="EXT:my_ext/Resources/Public/Css/main.css" />
+<f:asset.css
+    identifier="site-css"
+    src="EXT:my_ext/Resources/Public/Css/main.css"
+/>
 ```
 
 ### fFormatDateInline (trigger: `fFormatDateInline`)
@@ -80,8 +87,11 @@ All snippets included in this extension are created and adjusted based on the [T
 
 ## Syntax Support
 
-This extension also provides syntax support for [TypoScript](https://docs.typo3.org/m/typo3/reference-typoscript/main/en-us/Index.html) and [TSConfig](https://docs.typo3.org/m/typo3/reference-tsconfig/main/en-us/Index.html#start).
+This extension also provides syntax support for
+[TypoScript](https://docs.typo3.org/m/typo3/reference-typoscript/main/en-us/Index.html) and
+[TSConfig](https://docs.typo3.org/m/typo3/reference-tsconfig/main/en-us/Index.html#start).
 
 ## Issue
 
-Have you found a bug in this project or have a suggestion for a new feature? Create a new ticket for the bug or feature, which can be found on the [GitHub](https://github.com/krudi/typo3-fluid-viewhelper-snippets/issues) page.
+Have you found a bug in this project or have a suggestion for a new feature? Create a new ticket for the bug or feature,
+which can be found on the [GitHub](https://github.com/krudi/typo3-fluid-viewhelper-snippets/issues) page.

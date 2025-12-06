@@ -13,12 +13,7 @@
     },
     "Form Checkbox Basic ViewHelper": {
         "prefix": "fFormCheckboxBasic",
-        "body": [
-            "<f:form.checkbox",
-            "\tname=\"${1:myCheckBox}\"",
-            "\tvalue=\"${2:1}\"",
-            "/>"
-        ],
+        "body": ["<f:form.checkbox", "\tname=\"${1:myCheckBox}\"", "\tvalue=\"${2:1}\"", "/>"],
         "description": "Creates a basic checkbox input element."
     },
     "Form Checkbox Preselected ViewHelper": {
@@ -45,52 +40,27 @@
     },
     "Form Country Select ViewHelper": {
         "prefix": "fFormCountrySelect",
-        "body": [
-            "<f:form.countrySelect",
-            "\tname=\"${1:country}\"",
-            "\tvalue=\"${2:DE}\"",
-            ">"
-        ],
+        "body": ["<f:form.countrySelect", "\tname=\"${1:country}\"", "\tvalue=\"${2:DE}\"", ">"],
         "description": "Renders a select tag with all available countries as options."
     },
     "Form Hidden ViewHelper": {
         "prefix": "fFormHidden",
-        "body": [
-            "<f:form.hidden",
-            "\tname=\"${1:myHiddenValue}\"",
-            "\tvalue=\"${2:42}\"",
-            "/>"
-        ],
+        "body": ["<f:form.hidden", "\tname=\"${1:myHiddenValue}\"", "\tvalue=\"${2:42}\"", "/>"],
         "description": "Renders a hidden input field."
     },
     "Form Password ViewHelper": {
         "prefix": "fFormPassword",
-        "body": [
-            "<f:form.password",
-            "\tname=\"${1:password}\"",
-            "\tvalue=\"${2}\"",
-            "/>"
-        ],
+        "body": ["<f:form.password", "\tname=\"${1:password}\"", "\tvalue=\"${2}\"", "/>"],
         "description": "Creates a password input field."
     },
     "Form Radio Basic ViewHelper": {
         "prefix": "fFormRadioBasic",
-        "body": [
-            "<f:form.radio",
-            "\tname=\"${1:myRadioButton}\"",
-            "\tvalue=\"${2:1}\"",
-            "/>"
-        ],
+        "body": ["<f:form.radio", "\tname=\"${1:myRadioButton}\"", "\tvalue=\"${2:1}\"", "/>"],
         "description": "Creates a basic radio button input element."
     },
     "Form Radio Bound ViewHelper": {
         "prefix": "fFormRadioBound",
-        "body": [
-            "<f:form.radio",
-            "\tproperty=\"${1:newsletter}\"",
-            "\tvalue=\"${2:1}\"",
-            "/>"
-        ],
+        "body": ["<f:form.radio", "\tproperty=\"${1:newsletter}\"", "\tvalue=\"${2:1}\"", "/>"],
         "description": "Creates a radio button input element bound to a property."
     },
     "Form Radio Multiple ViewHelper": {
@@ -157,32 +127,17 @@
     },
     "Form Textarea ViewHelper": {
         "prefix": "fFormTextarea",
-        "body": [
-            "<f:form.textarea",
-            "\tname=\"${1:myTextArea}\"",
-            "\tvalue=\"${2:Enter your text here}\"",
-            "/>"
-        ],
+        "body": ["<f:form.textarea", "\tname=\"${1:myTextArea}\"", "\tvalue=\"${2:Enter your text here}\"", "/>"],
         "description": "Creates a textarea field."
     },
     "Form Textfield ViewHelper": {
         "prefix": "fFormTextfield",
-        "body": [
-            "<f:form.textfield",
-            "\tname=\"${1:myTextBox}\"",
-            "\tvalue=\"${2:default value}\"",
-            "/>"
-        ],
+        "body": ["<f:form.textfield", "\tname=\"${1:myTextBox}\"", "\tvalue=\"${2:default value}\"", "/>"],
         "description": "Creates a text field input element."
     },
     "Form Upload ViewHelper": {
         "prefix": "fFormUpload",
-        "body": [
-            "<f:form.upload",
-            "\tname=\"${1:fileUpload}\"",
-            "\tvalue=\"${2}\"",
-            "/>"
-        ],
+        "body": ["<f:form.upload", "\tname=\"${1:fileUpload}\"", "\tvalue=\"${2}\"", "/>"],
         "description": "Generates an input file element."
     },
     "Form ValidationResults ViewHelper": {

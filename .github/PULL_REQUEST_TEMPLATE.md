@@ -11,7 +11,8 @@
 
 ## Checklist
 
-- [ ] I have read the [Contributing Guidelines](https://github.com/krudi/typo3-viewhelpers-snippets/blob/main/CONTRIBUTING.md)
+- [ ] I have read the
+      [Contributing Guidelines](https://github.com/krudi/typo3-viewhelpers-snippets/blob/main/CONTRIBUTING.md)
 - [ ] My code follows the code style (`npm run lint:full`)
 
 ## Related topics

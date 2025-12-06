@@ -63,18 +63,12 @@
     },
     "Uri Resource Inline ViewHelper": {
         "prefix": "fUriResourceInline",
-        "body": [
-            "{f:uri.resource(path: '${1:EXT:my_ext/Resources/Public/Images/foo.webp}')}"
-        ],
+        "body": ["{f:uri.resource(path: '${1:EXT:my_ext/Resources/Public/Images/foo.webp}')}"],
         "description": "An inline version of the Uri Resource ViewHelper."
     },
     "Uri Typolink ViewHelper": {
         "prefix": "fUriTypolink",
-        "body": [
-            "<f:uri.typolink parameter=\"${1:1}\">",
-            "\t${2}",
-            "</f:uri.typolink>"
-        ],
+        "body": ["<f:uri.typolink parameter=\"${1:1}\">", "\t${2}", "</f:uri.typolink>"],
         "description": "A ViewHelper to create URIs from fields supported by the link wizard."
     }
 }

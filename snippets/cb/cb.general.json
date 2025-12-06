@@ -16,9 +16,7 @@
     },
     "Translate Inline ViewHelper (ContentBlocks)": {
         "prefix": "cbTranslateInline",
-        "body": [
-            "{f:translate(key: '{cb:languagePath(name: '${1:vendor/name}')}:${2:key}')}"
-        ],
+        "body": ["{f:translate(key: '{cb:languagePath(name: '${1:vendor/name}')}:${2:key}')}"],
         "description": "Translates an inline key using custom languagePath syntax for ContentBlocks."
     },
     "Uri Resource Inline ViewHelper (ContentBlocks)": {
