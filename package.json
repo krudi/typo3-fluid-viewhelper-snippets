@@ -1,15 +1,13 @@
 {
     "$schema": "https://json.schemastore.org/package.json",
     "name": "typo3-fluid-viewhelper-snippets",
+    "displayName": "TYPO3 Fluid ViewHelper Snippets",
     "version": "0.4.0",
-    "description": "TYPO3 Fluid ViewHelper snippets plus TypoScript and TSConfig syntax highlighting for Visual Studio Code.",
-    "license": "MIT",
-    "publisher": "krudi",
     "private": false,
-    "homepage": "https://gitlab.com/krudi/typo3-fluid-viewhelper-snippets#readme",
-    "bugs": {
-        "url": "https://github.com/krudi/typo3-fluid-viewhelper-snippets/issues"
-    },
+    "description": "TYPO3 Fluid ViewHelper snippets plus TypoScript and TSConfig syntax highlighting for Visual Studio Code.",
+    "categories": [
+        "Snippets"
+    ],
     "keywords": [
         "vscode",
         "extension",
@@ -21,30 +19,34 @@
         "tsconfig",
         "syntax-highlighting"
     ],
+    "homepage": "https://gitlab.com/krudi/typo3-fluid-viewhelper-snippets#readme",
+    "bugs": {
+        "url": "https://github.com/krudi/typo3-fluid-viewhelper-snippets/issues"
+    },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/krudi/typo3-fluid-viewhelper-snippets.git"
     },
-    "engines": {
-        "vscode": "^1.0.0"
-    },
-    "packageManager": "npm@11.6.2",
+    "license": "MIT",
+    "publisher": "krudi",
     "scripts": {
-        "typecheck": "tsc -p tsconfig.json --noEmit",
         "lint:prettier": "prettier --check . --cache --cache-strategy metadata --cache-location .cache/.prettiercache \"**/*.{js,ts,css,html,yaml,yml,json,json5,graphql,gql}\"",
-        "lint:prettier:fix": "prettier --write . --cache --cache-strategy metadata --cache-location .cache/.prettiercache \"**/*.{js,ts,css,html,yaml,yml,json,json5,graphql,gql}\""
-    },
-    "preview": true,
-    "categories": [
-        "Snippets"
-    ],
-    "icon": "./assets/images/icon.png",
-    "displayName": "TYPO3 Fluid ViewHelper Snippets",
-    "galleryBanner": {
-        "color": "#FFFFFF",
-        "theme": "light"
+        "lint:prettier:fix": "prettier --write . --cache --cache-strategy metadata --cache-location .cache/.prettiercache \"**/*.{js,ts,css,html,yaml,yml,json,json5,graphql,gql}\"",
+        "typecheck": "tsc -p tsconfig.json --noEmit"
     },
     "contributes": {
+        "grammars": [
+            {
+                "language": "tsconfig",
+                "scopeName": "source.tsconfig",
+                "path": "./syntaxes/tsconfig.tmLanguage.json"
+            },
+            {
+                "language": "typoscript",
+                "scopeName": "source.typoscript",
+                "path": "./syntaxes/typoscript.tmLanguage.json"
+            }
+        ],
         "languages": [
             {
                 "id": "tsconfig",
@@ -67,18 +69,6 @@
                     ".typoscript"
                 ],
                 "configuration": "./language-configuration.json"
-            }
-        ],
-        "grammars": [
-            {
-                "language": "tsconfig",
-                "scopeName": "source.tsconfig",
-                "path": "./syntaxes/tsconfig.tmLanguage.json"
-            },
-            {
-                "language": "typoscript",
-                "scopeName": "source.typoscript",
-                "path": "./syntaxes/typoscript.tmLanguage.json"
             }
         ],
         "snippets": [
@@ -177,11 +167,20 @@
         ]
     },
     "devDependencies": {
-        "@krudi/prettier-config": "^0.1.6",
+        "@krudi/prettier-config": "^0.1.8",
         "@krudi/typescript-config": "^0.1.9",
         "@types/node": "^24.10.1",
-        "prettier": "^3.7.4",
         "ts-node": "^10.9.2",
         "typescript": "^5.9.3"
-    }
+    },
+    "packageManager": "npm@11.6.4",
+    "engines": {
+        "vscode": "^1.0.0"
+    },
+    "icon": "./assets/images/icon.png",
+    "galleryBanner": {
+        "color": "#FFFFFF",
+        "theme": "light"
+    },
+    "preview": true
 }
