@@ -2,7 +2,7 @@
     "$schema": "https://json.schemastore.org/package.json",
     "name": "typo3-fluid-viewhelper-snippets",
     "displayName": "TYPO3 Fluid ViewHelper Snippets",
-    "version": "0.4.0",
+    "version": "0.5.0",
     "private": false,
     "description": "TYPO3 Fluid ViewHelper snippets plus TypoScript and TSConfig syntax highlighting for Visual Studio Code.",
     "categories": [
