@@ -1,0 +1,113 @@
+name: Publish
+
+on:
+    workflow_dispatch:
+        inputs:
+            version:
+                description: 'Release version without the v prefix, for example 0.5.0'
+                required: true
+                type: string
+            create_latest:
+                description: 'Mark the GitHub release as latest'
+                required: true
+                default: true
+                type: boolean
+
+concurrency:
+    group: deploy-${{ github.workflow }}
+    cancel-in-progress: false
+
+permissions:
+    contents: write
+
+jobs:
+    publish:
+        if: ${{ github.actor != 'dependabot[bot]' }}
+        runs-on: ubuntu-latest
+        env:
+            GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            VSCE_PAT: ${{ secrets.VSCE_PAT }}
+
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v4
+              with:
+                  fetch-depth: 0
+
+            - name: Setup Node.js
+              uses: actions/setup-node@v4
+              with:
+                  cache: npm
+                  node-version-file: .nvmrc
+
+            - name: Validate release input
+              shell: bash
+              run: |
+                  VERSION="${{ inputs.version }}"
+
+                  if [[ ! "$VERSION" =~ ^[0-9]+\.[0-9]+\.[0-9]+(-[0-9A-Za-z.-]+)?$ ]]; then
+                    echo "Version must be a semantic version like 0.5.0 or 0.5.0-beta.1."
+                    exit 1
+                  fi
+
+            - name: Install dependencies
+              run: npm ci
+
+            - name: Run checks
+              run: |
+                  npm run lint:prettier
+                  npm run typecheck
+
+            - name: Bump version
+              id: version
+              shell: bash
+              run: |
+                  OLD_VERSION="$(node -p "require('./package.json').version")"
+                  NEW_VERSION="${{ inputs.version }}"
+
+                  if [ "$OLD_VERSION" = "$NEW_VERSION" ]; then
+                    echo "Version ${NEW_VERSION} is already set in package.json."
+                    exit 1
+                  fi
+
+                  npm version "$NEW_VERSION" --no-git-tag-version
+
+                  echo "old_version=$OLD_VERSION" >> "$GITHUB_OUTPUT"
+                  echo "new_version=$NEW_VERSION" >> "$GITHUB_OUTPUT"
+                  echo "tag=v$NEW_VERSION" >> "$GITHUB_OUTPUT"
+
+            - name: Commit version bump
+              shell: bash
+              run: |
+                  git config user.name "github-actions[bot]"
+                  git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+                  git add package.json package-lock.json
+                  git commit -m "chore(release): bump typo3-fluid-viewhelper-snippets from ${{ steps.version.outputs.old_version }} to ${{ steps.version.outputs.new_version }}"
+                  git push origin HEAD:main
+
+            - name: Create tag
+              shell: bash
+              run: |
+                  git tag "${{ steps.version.outputs.tag }}"
+                  git push origin "${{ steps.version.outputs.tag }}"
+
+            - name: Package extension
+              run: npx @vscode/vsce package
+
+            - name: Create GitHub release
+              shell: bash
+              run: |
+                  LATEST_FLAG="--latest=false"
+
+                  if [ "${{ inputs.create_latest }}" = "true" ]; then
+                    LATEST_FLAG="--latest"
+                  fi
+
+                  gh release create "${{ steps.version.outputs.tag }}" \
+                    --title "${{ steps.version.outputs.tag }}" \
+                    --generate-notes \
+                    $LATEST_FLAG \
+                    ./*.vsix
+
+            - name: Publish to Visual Studio Marketplace
+              run: npx @vscode/vsce publish -p "$VSCE_PAT"
