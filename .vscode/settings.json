@@ -9,7 +9,5 @@
         "source.removeUnusedImports": "never",
         "source.sort.json": "never",
         "source.sortImports": "never"
-    },
-    "typescript.tsdk": "node_modules/typescript/lib",
-    "typescript.enablePromptUseWorkspaceTsdk": true
+    }
 }
