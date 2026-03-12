@@ -3,6 +3,8 @@
 TYPO3 Fluid ViewHelper snippets plus TypoScript and TSConfig syntax highlighting for
 [Visual Studio Code](https://code.visualstudio.com).
 
+Supports TYPO3 Fluid templates in `.fluid.html` files.
+
 ## Source of snippets
 
 All snippets included in this extension are created and adjusted based on the
