@@ -31,5 +31,16 @@
             "/>"
         ],
         "description": "Handles uploaded files and displays previously uploaded images if the form is redisplayed due to validation errors. Customize the accepted file types, additional attributes, and error handling. Supports custom data- attributes."
+    },
+    "Upload Delete Checkbox Form ViewHelper": {
+        "prefix": "formUploadDeleteCheckbox",
+        "body": [
+            "<formvh:form.uploadDeleteCheckbox",
+            "\tproperty=\"{${1:element.identifier}}\"",
+            "\tid=\"${2:delete-upload}\"",
+            "\tclass=\"${3:form-check-input}\"",
+            "/>"
+        ],
+        "description": "Renders a delete checkbox for an uploaded form resource."
     }
 }

@@ -151,5 +151,16 @@
             "</f:form.validationResults>"
         ],
         "description": "Outputs validation results."
+    },
+    "Form Upload Delete Checkbox ViewHelper": {
+        "prefix": "fFormUploadDeleteCheckbox",
+        "body": [
+            "<f:form.uploadDeleteCheckbox",
+            "\tproperty=\"${1:file}\"",
+            "\tresourcePointer=\"${2:{resourcePointer}}\"",
+            "\tid=\"${3:delete-upload}\"",
+            "/>"
+        ],
+        "description": "Renders a delete checkbox for an uploaded resource."
     }
 }

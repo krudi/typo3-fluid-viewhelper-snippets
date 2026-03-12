@@ -376,6 +376,146 @@
         ],
         "description": "Translates a key inline from locallang or custom locallang file."
     },
+    "Argument ViewHelper": {
+        "prefix": "fArgument",
+        "body": [
+            "<f:argument",
+            "\tname=\"${1:headline}\"",
+            "\tvalue=\"${2:{data.header}}\"",
+            "/>"
+        ],
+        "description": "Defines an argument for a Fluid component slot."
+    },
+    "Ceil ViewHelper": {
+        "prefix": "fCeil",
+        "body": ["<f:ceil value=\"${1:3.14}\" />"],
+        "description": "Rounds a number up to the next highest integer."
+    },
+    "Contains ViewHelper": {
+        "prefix": "fContains",
+        "body": [
+            "<f:contains haystack=\"{${1:items}}\" needle=\"${2:news}\">",
+            "\t${3:Needle found}",
+            "</f:contains>"
+        ],
+        "description": "Checks whether a haystack contains a given value."
+    },
+    "EndsWith ViewHelper": {
+        "prefix": "fEndsWith",
+        "body": [
+            "<f:endsWith haystack=\"${1:filename.jpg}\" needle=\"${2:.jpg}\">",
+            "\t${3:File has expected suffix}",
+            "</f:endsWith>"
+        ],
+        "description": "Checks whether a string ends with a given suffix."
+    },
+    "Flatten ViewHelper": {
+        "prefix": "fFlatten",
+        "body": ["<f:flatten value=\"{${1:nestedArray}}\" />"],
+        "description": "Flattens a nested array into a one-dimensional array."
+    },
+    "Floor ViewHelper": {
+        "prefix": "fFloor",
+        "body": ["<f:floor value=\"${1:3.99}\" />"],
+        "description": "Rounds a number down to the next lowest integer."
+    },
+    "Fragment ViewHelper": {
+        "prefix": "fFragment",
+        "body": [
+            "<f:fragment name=\"${1:content-main}\">",
+            "\t${2:Fragment content}",
+            "</f:fragment>"
+        ],
+        "description": "Defines a named Fluid component fragment."
+    },
+    "Length ViewHelper": {
+        "prefix": "fLength",
+        "body": ["<f:length value=\"{${1:items}}\" />"],
+        "description": "Returns the length of a string or countable value."
+    },
+    "Max ViewHelper": {
+        "prefix": "fMax",
+        "body": ["<f:max values=\"{${1:[1, 3, 9, 2]}}\" />"],
+        "description": "Returns the maximum value from a list of values."
+    },
+    "Merge ViewHelper": {
+        "prefix": "fMerge",
+        "body": ["<f:merge value=\"{${1:firstArray}}\" additional=\"{${2:secondArray}}\" />"],
+        "description": "Merges arrays into a single array."
+    },
+    "Min ViewHelper": {
+        "prefix": "fMin",
+        "body": ["<f:min values=\"{${1:[1, 3, 9, 2]}}\" />"],
+        "description": "Returns the minimum value from a list of values."
+    },
+    "Range ViewHelper": {
+        "prefix": "fRange",
+        "body": ["<f:range start=\"${1:1}\" end=\"${2:10}\" step=\"${3:1}\" />"],
+        "description": "Creates a range of integer values."
+    },
+    "Render ContentArea ViewHelper": {
+        "prefix": "fRenderContentArea",
+        "body": [
+            "<f:render.contentArea",
+            "\trecord=\"{${1:record}}\"",
+            "\tarea=\"${2:main}\"",
+            "/>"
+        ],
+        "description": "Renders a content area from a record."
+    },
+    "Render Record ViewHelper": {
+        "prefix": "fRenderRecord",
+        "body": [
+            "<f:render.record",
+            "\trecord=\"{${1:record}}\"",
+            "\ttable=\"${2:tt_content}\"",
+            "/>"
+        ],
+        "description": "Renders a database record with the TYPO3 record renderer."
+    },
+    "Render Text ViewHelper": {
+        "prefix": "fRenderText",
+        "body": [
+            "<f:render.text",
+            "\tdata=\"${1:{bodytext: data.bodytext}}\"",
+            "\tfield=\"${2:bodytext}\"",
+            "/>"
+        ],
+        "description": "Renders text using TYPO3 text processing."
+    },
+    "Resource ViewHelper": {
+        "prefix": "fResource",
+        "body": ["<f:resource path=\"${1:EXT:my_ext/Resources/Public/Images/example.webp}\" />"],
+        "description": "Returns the public URL for a TYPO3 resource."
+    },
+    "Round ViewHelper": {
+        "prefix": "fRound",
+        "body": ["<f:round value=\"${1:3.14159}\" decimals=\"${2:2}\" />"],
+        "description": "Rounds a number to the given precision."
+    },
+    "Shuffle ViewHelper": {
+        "prefix": "fShuffle",
+        "body": ["<f:shuffle value=\"{${1:items}}\" />"],
+        "description": "Shuffles the order of array values."
+    },
+    "Slot ViewHelper": {
+        "prefix": "fSlot",
+        "body": [
+            "<f:slot name=\"${1:header}\">",
+            "\t${2:Slot content}",
+            "</f:slot>"
+        ],
+        "description": "Defines a named Fluid component slot."
+    },
+    "StartsWith ViewHelper": {
+        "prefix": "fStartsWith",
+        "body": [
+            "<f:startsWith haystack=\"${1:EXT:site_package}\" needle=\"${2:EXT:}\">",
+            "\t${3:String has expected prefix}",
+            "</f:startsWith>"
+        ],
+        "description": "Checks whether a string starts with a given prefix."
+    },
     "f:variable ViewHelper": {
         "prefix": "fVariable",
         "body": ["<f:variable name=\"${1:myVariable}\">", "\t${2:'Variable content'}", "</f:variable>"],

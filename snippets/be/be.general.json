@@ -31,5 +31,52 @@
             "/>"
         ],
         "description": "Generates an `<img>` tag for rendering thumbnails. The ViewHelper supports various image parameters including width, height, cropping, and context. You can also pass additional attributes and data for customization."
+    },
+    "Login Logo ViewHelper": {
+        "prefix": "beLoginLogo",
+        "body": ["<be:loginLogo />"],
+        "description": "Renders the configured TYPO3 backend login logo."
+    },
+    "MFA IfHasState ViewHelper": {
+        "prefix": "beMfaIfHasState",
+        "body": [
+            "<be:mfa.ifHasState provider=\"{${1:provider}}\" state=\"${2:active}\">",
+            "\t${3:MFA state matched}",
+            "</be:mfa.ifHasState>"
+        ],
+        "description": "Checks whether the given MFA provider of the current user has the requested state."
+    },
+    "Toolbar Attributes ViewHelper": {
+        "prefix": "beToolbarAttributes",
+        "body": ["<be:toolbar.attributes item=\"{${1:toolbarItem}}\" />"],
+        "description": "Renders HTML attributes for a backend toolbar item."
+    },
+    "Toolbar IfHasDropdown ViewHelper": {
+        "prefix": "beToolbarIfHasDropdown",
+        "body": [
+            "<be:toolbar.ifHasDropdown item=\"{${1:toolbarItem}}\">",
+            "\t${2:Dropdown content}",
+            "</be:toolbar.ifHasDropdown>"
+        ],
+        "description": "Checks whether a backend toolbar item has a dropdown."
+    },
+    "Type IsArray ViewHelper": {
+        "prefix": "beTypeIsArray",
+        "body": [
+            "<be:type.isArray value=\"{${1:variable}}\">",
+            "\t${2:Value is an array}",
+            "</be:type.isArray>"
+        ],
+        "description": "Checks whether a given value is an array."
+    },
+    "TypoScript FineDiff ViewHelper": {
+        "prefix": "beTypoScriptFineDiff",
+        "body": [
+            "<be:typoScript.fineDiff",
+            "\toldLine=\"${1:lib.old = TEXT}\"",
+            "\tnewLine=\"${2:lib.new = TEXT}\"",
+            "/>"
+        ],
+        "description": "Highlights differences between two TypoScript lines."
     }
 }

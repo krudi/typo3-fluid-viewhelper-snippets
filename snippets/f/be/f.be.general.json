@@ -70,5 +70,29 @@
             "/>"
         ],
         "description": "Creates URIs to backend modules."
+    },
+    "Backend PageInfo ViewHelper": {
+        "prefix": "fBePageInfo",
+        "body": [
+            "<f:be.pageInfo",
+            "\tpage=\"{${1:pageRecord}}\"",
+            "\tas=\"${2:pageInfo}\"",
+            ">",
+            "\t${3:{pageInfo.title}}",
+            "</f:be.pageInfo>"
+        ],
+        "description": "Provides processed backend page information for a page record."
+    },
+    "Backend PagePath ViewHelper": {
+        "prefix": "fBePagePath",
+        "body": [
+            "<f:be.pagePath",
+            "\tpageUid=\"${1:1}\"",
+            "\tas=\"${2:pagePath}\"",
+            ">",
+            "\t${3:{pagePath}}",
+            "</f:be.pagePath>"
+        ],
+        "description": "Resolves the backend page path for a page UID."
     }
 }

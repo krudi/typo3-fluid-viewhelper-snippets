@@ -58,5 +58,19 @@
             "/>"
         ],
         "description": "Translates properties of a form element, allowing for localization of form fields and options. Requires a Form Element and the property to translate, along with optional rendering options."
+    },
+    "Maximum File Size ViewHelper": {
+        "prefix": "vhMaximumFileSize",
+        "body": ["<formvh:be.maximumFileSize />"],
+        "description": "Outputs the configured backend maximum upload file size for form editor usage."
+    },
+    "Render Content Element Preview ViewHelper": {
+        "prefix": "vhRenderContentElementPreview",
+        "body": [
+            "<formvh:be.renderContentElementPreview",
+            "\tformPersistenceIdentifier=\"${1:contact-form}\"",
+            "/>"
+        ],
+        "description": "Renders a backend preview for a persisted form content element."
     }
 }

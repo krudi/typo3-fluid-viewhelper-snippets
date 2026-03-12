@@ -40,5 +40,16 @@
             "</f:asset.script>"
         ],
         "description": "Includes inline JavaScript in TYPO3 templates, identified by a unique identifier."
+    },
+    "Module Asset ViewHelper": {
+        "prefix": "fAssetModule",
+        "body": [
+            "<f:asset.module",
+            "\tidentifier=\"${1:identifier123}\"",
+            "\tname=\"${2:@vendor/package/module.js}\"",
+            "\tadditionalAttributes=\"${3:{async: 'async'}}\"",
+            "/>"
+        ],
+        "description": "Registers a JavaScript ES module in TYPO3 templates."
     }
 }

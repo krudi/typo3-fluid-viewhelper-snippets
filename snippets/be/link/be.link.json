@@ -23,5 +23,16 @@
             "/>"
         ],
         "description": "Generates a link to create a new record in a specified table. You can specify the page ID for placement, the UID for ordering, default field values, and a return URL to redirect after creating the record."
+    },
+    "Documentation Link ViewHelper": {
+        "prefix": "beLinkDocumentation",
+        "body": [
+            "<be:link.documentation",
+            "\tidentifier=\"${1:typo3-viewhelper-reference}\"",
+            ">",
+            "\t${2:See documentation}",
+            "</be:link.documentation>"
+        ],
+        "description": "Generates a link to TYPO3 documentation using a permalink identifier."
     }
 }
