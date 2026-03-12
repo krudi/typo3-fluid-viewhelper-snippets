@@ -36,12 +36,6 @@
         "lint:prettier:fix": "prettier --write . --cache --cache-strategy metadata --cache-location .cache/.prettiercache \"**/*.{js,ts,css,html,yaml,yml,json,json5,graphql,gql}\"",
         "typecheck": "tsc -p tsconfig.json --noEmit"
     },
-    "capabilities": {
-        "virtualWorkspaces": true,
-        "untrustedWorkspaces": {
-            "supported": true
-        }
-    },
     "contributes": {
         "grammars": [
             {
@@ -190,5 +184,11 @@
         "color": "#FFFFFF",
         "theme": "light"
     },
-    "preview": true
+    "preview": true,
+    "capabilities": {
+        "virtualWorkspaces": true,
+        "untrustedWorkspaces": {
+            "supported": true
+        }
+    }
 }

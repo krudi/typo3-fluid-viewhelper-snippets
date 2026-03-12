@@ -66,11 +66,7 @@
     },
     "Render Content Element Preview ViewHelper": {
         "prefix": "vhRenderContentElementPreview",
-        "body": [
-            "<formvh:be.renderContentElementPreview",
-            "\tformPersistenceIdentifier=\"${1:contact-form}\"",
-            "/>"
-        ],
+        "body": ["<formvh:be.renderContentElementPreview", "\tformPersistenceIdentifier=\"${1:contact-form}\"", "/>"],
         "description": "Renders a backend preview for a persisted form content element."
     }
 }

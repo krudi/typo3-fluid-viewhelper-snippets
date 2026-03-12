@@ -62,11 +62,7 @@
     },
     "Type IsArray ViewHelper": {
         "prefix": "beTypeIsArray",
-        "body": [
-            "<be:type.isArray value=\"{${1:variable}}\">",
-            "\t${2:Value is an array}",
-            "</be:type.isArray>"
-        ],
+        "body": ["<be:type.isArray value=\"{${1:variable}}\">", "\t${2:Value is an array}", "</be:type.isArray>"],
         "description": "Checks whether a given value is an array."
     },
     "TypoScript FineDiff ViewHelper": {

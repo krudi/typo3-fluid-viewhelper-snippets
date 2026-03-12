@@ -378,12 +378,7 @@
     },
     "Argument ViewHelper": {
         "prefix": "fArgument",
-        "body": [
-            "<f:argument",
-            "\tname=\"${1:headline}\"",
-            "\tvalue=\"${2:{data.header}}\"",
-            "/>"
-        ],
+        "body": ["<f:argument", "\tname=\"${1:headline}\"", "\tvalue=\"${2:{data.header}}\"", "/>"],
         "description": "Defines an argument for a Fluid component slot."
     },
     "Ceil ViewHelper": {
@@ -393,11 +388,7 @@
     },
     "Contains ViewHelper": {
         "prefix": "fContains",
-        "body": [
-            "<f:contains haystack=\"{${1:items}}\" needle=\"${2:news}\">",
-            "\t${3:Needle found}",
-            "</f:contains>"
-        ],
+        "body": ["<f:contains haystack=\"{${1:items}}\" needle=\"${2:news}\">", "\t${3:Needle found}", "</f:contains>"],
         "description": "Checks whether a haystack contains a given value."
     },
     "EndsWith ViewHelper": {
@@ -421,11 +412,7 @@
     },
     "Fragment ViewHelper": {
         "prefix": "fFragment",
-        "body": [
-            "<f:fragment name=\"${1:content-main}\">",
-            "\t${2:Fragment content}",
-            "</f:fragment>"
-        ],
+        "body": ["<f:fragment name=\"${1:content-main}\">", "\t${2:Fragment content}", "</f:fragment>"],
         "description": "Defines a named Fluid component fragment."
     },
     "Length ViewHelper": {
@@ -455,32 +442,17 @@
     },
     "Render ContentArea ViewHelper": {
         "prefix": "fRenderContentArea",
-        "body": [
-            "<f:render.contentArea",
-            "\trecord=\"{${1:record}}\"",
-            "\tarea=\"${2:main}\"",
-            "/>"
-        ],
+        "body": ["<f:render.contentArea", "\trecord=\"{${1:record}}\"", "\tarea=\"${2:main}\"", "/>"],
         "description": "Renders a content area from a record."
     },
     "Render Record ViewHelper": {
         "prefix": "fRenderRecord",
-        "body": [
-            "<f:render.record",
-            "\trecord=\"{${1:record}}\"",
-            "\ttable=\"${2:tt_content}\"",
-            "/>"
-        ],
+        "body": ["<f:render.record", "\trecord=\"{${1:record}}\"", "\ttable=\"${2:tt_content}\"", "/>"],
         "description": "Renders a database record with the TYPO3 record renderer."
     },
     "Render Text ViewHelper": {
         "prefix": "fRenderText",
-        "body": [
-            "<f:render.text",
-            "\tdata=\"${1:{bodytext: data.bodytext}}\"",
-            "\tfield=\"${2:bodytext}\"",
-            "/>"
-        ],
+        "body": ["<f:render.text", "\tdata=\"${1:{bodytext: data.bodytext}}\"", "\tfield=\"${2:bodytext}\"", "/>"],
         "description": "Renders text using TYPO3 text processing."
     },
     "Resource ViewHelper": {
@@ -500,11 +472,7 @@
     },
     "Slot ViewHelper": {
         "prefix": "fSlot",
-        "body": [
-            "<f:slot name=\"${1:header}\">",
-            "\t${2:Slot content}",
-            "</f:slot>"
-        ],
+        "body": ["<f:slot name=\"${1:header}\">", "\t${2:Slot content}", "</f:slot>"],
         "description": "Defines a named Fluid component slot."
     },
     "StartsWith ViewHelper": {
