@@ -6,7 +6,8 @@
     "private": false,
     "description": "TYPO3 Fluid ViewHelper snippets plus TypoScript and TSConfig syntax highlighting for Visual Studio Code.",
     "categories": [
-        "Snippets"
+        "Snippets",
+        "Programming Languages"
     ],
     "keywords": [
         "vscode",
@@ -19,7 +20,7 @@
         "tsconfig",
         "syntax-highlighting"
     ],
-    "homepage": "https://gitlab.com/krudi/typo3-fluid-viewhelper-snippets#readme",
+    "homepage": "https://github.com/krudi/typo3-fluid-viewhelper-snippets#readme",
     "bugs": {
         "url": "https://github.com/krudi/typo3-fluid-viewhelper-snippets/issues"
     },
@@ -34,6 +35,12 @@
         "lint:prettier": "prettier --check . --cache --cache-strategy metadata --cache-location .cache/.prettiercache \"**/*.{js,ts,css,html,yaml,yml,json,json5,graphql,gql}\"",
         "lint:prettier:fix": "prettier --write . --cache --cache-strategy metadata --cache-location .cache/.prettiercache \"**/*.{js,ts,css,html,yaml,yml,json,json5,graphql,gql}\"",
         "typecheck": "tsc -p tsconfig.json --noEmit"
+    },
+    "capabilities": {
+        "virtualWorkspaces": true,
+        "untrustedWorkspaces": {
+            "supported": true
+        }
     },
     "contributes": {
         "grammars": [
@@ -176,7 +183,7 @@
     },
     "packageManager": "npm@11.6.4",
     "engines": {
-        "vscode": "^1.0.0"
+        "vscode": "^1.105.0"
     },
     "icon": "./assets/images/icon.png",
     "galleryBanner": {
