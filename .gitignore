@@ -9,6 +9,7 @@ node_modules/
 build
 dist
 dev-dist
+*.vsix
 
 # Tooling caches files
 .cache/.eslintcache
