@@ -1,21 +1,24 @@
 # Extension files
-
 samples
 docs
 tsconfig.json
-prettier.config.ts
+prettier.config.mjs
 .editorconfig
 
 # Dependency directories
-
 node_modules/
+.cache/
 
 # Visual Studio Code files
-
 .vscode
 .vscode-test
 vsc-extension-quickstart.md
 
 # Git files
-
+.github
+.gitattributes
 .gitignore
+
+# Repo metadata
+.nvmrc
+.prettierignore
