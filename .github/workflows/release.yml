@@ -22,9 +22,10 @@ jobs:
         if: ${{ github.actor != 'dependabot[bot]' }}
         permissions:
             contents: write
-        uses: krudi/reusable-actions/.github/workflows/create-release.yaml@main
+        uses: krudi/reusable-actions/.github/workflows/release-and-publish.yaml@main
         with:
             version: ${{ inputs.version }}
+            publish_target: vscode
             create_latest: ${{ inputs.create_latest }}
             working_directory: .
             package_json_path: package.json
@@ -32,3 +33,11 @@ jobs:
             node_version_file: .nvmrc
             tag_prefix: 'v'
             commit_message: 'chore(release): bump typo3-fluid-viewhelper-snippets from {old} to {new}'
+            install_command: npm ci
+            check_command: npm run lint:prettier
+            package_command: npx @vscode/vsce package
+            publish_command: npx @vscode/vsce publish -p "$VSCE_PAT"
+            vsce_glob: '*.vsix'
+        secrets:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            VSCE_PAT: ${{ secrets.VSCE_PAT }}
