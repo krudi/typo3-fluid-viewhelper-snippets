@@ -170,7 +170,7 @@
     "devDependencies": {
         "@krudi/prettier-config": "^0.1.8"
     },
-    "packageManager": "npm@11.6.4",
+    "packageManager": "npm@11.12.1",
     "engines": {
         "vscode": "^1.105.0"
     },
