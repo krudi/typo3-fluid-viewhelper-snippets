@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "project": {
+    "name": "typo3-fluid-viewhelper-snippets",
+    "description": "VS Code extension \u2014 TYPO3 Fluid ViewHelper snippets and syntax highlighting",
+    "type": "vscode-extension",
+    "status": "active"
+  },
+  "stack": {
+    "language": "json",
+    "framework": "vscode",
+    "packageManager": null,
+    "buildStep": false
+  },
+  "commands": {
+    "debug": "F5 in VS Code (Extension Development Host)"
+  },
+  "docs": {
+    "agentsFile": "AGENTS.md",
+    "claudeFile": "CLAUDE.md",
+    "rules": ".ai/rules/vscode-extension.md",
+    "lessons": ".ai/memory/lessons.md"
+  },
+  "publishing": {
+    "marketplace": "vsce",
+    "packageCmd": "vsce package",
+    "publishCmd": "vsce publish"
+  }
+}
