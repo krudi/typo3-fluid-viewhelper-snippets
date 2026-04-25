@@ -56,3 +56,21 @@ No dependencies to install — this extension has no build step.
 - Snippets use tab stops (`$1`, `$2`, ...) — test in VS Code after changes
 - `package.json` `engines.vscode` must stay compatible with the minimum VS Code version
 - No build step — changes to snippets/syntax are immediately testable with `F5` in VS Code
+
+---
+
+## For Claude Code
+
+### Rules loaded automatically
+
+| Rule file | Applied to |
+|-----------|---|
+| `.ai/rules/vscode-extension.md` | `**/*.json`, `package.json` |
+
+### Constraints
+
+- No build step — snippet JSON files are consumed directly by VS Code
+- Test changes manually with `F5` (Extension Development Host) — no automated tests
+- Commits use conventional commits format (see global `AGENTS.md`)
+- All snippet namespaces: `f:*`, `be:*`, `core:*`, `formvh:*`, `cb:*` — keep consistent
+- `package.json` `engines.vscode` defines minimum VS Code compatibility — do not lower it without testing
